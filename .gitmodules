@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-[submodule "noteworthy"]
-=======
 [submodule "themes/noteworthy"]
->>>>>>> e8e0976 (init)
 	path = themes/noteworthy
 	url = https://github.com/kimcc/hugo-theme-noteworthy.git
