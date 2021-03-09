@@ -1,5 +1,10 @@
 baseURL = "https://aileenhuang.dev/"
 languageCode = "en-nz"
-title = "Aileen's Garbage Collection"
+title = "Aileen's Dump"
 theme = "noteworthy"
 themesDir = "themes"
+
+[params]
+    email = "aileen.huang@outlook.co.nz"
+    github = "https://github.com/axkeyz"
+    linkedin = "https://www.linkedin.com/in/aileen-huang/"
