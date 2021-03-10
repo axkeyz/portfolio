@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aileen&#39;s Dump</title>
-    <link>https://aileenhuang.dev/</link>
-    <description>Recent content on Aileen&#39;s Dump</description>
+    <title>Blogs on Aileen&#39;s Dump</title>
+    <link>https://aileenhuang.dev/blog/</link>
+    <description>Recent content in Blogs on Aileen&#39;s Dump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
-    <lastBuildDate>Wed, 10 Mar 2021 12:48:00 +1300</lastBuildDate><atom:link href="https://aileenhuang.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Mar 2021 12:48:00 +1300</lastBuildDate><atom:link href="https://aileenhuang.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts on replacing my laptop</title>
       <link>https://aileenhuang.dev/blog/replacing-laptop/</link>
@@ -24,15 +24,6 @@ But as I grow up, I realise that&amp;hellip;maybe I&amp;rsquo;ve just grown out 
       
       <guid>https://aileenhuang.dev/blog/too-much/</guid>
       <description>Too much you want to do and not enough time. Too much on your plate and not enough what you want. Such a paiiiiin&amp;hellip;.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://aileenhuang.dev/p/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aileenhuang.dev/p/contact/</guid>
-      <description>Loading…</description>
     </item>
     
   </channel>

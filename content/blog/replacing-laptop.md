@@ -1,6 +1,6 @@
 ---
 title: "Thoughts on replacing my laptop"
-date: 2021-03-09T12:48:00+13:00
+date: 2021-03-10T12:48:00+13:00
 draft: false
 ---
 
