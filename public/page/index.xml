@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Aileen&#39;s Dump</title>
+    <link>https://aileenhuang.dev/page/</link>
+    <description>Recent content in Pages on Aileen&#39;s Dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language>
+    <lastBuildDate>Tue, 09 Mar 2021 12:48:00 +1300</lastBuildDate><atom:link href="https://aileenhuang.dev/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://aileenhuang.dev/page/contact/</link>
+      <pubDate>Tue, 09 Mar 2021 12:48:00 +1300</pubDate>
+      
+      <guid>https://aileenhuang.dev/page/contact/</guid>
+      <description>Where the fuck my content go?</description>
+    </item>
+    
+  </channel>
+</rss>
