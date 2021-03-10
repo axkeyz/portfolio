@@ -8,3 +8,6 @@ themesDir = "themes"
     email = "aileen.huang@outlook.co.nz"
     github = "https://github.com/axkeyz"
     linkedin = "https://www.linkedin.com/in/aileen-huang/"
+
+[markup.goldmark.renderer]
+    unsafe = true
