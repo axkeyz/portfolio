@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Aileen&#39;s Dump</title>
+    <link>https://aileenhuang.dev/projects/</link>
+    <description>Recent content in Projects on Aileen&#39;s Dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language><atom:link href="https://aileenhuang.dev/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Project</title>
+      <link>https://aileenhuang.dev/projects/test-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/projects/test-project/</guid>
+      <description>I once wrote a project and thought it wasn&amp;rsquo;t good enough.</description>
+    </item>
+    
+  </channel>
+</rss>

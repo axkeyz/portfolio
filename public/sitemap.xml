@@ -31,11 +31,19 @@
   </url>
   
   <url>
+    <loc>https://aileenhuang.dev/projects/</loc>
+  </url>
+  
+  <url>
     <loc>https://aileenhuang.dev/p/</loc>
   </url>
   
   <url>
     <loc>https://aileenhuang.dev/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aileenhuang.dev/projects/test-project/</loc>
   </url>
   
 </urlset>
