@@ -10,7 +10,7 @@
     <meta name="keywords" content="aileen huang, portfolio, coding, programmer, engineer, game">
     <meta name="author" content="Aileen Huang">
 
-    <title>Test Project | Aileen&#39;s Dump</title>
+    <title>Screw Accounting | Aileen&#39;s Dump</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -53,6 +53,7 @@
   <div class="nav-menu">
   
   <p><a href="/blog/" rel="noopener">Blog</a></p>
+  <p><a href="/projects/" rel="noopener">Projects</a></p>
   <p><a href="/p/contact/" rel="noopener">Contact</a></p>
 </div>
 <footer class="footer">
@@ -144,11 +145,33 @@
         <div id="content" class="content-container">
         
 
-<h1 class="post-title">Test Project</h1>
+<h1 class="post-title">Screw Accounting</h1>
     
     <div>
         <p>
-        <p>I once wrote a project and thought it wasn&rsquo;t good enough.</p>
+        <h2 id="background">Background</h2>
+<p>I am a lazy person. Data-entry may have been in my job description, but I absolutely hate doing it. Why? It&rsquo;s so freaking repetitive and it&rsquo;s way too easy to mess up. When I switched to working from home, motivation to these boring repetitive tasks plummeted even more. And then there were even more time constraints after I decided to go back to study and I still had to work through a huge backlog of non-data-entry tasks.</p>
+<p>For the sake of my mental health and to be more productive with my other more enjoyable (?) tasks, I decided to make this &ldquo;Screw Accounting&rdquo; project.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Create a simplified, user-friendly way of automating particular data-entry tasks.</li>
+<li>Save time, save mental health, save my life.</li>
+</ul>
+<h2 id="approach">Approach</h2>
+<ul>
+<li><strong>Language/Framework</strong>: Xero has provided API-scaffolding with C#, Java, NodeJS, PHP, Python and Ruby, of which I&rsquo;m most familiar with PHP &amp; Python (based off Flask). I was looking for a simple app only to do a few automation tasks, PHP has way too many dependencies. I didn&rsquo;t need CRUD either. Flask is a microframework that seemed just perfect for my use case.</li>
+<li><strong>Site UI/UX</strong>: Wasn&rsquo;t too important since it was just me using it. Did some basic styling with Bootstrap.</li>
+<li><strong>Deployment</strong>: Hosted on the WSL Ubuntu installation on my work laptop. It&rsquo;s a virtual environment, which works pretty good since it&rsquo;s just me using it.</li>
+</ul>
+<h2 id="main-tasks">Main Tasks</h2>
+<ul>
+<li>Upload &amp; read PDF invoices.</li>
+<li>Connect to the company MSSQL database.</li>
+<li>Connect to XeroAPI to send/receive data.</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>I saved about 5 hours of work per week. My mental health improved! Hooray!</p>
+<p>But then I spent the time saved on the other parts of my job, which is great for the company, but not so much for my mental health. Cry!</p>
 
         </p>
     </div>
