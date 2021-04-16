@@ -30,4 +30,4 @@ For the sake of my mental health and to be more productive with my other more en
 
 I saved about 5 hours of work per week. My mental health improved! Hooray!
 
-But then I spent the time saved on the other parts of my job, which is great for the company, but not so much for my mental health. Cry!
+But then I spent the time saved on the other parts of my job, which is great for the company, but not so much for my mental health. Plus had more classes. sCry!
