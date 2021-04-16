@@ -5,7 +5,7 @@ theme = "noteworthy"
 themesDir = "themes"
 
 [params]
-    email = "http://localhost:1313/p/contact/"
+    email = "https://aileenhuang.dev/p/contact/"
     github = "https://github.com/axkeyz"
     linkedin = "https://www.linkedin.com/in/aileen-huang/"
 
