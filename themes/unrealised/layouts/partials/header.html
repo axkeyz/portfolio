@@ -1,5 +1,6 @@
-<header>
-    <div class="site-title text-center p-8 text-4xl">
+<header class="py-10">
+    <div class="site-title text-center pb-2 text-4xl">
         <a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
-    </div>  
+    </div>
+    {{- partial "navbar.html" . -}}  
 </header>

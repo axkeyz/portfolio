@@ -1,0 +1,6 @@
+<footer class="footer">
+    {{- partial "social.html" . -}}
+    <div class="copyright text-center py-2 bg-black text-white">
+		{{ replace .Site.Copyright "{year}" now.Year }}
+	</div>
+</footer>
