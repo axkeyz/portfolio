@@ -1,16 +1,55 @@
 {{ define "main" }}
-<div class = "article-content">
-    <div class="description">
-        I'm kinda lazy, but even I admire the power of projects. Here're mine.
+    <div class="article-content w-full m-auto md:w-7/12">
+        {{ $pages := where site.RegularPages "Type" "in" "projects" }}
+        {{ range (.Paginate $pages).Pages }}
+            <article class="m-5 p-8 bg-gray-50 rounded-3xl">
+                <h2 class="text-2xl font-bold text-green-900 hover:text-green-600">
+                    <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                    </a>
+                </h2>
+                <div class="summary py-5">
+                    <p>
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                            [<a href="{{ .RelPermalink }}" class="text-green-800 hover:text-green-600">Read More…</a>]
+                        {{ end }}
+                    </p>
+                </div>
+                <div class="post-footer text-green-600">
+                <!-- Display tags -->
+                {{if .Params.tags}}
+                    {{ range .Params.tags }}
+                        <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+                    {{ end }}
+                {{ end }}
+                </div> 
+        </article>
+        {{ end }}
     </div>
-
-    <div>
-        Creative Work: A poem about what math means to me that I wrote for class. It's coded a bit to display a bit like a powerpoint, but hopefully it's a bit more fun.
+    <!-- Custom paginator -->
+    <div class="paginator text-center pb-5">
+        {{ $paginator := .Paginator }}
+        {{ if gt .Paginator.TotalPages 1 }}
+        <p class="inline-block">
+            {{ if $paginator.HasNext }}
+                <a class="hover:text-green-600 older inline-flex items-center" href="{{ $paginator.Next.URL | relLangURL }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>&nbsp; Older &nbsp;
+                </a>|&nbsp; 
+            {{ end }}
+            Page {{ $paginator.PageNumber}} of {{ $paginator.TotalPages }}
+            {{ if $paginator.HasPrev }}
+                &nbsp;|&nbsp;
+                <a class="hover:text-green-600 newer inline-flex items-center" href="{{ $paginator.Prev.URL | relLangURL }}">
+                    Newer &nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg> 
+                </a>
+            {{ end }}
+        </p>
+        {{ end }}
     </div>
-
-    <div>
-        Screw Accounting: A self-initiated project to lessen my hours in data-entry for the accounts team at my job. I hate that part of my job.
-    </div>
-    
-</div>
 {{ end }}

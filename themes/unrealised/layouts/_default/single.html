@@ -1,26 +1,16 @@
 {{ define "main" }}
-
-<h1 class="post-title">{{ .Title }}</h1>
-    {{ if .Date }}
-    <time>{{ .Date.Format "January 2, 2006" }}</time>
-    {{ end }}
-    <div>
+<div class="article-content w-full m-auto md:w-7/12">
+    <article class="m-5 p-8 bg-gray-50 rounded-3xl">
+    <h1 class="post-title text-2xl font-bold text-green-900">{{ .Title }}</h1>
+    <div class="content pb-5 clear">
         <p>
-        {{ .Content }}
+        {{ .Content | replaceRE "<p>" "<p class=\"pt-5\">" | replaceRE "<ol>" "<ol class=\"list-decimal pl-8 pt-0\">" | replaceRE "<ul>" "<ul class=\"list-disc pl-8 pt-0\">" | safeHTML }}
         </p>
     </div>
-    {{ template "_internal/disqus.html" . }}
-
-    {{ if .Site.Params.enableKofi }}
-
-        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
-        <script type='text/javascript'>
-            const kofiId = '{{ .Site.Params.Kofi }}';
-            kofiwidget2.init('Support Me on Ko-fi', '#29abe0', kofiId);
-            kofiwidget2.draw();
-        </script> 
-
+    {{ if .Date }}
+    <time class="text-green-600">{{ .Date.Format "January 2, 2006" }}</time>
     {{ end }}
+    {{ template "_internal/disqus.html" . }}
 
     <div class="page-footer">
         {{if .Params.tags}}
@@ -30,5 +20,6 @@
         {{ end }}
       {{ end }}
     </div>
-
+</article>
+</div>
 {{end}}

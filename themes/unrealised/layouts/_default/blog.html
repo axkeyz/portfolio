@@ -2,30 +2,30 @@
     <div class="article-content w-full m-auto md:w-7/12">
         {{ $pages := where site.RegularPages "Type" "in" "blog" }}
         {{ range (.Paginate $pages).Pages }}
-            <article class="m-5 p-8 bg-gray-50 rounded-3xl">
-                <h2 class="text-2xl font-bold text-green-900 hover:text-green-600">
-                    <a href="{{ .Permalink }}">
-                        {{ .Title }}
-                    </a>
-                </h2>
-                <div class="summary py-5">
-                    <p>
-                        {{ .Summary }}
-                        {{ if .Truncated }}
-                            <a href="{{ .RelPermalink }}" class="text-green-800 hover:text-green-600">[Read More…]</a>
-                        {{ end }}
-                    </p>
-                </div>
-                <div class="post-footer text-green-600">
-                <time>{{ .Date.Format "January 2, 2006" }}</time>
-
-                <!-- Display tags -->
-                {{if .Params.tags}}
-                    {{ range .Params.tags }}
-                        <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+        <article class="m-5 p-8 bg-gray-50 rounded-3xl">
+            <h2 class="text-2xl font-bold text-green-900 hover:text-green-600">
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+            <div class="summary py-5">
+                <p>
+                    {{ .Summary }}
+                    {{ if .Truncated }}
+                        [<a href="{{ .RelPermalink }}" class="text-green-800 hover:text-green-600">Read More…</a>]
                     {{ end }}
+                </p>
+            </div>
+            <div class="post-footer text-green-600">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+
+            <!-- Display tags -->
+            {{if .Params.tags}}
+                {{ range .Params.tags }}
+                    <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
                 {{ end }}
-                </div> 
+            {{ end }}
+            </div> 
         </article>
         {{ end }}
     </div>
