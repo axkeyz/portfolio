@@ -1,5 +1,5 @@
 ---
-title: "Rubbish Ball"
+title: "Rubbish ball"
 date: 2021-04-13T16:09:27+12:00
 draft: false
 ---

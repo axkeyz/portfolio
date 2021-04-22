@@ -2,6 +2,16 @@
 <html>
     {{- partial "head.html" . -}}
     <body class="min-h-screen">
-        {{- block "main" . }}{{- end }}
+        {{- partial "header.html" . -}}
+        {{ if .IsHome }}
+            {{- block "main" . }}{{- end }}
+        {{ else }}
+            <div id="content" class="p-0 pt-14">
+                {{- block "main" . }}{{- end }}
+            </div>
+        {{ end }}
     </body>
+    {{ if not .IsHome }}
+        {{- partial "footer.html" . -}}
+    {{ end }}
 </html>

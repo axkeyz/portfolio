@@ -1,5 +1,5 @@
 ---
-title: "Beache's Tea (1)"
+title: "Beache's tea (1)"
 date: 2021-04-20T16:15:40+12:00
 draft: false
 ---
