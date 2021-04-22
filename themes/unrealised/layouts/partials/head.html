@@ -22,4 +22,12 @@
     <style>
         html{font-family: 'Nunito', sans-serif;}
     </style>
+    {{ if .IsHome }}
+    <style>
+        body {
+        background-image: url("img/placeholder.jpg");
+        background-color: #cccccc;
+        }
+    </style>
+    {{ end }}
 </head>

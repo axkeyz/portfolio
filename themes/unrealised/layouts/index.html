@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div class = "article-content">
-    <div class="description text-center">
-        Intended to be a portfolio site. Reality? Content in 2021 maybe.
-        I'm kinda lazy so that might never happen.
+    {{- partial "header.html" . -}}
+    <div class="flex min-h-screen items-center justify-center">
+        <div>All I wanted was some content</div>
     </div>
-</div>
-        
+    <div class="rss fixed bottom-5 left-5">
+        RSS
+    </div>
 {{ end }}
