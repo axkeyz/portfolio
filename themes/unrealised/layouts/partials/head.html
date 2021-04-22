@@ -23,10 +23,17 @@
         html{font-family: 'Nunito', sans-serif;}
     </style>
     {{ if .IsHome }}
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet"> 
     <style>
         body {
-        background-image: url("img/placeholder.jpg");
-        background-color: #cccccc;
+            background-image: url("img/bg.jpg");
+            background-repeat: no-repeat;
+            background-color: #000;
+            background-size: cover;
+        }
+
+        .bitter {
+            font-family: 'Bitter', serif;
         }
     </style>
     {{ end }}

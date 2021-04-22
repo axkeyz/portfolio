@@ -1,9 +1,32 @@
 {{ define "main" }}
     {{- partial "header.html" . -}}
-    <div class="flex min-h-screen items-center justify-center">
-        <div>All I wanted was some content</div>
+    <!-- <div class="flex min-h-screen items-center justify-center">
+        <div class="clear">
+            <div>All I wanted was some content</div>
+            <div>All I wanted was some content</div>
+        </div>
+    </div> -->
+    <div id="home-img" class="grid grid-cols-1 grid-rows-1 items-center md:grid-rows-2 min-h-screen text-white">
+        <div class="hidden md:block"></div>
+        <div class="text-center">
+            <h1 class="bitter text-8xl p-5">Aileen Huang</h1>
+            <h2 class="bitter text-lg p-5">MAKING STUFF KINDA WORK</h2>
+        </div>
     </div>
-    <div class="rss fixed bottom-5 left-5">
-        RSS
+    <div class="nav fixed bottom-6 left-6 text-white">
+        Blog | Projects
     </div>
+
+    <script>
+        function handleWheel(e){
+            if (event.deltaY > 0){ // only when scrolling down
+                document.removeEventListener("wheel", handleWheel);
+                window.location.href = '/blog'; // redirect to url
+                setTimeout(()=>{
+                document.addEventListener("wheel", handleWheel);
+                },4000); // return event after 4 seconds
+            }
+        }
+        document.addEventListener("wheel", handleWheel);
+    </script>
 {{ end }}

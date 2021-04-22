@@ -14,3 +14,6 @@ I guess this site is mainly for me to unleash ~~my inner potential~~ grumbles. B
 I think I'm pretty unlikeable judging by how many "I"s there are in this page, but that's kinda hard to change.
 
 Apart from coding, I like to do the occasional travelling, doodling, listening to music, writing awful rhyming poems, reading survival horror manga & graphic novels. But I'll probably just tell you, my hobbies are sleeping, eating and breathing.
+
+Credits to: Photo by <a href="https://unsplash.com/@didiofederico_photographer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Federico Di Dio photography</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
