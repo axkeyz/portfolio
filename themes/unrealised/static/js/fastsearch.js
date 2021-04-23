@@ -10,6 +10,42 @@ var resultsAvailable = false; // Did we get any search results?
 // ==========================================
 // The main keyboard event listener running the show
 //
+
+document.addEventListener('keydown', function(event) {
+  // Allow ESC (27) to close search box
+  if (event.keyCode == 27) {
+    if (searchVisible) {
+      document.getElementById("fastSearch").classList.add("hidden");
+      document.activeElement.blur();
+      searchVisible = false;
+    }
+  }
+
+  // DOWN (40) arrow
+  if (event.keyCode == 40) {
+    if (searchVisible && resultsAvailable) {
+      console.log("down");
+      event.preventDefault(); // stop window from scrolling
+      if ( document.activeElement == maininput) { first.focus(); } // if the currently focused element is the main input --> focus the first <li>
+      else if ( document.activeElement == last ) { last.focus(); } // if we're at the bottom, stay there
+      else { document.activeElement.parentElement.nextSibling.firstElementChild.focus(); } // otherwise select the next search result
+    }
+  }
+
+  // UP (38) arrow
+  if (event.keyCode == 38) {
+    if (searchVisible && resultsAvailable) {
+      event.preventDefault(); // stop window from scrolling
+      if ( document.activeElement == maininput) { maininput.focus(); } // If we're in the input box, do nothing
+      else if ( document.activeElement == first) { maininput.focus(); } // If we're at the first item, go to input box
+      else { document.activeElement.parentElement.previousSibling.firstElementChild.focus(); } // Otherwise, select the search result above the current active one
+    }
+  }
+});
+
+// ==========================================
+// Click the damn button to open/close search
+//
 document.getElementById("search-toggler").addEventListener('click', function(event) {
     // Load json search index if first time invoking search
     // Means we don't load json unless searches are going to happen; keep user payload small unless needed
@@ -20,14 +56,14 @@ document.getElementById("search-toggler").addEventListener('click', function(eve
 
     // Toggle visibility of search box
     if (!searchVisible) {
-    document.getElementById("fastSearch").classList.remove("hidden"); // show search box
-    document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
-    searchVisible = true; // search visible
+      document.getElementById("fastSearch").classList.remove("hidden"); // show search box
+      document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
+      searchVisible = true; // search visible
     }
     else {
-    document.getElementById("fastSearch").classList.add("hidden"); // hide search box
-    document.activeElement.blur(); // remove focus from search box 
-    searchVisible = false; // search not visible
+      document.getElementById("fastSearch").classList.add("hidden"); // hide search box
+      document.activeElement.blur(); // remove focus from search box 
+      searchVisible = false; // search not visible
     }
 });
 
@@ -96,7 +132,7 @@ function executeSearch(term) {
     searchitems = '';
   } else { // build our html 
     for (let item in results.slice(0,5)) { // only show first 5 results
-      searchitems = searchitems + '<li class="p-2 hover:text-green-600"><a href="' + results[item].permalink + '" tabindex="0">' + '<span class="title font-bold">' + results[item].title + ': </span><span class="italic">'+results[item].contents.substr(0,30)+'...</span></li>';
+      searchitems = searchitems + '<li class="p-2 hover:text-green-600"><a href="' + results[item].permalink + '" tabindex="0" class="focus:text-green-600">' + '<span class="title font-bold">' + results[item].title + ': </span><span class="italic">'+results[item].contents.substr(0,30)+'...</span></li>';
     }
     resultsAvailable = true;
   }
