@@ -7,10 +7,7 @@ var last = list.lastChild; // last child of search list
 var maininput = document.getElementById('searchInput'); // input box for search
 var resultsAvailable = false; // Did we get any search results?
 
-// ==========================================
-// The main keyboard event listener running the show
-//
-
+// Keyboard events -> escape & up/down arrows
 document.addEventListener('keydown', function(event) {
   // Allow ESC (27) to close search box
   if (event.keyCode == 27) {
@@ -43,15 +40,13 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-// ==========================================
 // Click the damn button to open/close search
-//
 document.getElementById("search-toggler").addEventListener('click', function(event) {
     // Load json search index if first time invoking search
     // Means we don't load json unless searches are going to happen; keep user payload small unless needed
     if(firstRun) {
-    loadSearch(); // loads our json data and builds fuse.js search index
-    firstRun = false; // let's never do this again
+      loadSearch(); // loads our json data and builds fuse.js search index
+      firstRun = false; // let's never do this again
     }
 
     // Toggle visibility of search box
@@ -67,6 +62,24 @@ document.getElementById("search-toggler").addEventListener('click', function(eve
     }
 });
 
+var specifiedElement = document.getElementById('fastSearch');
+var specifiedElement2 = document.getElementById('search-toggler');
+
+//Add click away
+document.addEventListener('click', function(event) {
+  var isClickInside = specifiedElement.contains(event.target);
+
+  if (!isClickInside && searchVisible) {
+    //the click was outside the specifiedElement, do something
+    console.log(event.target);
+
+    if(! specifiedElement2.contains(event.target)){
+      document.getElementById("fastSearch").classList.add("hidden"); // hide search box
+      document.activeElement.blur(); // remove focus from search box 
+      searchVisible = false; // search not visible
+    }
+  }
+});
 
 // ==========================================
 // execute search as each character is typed
