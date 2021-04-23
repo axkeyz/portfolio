@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Page on Aileen&#39;s Quibbles</title>
-    <link>http://localhost:1313/page/</link>
+    <link>https://aileenhuang.dev/page/</link>
     <description>Recent content in Page on Aileen&#39;s Quibbles</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
-    <copyright>© {year} Aileen Huang. All rights reserved.</copyright><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© {year} Aileen Huang. All rights reserved.</copyright><atom:link href="https://aileenhuang.dev/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me &amp; This Site</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://aileenhuang.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://aileenhuang.dev/about/</guid>
       <description>I kinda like to work (min 46 hours per week), but I have a slightly potty mouth that complains about life a lot. My mouth is pottier under stress - so much that my supervisor calls me a grumpy cat - but then my colleagues discuss their ideas to help me.
 I tend to value speed over accuracy (get the stuff over and done with and then make sure it&amp;rsquo;s right).</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://aileenhuang.dev/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://aileenhuang.dev/contact/</guid>
       <description>Loading…</description>
     </item>
     
