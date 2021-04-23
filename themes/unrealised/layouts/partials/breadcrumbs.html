@@ -1,0 +1,7 @@
+{{ if not .IsHome }}
+    {{ $var := split .RelPermalink "/" }}
+    {{ $v := index $var 1 }}
+    <span class="text-xl breadcrumbs">&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/{{ index $var 1 }}">{{ humanize (replace $v "posts" "blog") }}</a>
+    </span>
+{{ end }}

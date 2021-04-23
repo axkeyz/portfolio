@@ -6,7 +6,7 @@
         {{ if .IsHome }}
             {{- block "main" . }}{{- end }}
         {{ else }}
-            <div id="content" class="pt-14">
+            <div id="content" class="pt-14 min-h-screen">
                 {{- block "main" . }}{{- end }}
             </div>
         {{ end }}
