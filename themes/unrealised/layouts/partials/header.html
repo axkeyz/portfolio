@@ -2,14 +2,21 @@
     <a class="site-logo text-xl {{ if .IsHome }}text-white{{ end }} float-left" href="/">HUANG</a>
 
     {{ partial "breadcrumbs.html" . }}
+    
+
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-5 float-right menu" fill="none" viewBox="0 0 24 24" stroke="{{ if .IsHome }}#fff{{ else }}currentColor{{ end }}">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 float-right ml-5 dark-mode" fill="none" viewBox="0 0 24 24" stroke="{{ if .IsHome }}#fff{{ else }}currentColor{{ end }}">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 float-right ml-5 search" fill="none" viewBox="0 0 24 24" stroke="{{ if .IsHome }}#fff{{ else }}currentColor{{ end }}">
+    <svg xmlns="http://www.w3.org/2000/svg" id="search-toggler" class="cursor-pointer h-6 w-6 float-right ml-5 search" fill="none" viewBox="0 0 24 24" stroke="{{ if .IsHome }}#fff{{ else }}currentColor{{ end }}">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>
+
+    <div id="fastSearch" class="hidden w-52 float-right">
+        <input id="searchInput" class="{{ if not .IsHome }}border-gray-800{{else}}bg-gray-400 bg-opacity-25 border-gray-300 text-white{{ end }} border-b-2 px-2" {{ if not .IsHome }}placeholder="Search..."{{end}} tabindex="0">
+        <ul id="searchResults" class="absolute w-52 {{ if .IsHome }}bg-gray-400 bg-opacity-25 text-white{{ else }}bg-white bg-opacity-75{{ end }}"></ul>
+    </div>
 </header>
 {{- partial "social.html" . -}}

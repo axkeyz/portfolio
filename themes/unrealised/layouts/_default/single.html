@@ -4,7 +4,7 @@
     <h1 class="post-title text-2xl font-bold text-green-900">{{ .Title }}</h1>
     <div class="content pb-5 clear">
         <p>
-        {{ .Content | replaceRE "<p>" "<p class=\"pt-5\">" | replaceRE "<ol>" "<ol class=\"list-decimal pl-8 pt-0\">" | replaceRE "<ul>" "<ul class=\"list-disc pl-8 pt-0\">" | safeHTML }}
+        {{ .Content | replaceRE "<p>" "<p class=\"pt-5\">" | replaceRE "<ol>" "<ol class=\"list-decimal pl-8 pt-0\">" | replaceRE "<h2" "<h2 class=\"text-xl font-bold pt-5\"" | replaceRE "<ul>" "<ul class=\"list-disc pl-8 pt-0\">" | safeHTML }}
         </p>
     </div>
     {{ if .Date }}
