@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
     {{- partial "head.html" . -}}
-    <body class="min-h-screen">
+    <body>
         {{- partial "header.html" . -}}
         {{ if .IsHome }}
             {{- block "main" . }}{{- end }}
         {{ else }}
-            <div id="content" class="pt-14 min-h-screen">
-                {{- block "main" . }}{{- end }}
-            </div>
+        <div id="content" class="pt-14">
+            {{- block "main" . }}{{- end }}
+        </div>
         {{ end }}
         
         <script src="/js/fuse.js"></script> <!-- download and copy over fuse.js file from fusejs.io -->
         <script src="/js/fastsearch.js"></script>
     </body>
+    
     {{ if not .IsHome }}
         {{- partial "footer.html" . -}}
     {{ end }}
+
+    {{- partial "social.html" . -}}
 
 </html>
