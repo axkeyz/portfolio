@@ -38,10 +38,11 @@
 
 
     
-
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-5 float-right menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
+    <a href="javascript:void(0);" class="icon" onclick="hamburgMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-5 float-right menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </a>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 float-right ml-5 dark-mode" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
     </svg>
@@ -53,7 +54,16 @@
         <input id="searchInput" class="border-gray-800 border-b-2 px-2" placeholder="Search..." tabindex="0">
         <ul id="searchResults" class="absolute w-52 bg-white bg-opacity-75"></ul>
     </div>
+
 </header>
+
+<div id="navigation-menu" class="hidden block float-right z-20 bg-green-50 fixed top-16 pt-5 right-5">
+    <a href="/blog" class="block px-5 pb-5 text-green-900 hover:text-green-600">Blog</a>
+    <a href="/projects" class="block px-5 pb-5 text-green-900 hover:text-green-600">Projects</a>
+    <a href="/cv" class="block px-5 pb-5 text-green-900 hover:text-green-600">CV</a>
+    <a href="/about" class="block px-5 pb-5 text-green-900 hover:text-green-600">About</a>
+    <a href="/contact" class="block px-5 pb-5 text-green-900 hover:text-green-600">Contact</a>
+</div>
         <div id="content" class="pt-14">
 <div class="article-content w-full m-auto md:w-7/12">
     <article class="m-5 p-8 bg-gray-50 rounded-3xl">
@@ -70,15 +80,25 @@
 </ul>
 <h2 class="text-xl font-bold pt-5" id="approach">Approach</h2>
 <ul class="list-disc pl-8 pt-0">
-<li><strong>Language/Framework</strong>: Xero has provided API-scaffolding with C#, Java, NodeJS, PHP, Python and Ruby, of which I&rsquo;m most familiar with PHP &amp; Python (based off Flask). I was looking for a simple app only to do a few automation tasks, PHP has way too many dependencies. I didn&rsquo;t need CRUD either. Flask is a microframework that seemed just perfect for my use case.</li>
-<li><strong>Site UI/UX</strong>: Wasn&rsquo;t too important since it was just me using it. Did some basic styling with Bootstrap.</li>
+<li><strong>Language/Framework</strong>: I was lookiing to do make this quickly - a simple app for a few automation tasks - using either of the languages I knew best at this time (PHP/Python). PHP has way too many dependencies. I didn&rsquo;t need CRUD either. So I went with Python and made a Flask app. I did do some blueprint organisation so it would be easier to extend than the standard &ldquo;dump everything to a handy app.py file&rdquo;.</li>
+<li><strong>Site UI/UX</strong>: Wasn&rsquo;t too important since it was just me using it. Go Bootstrap!</li>
 <li><strong>Deployment</strong>: Hosted on the WSL Ubuntu installation on my work laptop. It&rsquo;s a virtual environment, which works pretty good since it&rsquo;s just me using it.</li>
 </ul>
 <h2 class="text-xl font-bold pt-5" id="main-tasks">Main Tasks</h2>
 <ul class="list-disc pl-8 pt-0">
-<li>Upload &amp; read PDF invoices.</li>
-<li>Connect to the company MSSQL database.</li>
-<li>Connect to XeroAPI to send/receive data.</li>
+<li>Connect to XeroAPI to send/receive data.
+<ul class="list-disc pl-8 pt-0">
+<li>Remarketing Invoices: Get invoice data from company&rsquo;s MSSQL database, create new invoice in XeroAPI and upload PDF attachment from company drive.</li>
+<li>Creditor invoices: Read their PDFs, aggressively extract needed information, create invoice &amp; attach file with Xero API.</li>
+<li>Classify payroll into respective departments: Get payslips from payrun, lookup staff department, auto-dump this data to an Excel file, sum each department&rsquo;s cost then create manual journal.</li>
+</ul>
+</li>
+<li>General data collection from XeroAPI
+<ul class="list-disc pl-8 pt-0">
+<li>Extract raw data in formats that are unavailable directly from xero.com for further processing.</li>
+</ul>
+</li>
+<li>General Excel spreadsheet creation &amp; automation</li>
 </ul>
 <h2 class="text-xl font-bold pt-5" id="results">Results</h2>
 <p class="pt-5">I saved about 5 hours of work per week. My mental health improved! Hooray!</p>
@@ -100,6 +120,7 @@
         
         <script src="/js/fuse.js"></script> 
         <script src="/js/fastsearch.js"></script>
+        <script src="/js/main.js"></script>
     </body>
     
     <footer class="footer copyright text-center py-2 bg-black text-white">

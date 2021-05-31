@@ -45,7 +45,7 @@ Objectives  Replicate original portal Allow clients to access supplier portals a
       
       <guid>https://aileenhuang.dev/projects/warehouse-transfer/</guid>
       <description>Background When items get transferred within the warehouse, their location records in the database are updated so people know where to find &amp;lsquo;em. The full company app is simply too complicated to lug around the warehouse, so a slim version of it is used.
-It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere.</description>
+But even if it was slim? It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere.</description>
     </item>
     
   </channel>

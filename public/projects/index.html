@@ -38,10 +38,11 @@
 
 
     
-
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-5 float-right menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
+    <a href="javascript:void(0);" class="icon" onclick="hamburgMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-5 float-right menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </a>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 float-right ml-5 dark-mode" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
     </svg>
@@ -53,7 +54,16 @@
         <input id="searchInput" class="border-gray-800 border-b-2 px-2" placeholder="Search..." tabindex="0">
         <ul id="searchResults" class="absolute w-52 bg-white bg-opacity-75"></ul>
     </div>
+
 </header>
+
+<div id="navigation-menu" class="hidden block float-right z-20 bg-green-50 fixed top-16 pt-5 right-5">
+    <a href="/blog" class="block px-5 pb-5 text-green-900 hover:text-green-600">Blog</a>
+    <a href="/projects" class="block px-5 pb-5 text-green-900 hover:text-green-600">Projects</a>
+    <a href="/cv" class="block px-5 pb-5 text-green-900 hover:text-green-600">CV</a>
+    <a href="/about" class="block px-5 pb-5 text-green-900 hover:text-green-600">About</a>
+    <a href="/contact" class="block px-5 pb-5 text-green-900 hover:text-green-600">Contact</a>
+</div>
         <div id="content" class="pt-14">
     <div class="article-content w-full m-auto md:w-7/12">
         
@@ -130,7 +140,7 @@ Objectives  Replicate original portal Allow clients to access supplier portals a
                 <div class="summary py-5">
                     <p>
                         Background When items get transferred within the warehouse, their location records in the database are updated so people know where to find &lsquo;em. The full company app is simply too complicated to lug around the warehouse, so a slim version of it is used.
-It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere.
+But even if it was slim? It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere.
                         
                             [<a href="/projects/warehouse-transfer/" class="text-green-800 hover:text-green-600">Read More…</a>]
                         
@@ -154,6 +164,7 @@ It was a pain to use. The slim version had sizes that transformed quite terribly
         
         <script src="/js/fuse.js"></script> 
         <script src="/js/fastsearch.js"></script>
+        <script src="/js/main.js"></script>
     </body>
     
     <footer class="footer copyright text-center py-2 bg-black text-white">
