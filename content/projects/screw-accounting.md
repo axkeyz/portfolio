@@ -16,15 +16,19 @@ For the sake of my mental health and to be more productive with my other more en
 
 ## Approach
 
-- **Language/Framework**: Xero has provided API-scaffolding with C#, Java, NodeJS, PHP, Python and Ruby, of which I'm most familiar with PHP & Python (based off Flask). I was looking for a simple app only to do a few automation tasks, PHP has way too many dependencies. I didn't need CRUD either. Flask is a microframework that seemed just perfect for my use case.
-- **Site UI/UX**: Wasn't too important since it was just me using it. Did some basic styling with Bootstrap.
+- **Language/Framework**: I was lookiing to do make this quickly - a simple app for a few automation tasks - using either of the languages I knew best at this time (PHP/Python). PHP has way too many dependencies. I didn't need CRUD either. So I went with Python and made a Flask app. I did do some blueprint organisation so it would be easier to extend than the standard "dump everything to a handy app.py file".
+- **Site UI/UX**: Wasn't too important since it was just me using it. Go Bootstrap!
 - **Deployment**: Hosted on the WSL Ubuntu installation on my work laptop. It's a virtual environment, which works pretty good since it's just me using it.
 
 ## Main Tasks
 
-- Upload & read PDF invoices.
-- Connect to the company MSSQL database.
 - Connect to XeroAPI to send/receive data.
+    - Remarketing Invoices: Get invoice data from company's MSSQL database, create new invoice in XeroAPI and upload PDF attachment from company drive.
+    - Creditor invoices: Read their PDFs, aggressively extract needed information, create invoice & attach file with Xero API.
+    - Classify payroll into respective departments: Get payslips from payrun, lookup staff department, auto-dump this data to an Excel file, sum each department's cost then create manual journal.
+- General data collection from XeroAPI
+    - Extract raw data in formats that are unavailable directly from xero.com for further processing.
+- General Excel spreadsheet creation & automation
 
 ## Results
 

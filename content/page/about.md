@@ -3,13 +3,11 @@ title: "About Me & This Site"
 draft: false
 ---
 
-## About Me!
-
 Hey, I'm Aileen Huang. My main job title(s) don't include being a web developer, but I do do a lot of it in work and my spare time. 
 
-For work, it ends up being client reporting portals, internal tools, Wordpress stuff or vanilla JS snippets. In my spare time, I like to write private tools that can speed up my job, static site generation or mess arround with Godot (game engine) on the side.
+For work, it ends up being client reporting portals, internal tools, Wordpress stuff or vanilla JS snippets. On the side, i.e. my spare time, I like to write private tools that can speed up my job (as per job title), static site generation or mess around with Godot (game engine).
 
-I kinda like to work (min 46 hours per week), but I have a slightly potty mouth that complains about life a lot. My mouth is pottier under stress - so much that my supervisor calls me a grumpy cat - but then my colleagues discuss their ideas to help me.
+I kinda like to work (min 46 hours per week), but I have a slightly potty mouth that complains about work a lot. My mouth is pottier under stress - so much that my supervisor calls me a grumpy cat - but then my colleagues discuss their ideas to help me so it ends up being alright.
 
 I think, I kinda like to code. But then I'm kinda lazy, so I don't really know. And I'm not that good at it, which is discouraging. I'm better at coding than I am at math though, that's for sure.
 

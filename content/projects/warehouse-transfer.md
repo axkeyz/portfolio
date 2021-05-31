@@ -7,7 +7,7 @@ draft: false
 
 When items get transferred within the warehouse, their location records in the database are updated so people know where to find 'em. The full company app is simply too complicated to lug around the warehouse, so a slim version of it is used.
 
-It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere. But you needed to click them to be “in” a location and see its items. Stuff was scrollable wasn’t really. It was also kinda slow and the last item would sometimes disappear into development hell, so you had to scan it twice.
+But even if it was slim? It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere. But you needed to click them to be “in” a location and see its items. Stuff was scrollable wasn’t really. It was also kinda slow and the last item would sometimes disappear into development hell, so you had to scan it twice.
 
 For the sake of my colleagues mental health (?), I was told to build a light web app to fit this purpose.
 

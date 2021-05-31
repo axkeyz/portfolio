@@ -29,9 +29,9 @@ The original reporting portal was a bit clunky from old code and outdated design
 ## Approach
 
 - **Language/Framework**: Originally I tried to use Wordpress. It didn't work too well thanks to the Microsoft SQL database (MSSQL), so I switched to Laravel. Since this was my first time using Laravel, I just installed the default TALL stack (Tailwind, AlpineJS, Livewire, Laravel) alongside Jetstream. For the graphs, I used ApexCharts.
-- **UI/UX**: I ended up redesigning a few of the Jetstream components. A sidebar was added on the right, while the header was replaced with a job & item search (Livewire!). Apparently that was quite popular with our clients.
-- **Deployment**: Hosted on the company’s IIS server, in a subfolder of the Wordpress installation.
-- **Notes**: Thanks to a lot of the default scaffolding, I didn't need to write much authentication stuff despite much of the database fitting with "the Laravel way". There were also some nice features like 2FA.
+- **UI/UX**: I ended up redesigning a few of the Jetstream components. A sidebar was added on the right, while the header was replaced with a job & item search (Livewire!). Apparently the search function was quite popular with our clients.
+- **Deployment**: Hosted on the company’s IIS server, in a subfolder of the Wordpress installation. I had to rewrite the web.config file to get that working.
+- **Notes**: Thanks to a lot of the default scaffolding, I didn't need to write much authentication stuff despite much of the existing database not fitting with "the Laravel way". 
 
 ## Results
 

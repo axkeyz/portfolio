@@ -10,6 +10,8 @@ Based on a game called Host no Abunai Sekai (ホストのアブナイ世界), wh
 
 But the game wasn't really catered for long-term playing and wasn't hardcore enough. My game will be a bit more hardcore than that. The loan you have will now have a 50% interest rate per week (I plan to give all crippling depression as you give away your money every week). There'll be a more intelligent customer and employee host AI which you may benefit from, if you don't fall into the traps. Maybe they'll be a 98% success cap, just to mess with you.
 
+This game isn't the most ethical (well, scamming isn't ethical but you aren't killing I guess?), but it's fun. Hopefully anyway.
+
 ## Objectives
 
 - Replicate the basic mechanics of Host no Abunai Sekai.
@@ -22,7 +24,9 @@ But the game wasn't really catered for long-term playing and wasn't hardcore eno
 
 ## Main Tasks
 
-Dunno really.
+- Make the art
+- Code the mechanics
+- Deploy
 
 ## Results
 
