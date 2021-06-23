@@ -26,14 +26,44 @@
     {{ if .IsHome }}
     <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet"> 
     <style>
-        #home-img {
+        /* #home-img {
             background-image: url("img/bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-        }
+        } */
 
         .bitter {
             font-family: 'Bitter', serif;
+        }
+
+        @media screen and (max-width: 640px) {
+            #home-img {
+                background-image: url("img/main-w640.jpg");
+            }
+        }
+        @media screen and (min-width: 641px) and (max-width: 768px) {
+            #home-img {
+                background-image: url("img/main-w768.jpg");
+            }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            #home-img {
+                background-image: url("img/main-w1024.jpg");
+            }
+        }
+        @media screen and (min-width:1025px) and (max-width: 1280px) {
+            #home-img {
+                background-image: url("img/main-w1280.jpg");
+            }
+        }
+        @media screen and (min-width:1281px) {
+            #home-img {
+                background-image: url("img/main-w2048.jpg");
+            }
+        }
+        #home-img {
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
     {{ end }}
