@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <copyright>© {year} Aileen Huang. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 22 Apr 2021 20:48:00 +1300</lastBuildDate><atom:link href="https://aileenhuang.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 16:54:15 +1200</lastBuildDate><atom:link href="https://aileenhuang.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>List of resources used for this theme (Unrealised)</title>
+      <link>https://aileenhuang.dev/blog/2021/06/unrealised-theme-resources/</link>
+      <pubDate>Thu, 24 Jun 2021 16:54:15 +1200</pubDate>
+      
+      <guid>https://aileenhuang.dev/blog/2021/06/unrealised-theme-resources/</guid>
+      <description>Here&amp;rsquo;s a list of resources used for the theme used on this site, Unrealised. It&amp;rsquo;s a custom hugo theme by me (mwahaha!). I feel like this theme still has a lot of unrealised potential, so the theme is still a work in progress. This list will be updated to reflect any new resources / sources of inspiration.
+Inspiration  Theme name inspiration: Unrealised Reality, by Kari Sigurdsson  Resources  Base theme (theme that taught me to make this theme): kimcc&amp;rsquo;s Noteworthy theme Dev stack icons: Get Icon  </description>
+    </item>
+    
     <item>
       <title>New theme for the website</title>
       <link>https://aileenhuang.dev/blog/2021/04/new-theme/</link>
