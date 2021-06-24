@@ -63,6 +63,11 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        .min-h-screen {
+            min-height: -webkit-fill-available;
+        }
+
     </style>
     
 </head>
@@ -97,8 +102,7 @@
   <a href="/contact" class="block px-5 pb-5 text-green-900 hover:text-green-600">Contact</a>
 </div>
     <div id="home-img" class="grid grid-cols-1 grid-rows-1 items-center md:grid-rows-2 min-h-screen text-white">
-        <div class="hidden md:block"></div>
-        <div class="text-center">
+        <div class="text-center md:row-start-2">
             <h1 class="bitter text-8xl p-5">Aileen Huang</h1>
             <h2 class="bitter text-lg p-5">MAKING STUFF NOBODY <br class="block md:hidden"/>ASKED FOR </h2>
         </div>
@@ -155,11 +159,11 @@
         <h2 class="text-2xl font-bold text-center">Not enough? Get in touch!</h2><br/>
         <form name="contact" method="POST" data-netlify="true">
             <label for="name" class="text-sm">Name</label>
-            <input type="text" class="w-full p-3 rounded border border-green-500" name="name" />
+            <input type="text" class="w-full p-3 rounded border border-green-500 focus:ring-2 focus:ring-green-500" name="name" />
             <label for="email" class="text-sm">Email</label>
-            <input type="email" class="w-full p-3 rounded border border-green-500" name="email" />
+            <input type="email" class="w-full p-3 rounded border border-green-500 focus:ring-2 focus:ring-green-500" name="email" />
             <label for="message" class="text-sm">Message</label>
-            <textarea name="message" class="w-full p-3 rounded border border-green-500" rows="5"></textarea>
+            <textarea name="message" class="w-full p-3 rounded border border-green-500 focus:ring-2 focus:ring-green-500" rows="5"></textarea>
             <button type="submit" class="w-full mt-3 bg-green-500 text-white font-bold text-sm py-2 px-4 rounded hover:bg-green-600">Send</button>
         </form>
     </div>     
