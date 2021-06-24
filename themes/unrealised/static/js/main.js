@@ -1,3 +1,4 @@
+// Hamburg menu
 var menuVisible = false; 
 function hamburgMenu() {
     var x = document.getElementById("navigation-menu");
@@ -11,6 +12,7 @@ function hamburgMenu() {
     menuVisible = !menuVisible;
 }
 
+// Main menu change in colour
 var homeImg = document.querySelector("#home-img");
 var windowHeight = window.innerHeight;
 
@@ -40,3 +42,18 @@ if(homeImg){
         // document.querySelector(".svgClass").getSVGDocument().getElementById("search-toggler").setAttribute("fill", "red")
     }
 }
+
+// Skill tree
+function run (){
+
+    var div = document.createElement("div");  //create new div
+    div.classList.add("col-span-4");
+    div.innerHTML = "Backend";
+    // div.addEventListener("click", run);       //bind click to new div
+    this.appendChild(div);                    //append the new div to clicked div
+    this.classList.remove("col-span-4");
+    this.classList.add("col-span-1");
+    // this.removeEventListener("click", run);   //remove the original click event
+    
+  }
+document.getElementById("skill-tree").addEventListener("click", run);  //bind the initial click event
