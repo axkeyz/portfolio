@@ -103,7 +103,7 @@
             <h2 class="bitter text-lg p-5">MAKING STUFF NOBODY <br class="block md:hidden"/>ASKED FOR </h2>
         </div>
     </div>
-    <div class="m-12 text-center md:m-24">
+    <div class="p-12 text-center border-b border-green-200 md:p-24">
         <h2 class="text-2xl font-bold pb-5">Coding is fun except when it sucks. That's probably me.</h2>
         <p class="pb-5">Hey there, I'm Aileen. My job titles don’t include being a web or game developer, but I do a lot of coding for work and in my spare time.</p>
         <p class="pb-5">Coding is awesome when doing cool things (automate the boring stuff!), makes the shiniest new toys (fun and games!) until...
@@ -115,56 +115,61 @@
         <h2 class="text-2xl font-bold pb-5">The shiny stuff. Projects.</h2>
         <p class="pb-5">I brought these into the world after wrestling with the bugs. Clients claimed they were satisfied.</p>
     </div>
-    <div class="p-12 text-center bg-green-500 bg-opacity-50 z-0 md:p-24">
-        <h2 class="text-2xl font-bold pb-5">Skills. The power behind my projects.</h2>
+    <div class="p-24 text-center bg-green-500 bg-opacity-50 z-0">
+        <h2 class="text-2xl font-bold pb-5">Skills. The project powa!</h2>
         <p class="pb-5">My skill points are a bit stacked on PHP and Python, but I'm kinda open to anything.</p>
         <br />
-    </div><div class="z-20 grid grid-cols-11">
-    <div class="bg-white mx-auto block col-start-2 col-span-3 -mt-24">
-        <img src="https://via.placeholder.com/150" alt="" class="w-full h-48 sm:h-56 object-cover" />
-
-        <div class="px-10 py-6 mb-10 text-center">
-        <div class="text-2xl font-bold text-green-600 mb-4">MALAY</div>
-        <span class="text-sm">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate tempore eligendi magnam distinctio molestias. Incidunt at consequuntur consequatur 
-            officiis repudiandae! Culpa cum vel tenetur itaque eius provident voluptatum similique impedit?
-        </span>
+    </div><div class="z-20 grid grid-cols-1 p-12 md:grid-cols-12 md:p-0">
+    <div class="bg-white mx-auto block -mt-24 rounded w-full md:col-start-2 md:col-span-10">
+        <div class="px-10 py-6 text-center">
+            <div class="text-2xl font-bold text-green-600 mb-4">SKILL TREE</div>
+            <div class="text-sm my-8 text-left grid grid-cols-5 whitespace-pre-line" id="skill-tree">
+                <div>Web Dev
+                    Game Dev
+                </div>
+                <div class="hidden">
+                    Backend
+                    Frontend
+                </div>
+                <div class="hidden">
+                    SSG
+                    DB
+                    Dynamic/APIs
+                </div>
+                <div class="hidden">
+                    Laravel
+                    Wordpress
+                </div>
+                <div class="hidden">
+                    Explanations
+                </div>
+            </div>
         </div>
-
-        <button class="w-full text-lg h-16 text-white font-extrabold bg-green-600">VIEW RECIPES</button>
+        <p class="w-full text-lg h-16 text-white rounded-b font-extrabold bg-green-500" id="stack-explanation"></p>
     </div>
-</div><div class="m-12 text-center md:m-24">
-        <h2 class="text-2xl font-bold pb-5">Experience. Level up stuff.</h2>
+</div><div class="p-12 text-center border-b border-green-200 md:p-24">
+        <h2 class="text-2xl font-bold pb-5">Experience. Levelling up is the grind.</h2>
         <p class="pb-5">Not really that interesting. Check my generic CV for more info.</p>
-    </div>
-    <div class="m-12 grid grid-cols-5 md:m-24">
-        <div class="col-start-2 col-span-3">
-            <h2 class="text-2xl font-bold text-center">Not enough? Get in touch!</h2><br/>
-            <form name="contact" method="POST" data-netlify="true">
-                <label for="name" class="text-sm">Name</label>
-                <input type="text" class="w-full p-3 rounded border border-green-500" name="name" />
-                <label for="email" class="text-sm">Email</label>
-                <input type="email" class="w-full p-3 rounded border border-green-500" name="email" />
-                <label for="message" class="text-sm">Message</label>
-                <textarea name="message" class="w-full p-3 rounded border border-green-500" rows="5"></textarea>
-                <button type="submit" class="w-full mt-3 bg-green-500 text-white font-bold text-sm py-2 px-4 rounded hover:bg-green-600">Send</button>
-            </form>
-        </div>     
-    </div>
-
-
+    </div><div class="m-12 grid grid-cols-1 md:grid-cols-5 md:m-24">
+    <div class="md:col-start-2 md:col-span-3">
+        <h2 class="text-2xl font-bold text-center">Not enough? Get in touch!</h2><br/>
+        <form name="contact" method="POST" data-netlify="true">
+            <label for="name" class="text-sm">Name</label>
+            <input type="text" class="w-full p-3 rounded border border-green-500" name="name" />
+            <label for="email" class="text-sm">Email</label>
+            <input type="email" class="w-full p-3 rounded border border-green-500" name="email" />
+            <label for="message" class="text-sm">Message</label>
+            <textarea name="message" class="w-full p-3 rounded border border-green-500" rows="5"></textarea>
+            <button type="submit" class="w-full mt-3 bg-green-500 text-white font-bold text-sm py-2 px-4 rounded hover:bg-green-600">Send</button>
+        </form>
+    </div>     
+</div>
         
         
         <script src="/js/fuse.js"></script> 
         <script src="/js/fastsearch.js"></script>
         <script src="/js/main.js"></script>
     </body><footer class="footer copyright text-center py-10 bg-green-50 border-t-2 border-dashed border-green-500">
-	<div class="z-20 -mt-24">
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
-		</svg>
-	</div>
-
 	<p class="px-24 leading-8 md:p-0">
 		<a href="/about" class="px-5 pb-5 text-green-900 hover:text-green-600">About</a>
 		<a href="/blog" class="px-5 pb-5 text-green-900 hover:text-green-600">Blog</a>
