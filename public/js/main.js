@@ -89,8 +89,6 @@ for (var i = 0; i < techStacks.length; i++) {
     techStacks[i].addEventListener('mouseenter', getTechStacks);
 }
 
-document.getElementById("skill-tree").addEventListener('mouseleave', closeTechExplanation);
-
 function getTechStacks (){
     // Get the id
     id = techStackExplanations[this.id];
@@ -132,9 +130,4 @@ function getTechStacks (){
         techStackExplanation.innerHTML = null;
     }
     
-}
-
-function closeTechExplanation(){
-    techStackName.innerHTML = null;
-    techStackExplanation.innerHTML = null;
 }

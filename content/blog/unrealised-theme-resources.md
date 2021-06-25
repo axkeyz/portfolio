@@ -12,3 +12,4 @@ Here's a list of resources used for the theme used on this site, Unrealised. It'
 ## Resources
 1. Base theme (theme that taught me to make this theme): [kimcc's Noteworthy theme](https://github.com/kimcc/hugo-theme-noteworthy)
 2. Dev stack icons: [Dev Icon](https://devicon.dev/)
+3. [christiankozalla's Resume Template](https://github.com/christiankozalla/dev-resume-template/)
