@@ -131,3 +131,11 @@ function getTechStacks (){
     }
     
 }
+
+window.addEventListener('keydown', function(event) {
+    if ((event.code === 80 || event.code === "KeyP")&& (event.ctrlKey || event.metaKey) && !event.altKey && (!event.shiftKey || window.chrome || window.opera)) {
+        // event.preventDefault();
+        console.log("pressed");
+        return;
+    }
+}, true);

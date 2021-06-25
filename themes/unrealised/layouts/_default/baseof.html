@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
     {{- partial "head.html" . -}}
-    <body>
+    <body {{ if .IsHome }}class="print:hidden"{{ end }}>
         {{- partial "header.html" . -}}
         {{ if .IsHome }}
             {{- block "main" . }}{{- end }}
