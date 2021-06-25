@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="">
     <div id="home-img" class="grid grid-cols-1 grid-rows-1 items-center md:grid-rows-2 min-h-screen text-white">
         <div class="text-center md:row-start-2">
             <h1 class="bitter text-8xl p-5">Aileen Huang</h1>
@@ -18,7 +19,7 @@
         <p class="pb-5">I brought these into the world after wrestling with the bugs. Clients claimed they were satisfied.</p>
     </div>
     <div class="p-24 text-center bg-green-500 bg-opacity-50 z-0">
-        <h2 class="text-2xl font-bold pb-5">Skills. The project powa!</h2>
+        <h2 class="text-2xl font-bold pb-5">Skills. The powa!</h2>
         <p class="pb-5">My skill points are a bit stacked on PHP and Python, but I'm kinda open to anything.</p>
         <br />
     </div>
@@ -26,9 +27,12 @@
     
     <div class="p-12 text-center border-b border-green-200 md:p-24">
         <h2 class="text-2xl font-bold pb-5">Experience. Levelling up is the grind.</h2>
-        <p class="pb-5">Not really that interesting. Check my generic CV for more info.</p>
+        <p class="pb-5">Not really that interesting. Check my <a href="/about" class="text-green-600 hover:text-green-900">generic CV</a> for more info.</p>
     </div>
     
     {{- partial "contact.html" . -}}
-
+</div>
+<div>
+    You can print this
+</div>
 {{ end }}
