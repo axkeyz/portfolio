@@ -46,40 +46,45 @@ var techStacks = document.getElementsByClassName("tech");
 var techStackName = document.getElementById("stack-name");
 var techStackExplanation = document.getElementById("stack-explanation");
 var techStackExplanations = {
-    "ubuntu": ["Ubuntu: Linux Server", ["Apache", "Networking", "Windows Subsystem for Linux (WSL)"]],
-    "windows": ["Windows Server", ["Networking/Web Config"]],
-    "mysql": ["MySQL", ["API Integration", "Backups", "Relationships", "Scheduling", "Structured Query"]],
-    "mssql": ["Microsoft SQL Server (MSSQL)", ["API Integration", "Backups", "Relationships", "Scheduling", "Structured Query"]],
-    "html": ["HTML", ["Dynamic & Static", "Speed & Optimisation", "SEO", "Website"]],
-    "css": ["CSS", ["Bootstrap", "Tailwind"]],
-    "js": ["JavaScript (JS)", ["AlpineJS", "AJAX", "JQuery", "Library Integration", "Vanilla", "VueJS"]],
-    "php": ["PHP", ["API", "Backend", "CMS", "Laravel", "Wordpress", "Object-Orientated Programming (OOP)"]],
-    "python": ["Python", ["API", "Backend", "Flask", "Object-Orientated Programming (OOP)"]],
-    "bootstrap": ["Bootstrap: A CSS Framework"],
-    "tailwind": ["Tailwind: A CSS Framework"],
-    "alpinejs": ["AlpineJS: A Frontend JS Framework", ["API Integration", "DOM", "Other Library Integration"]],
-    "vuejs": ["VueJS: A Frontend JS Framework", ["API integration", "DOM", "Other Library Integration"]],
-    "jquery": ["JQuery", ["AJAX", "DOM"]],
-    "wordpress": ["Wordpress: A CMS built with PHP", ["API Integration", "Plugin Development", "Theme Development", "Woocommerce"]],
-    "laravel": ["Laravel: A PHP Framework", ["API Integration", "Blade Templating", "Livewire (AJAX)", "Custom CMS"]],
-    "flask": ["Flask: A Python-based Microframework", ["API Integration", "Blueprints", "Scaling"]],
-    "hugo": ["Hugo: Static Site Generation", ["Theme Development"]],
-    "godot": ["Godot: An Awesome Open Source Game Engine", ["Used to develop my 2D games"]],
-    "rstudio": ["R/RStudio: Statistical Software"]
+    "ubuntu": "Ubuntu: Linux Server",
+    "windows": "Windows Server", 
+    "mysql": "MySQL", 
+    "mssql": "Microsoft SQL Server (MSSQL)",
+    "html": "HTML", 
+    "css": "CSS",
+    "js": "JavaScript (JS)", 
+    "php": "PHP", 
+    "python": "Python", 
+    "bootstrap": "Bootstrap",
+    "tailwind": "Tailwind",
+    "alpinejs": "AlpineJS", 
+    "vuejs": "VueJS",
+    "jquery": "JQuery",
+    "wordpress": "Wordpress",
+    "laravel": "Laravel",
+    "flask": "Flask:",
+    "hugo": "Hugo (Static Site Generation)",
+    "godot": "Godot: An Awesome Open Source Game Engine",
+    "rstudio": "R/RStudio"
 };
 var techStackBranch = {
+    "ubuntu": ["mysql", "php", "python"],
+    "windows": ["mssql", "php", "python"],
+    "mysql": ["ubuntu", "php", "python"],
+    "mssql": ["windows", "php", "python"],
     "css": ["tailwind", "bootstrap"],
     "js": ["alpinejs", "vuejs", "jquery"],
-    "php": ["wordpress", "laravel"],
-    "python": ["flask"],
+    "php": ["ubuntu", "windows", "mysql", "mssql", "wordpress", "laravel"],
+    "python": ["ubuntu", "windows", "mysql", "mssql", "flask"],
     "tailwind": ["css"],
     "bootstrap": ["css"],
     "alpinejs": ["js"],
     "vuejs": ["js"],
     "jquery": ["js"],
-    "wordpress": ["php"],
-    "laravel": ["php"],
-    "flask": ["python"],
+    "wordpress": ["ubuntu", "windows", "mysql", "mssql", "php"],
+    "laravel": ["ubuntu", "windows", "mysql", "mssql", "php"],
+    "flask": ["ubuntu", "mysql", "mssql", "python"],
+    "hugo": ["ubuntu", "html", "css", "js"]
 }
 var previousStack;
 
@@ -119,22 +124,14 @@ function getTechStacks (){
     previousStack = currentStack;
     
     // Change the explanation of the stack
-    techStackName.innerHTML = id[0];
-
-    if(id[1]){
-        techStackExplanation.innerHTML = "&#68177; ";
-        for(var i=0; i < id[1].length; i++){
-            techStackExplanation.innerHTML += id[1][i] + " &#68177; ";
-        }
-    }else{
-        techStackExplanation.innerHTML = null;
-    }
+    techStackName.innerHTML = id;
     
 }
 
 window.addEventListener('keydown', function(event) {
     if ((event.code === 80 || event.code === "KeyP")&& (event.ctrlKey || event.metaKey) && !event.altKey && (!event.shiftKey || window.chrome || window.opera)) {
         // event.preventDefault();
+        window.location.replace("http://www.w3schools.com");
         console.log("pressed");
         return;
     }

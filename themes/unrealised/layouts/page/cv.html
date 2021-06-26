@@ -3,8 +3,8 @@
     {{- partial "head.html" . -}}
     <body class="w-full">
         <div class="container mx-auto max-w-screen-xl">
-            <main class="flex flex-col sm:flex-row-reverse">
-                <div id="sidebar" class="w-full sm:max-w-sm p-8 bg-green-50">
+            <main id="wrapper" class="flex flex-col sm:flex-row-reverse sm:m-12 shadow-2xl">
+                <div id="sidebar" class="w-full sm:max-w-sm p-12 bg-green-50">
                     <div class="px-2 mb-8">
                         <h1 class="text-center text-3xl font-semibold mb-2">Aileen Huang</h1>
                         <h2 class="text-center text-md font-light">Fullstack Developer</h2>
@@ -12,230 +12,184 @@
                     </div>
 
                     <div class="font-light px-2 mb-8">
-                        <h2 class="text-md font-semibold">Contact</h2>
-                        <div class="flex items-center my-3 text-sm">
+                        <h2 class="font-semibold text-xl">Contact</h2>
+                        <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/web.html" . -}}</span>
-                            <a href="https://aileenhuang.dev">aileenhuang.dev</a>
+                            <a href="https://aileenhuang.dev" class="hover:text-green-600">aileenhuang.dev</a>
                         </div>
-                        <div class="flex items-center my-3 text-sm">
+                        <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/email.html" . -}}</span>
-                            <a href="mailto:">aileen.huang@outlook.co.nz</a>
+                            <a href="mailto:" class="hover:text-green-600">aileen.huang@outlook.co.nz</a>
                         </div>
-                        <div class="flex items-center my-3 text-sm">
+                        <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/house.html" . -}}</span>
                             Auckland, NZ
                         </div>
                     </div>
 
                     <div class="font-light px-2 mb-8">
-                        <h2 class="text-md font-semibold">Connect</h2>
+                        <h2 class="font-semibold text-xl">Connect</h2>
                         {{ if isset .Site.Params "github" }}
                             <div class="flex items-center my-3">
                                 <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/github.html" . -}}</span>
-                                <a href="{{ .Site.Params.Github }}" class="text-sm">axkeyz</a>
+                                <a href="{{ .Site.Params.Github }}" class="hover:text-green-600">axkeyz</a>
                             </div>
                         {{ end }}
                         {{ if isset .Site.Params "stackoverflow" }}
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/stackoverflow.html" . -}}</span>
-                            <a href="{{ .Site.Params.Stackoverflow }}" class="text-sm">{{ .Site.Params.Stackoverflow }}</a>
+                            <a href="{{ .Site.Params.Stackoverflow }}" class="hover:text-green-600">{{ .Site.Params.Stackoverflow }}</a>
                         </div>
                         {{ end }}
                         {{ if isset .Site.Params "linkedin" }}
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/linkedin.html" . -}}</span>
-                            <a href="{{ .Site.Params.Linkedin }}" class="text-sm">/in/aileen-huang</a>
+                            <a href="{{ .Site.Params.Linkedin }}" class="hover:text-green-600">/in/aileen-huang</a>
                         </div>
                         {{ end }}
                         {{ if isset .Site.Params "twitter" }}
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/twitter.html" . -}}</span>
-                            <a href="{{ .Site.Params.Twitter }}" class="text-sm">{{ .Site.Params.Twitter }}</a>
+                            <a href="{{ .Site.Params.Twitter }}" class="hover:text-green-600">{{ .Site.Params.Twitter }}</a>
                         </div>
                         {{ end }}
                         {{ if isset .Site.Params "codepen" }}
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/codepen.html" . -}}</span>
-                            <a href="{{ .Site.Params.Codepen }}" class="text-sm">{{ .Site.Params.Codepen }}</a>
+                            <a href="{{ .Site.Params.Codepen }}" class="hover:text-green-600">{{ .Site.Params.Codepen }}</a>
                         </div>
                         {{ end }}
                     </div>
 
                     <div class="font-light px-2 mb-5">
-                        <h2 class="text-md font-semibold">Skills</h2>
-                        <p class="whitespace-pre-line text-sm my-3"><span class="font-semibold">Programming:</span> HTML/CSS, JavaScript, PHP, Python, R, SQL
+                        <h2 class="font-semibold text-xl">Skills</h2>
+                        <p class="whitespace-pre-line my-3"><span class="font-semibold">Programming:</span> HTML/CSS, JavaScript, PHP, Python, R, SQL
                             <span class="font-semibold">Frameworks:</span> AlpineJS, Bootstrap, Flask, Hugo, JQuery, Laravel, Tailwind CSS, Vue, Wordpress
                             <span class="font-semibold">Tools:</span> Atom, Docker, Git, VS Code, WSL
-                            <span class="font-semibold">Misc:</span> Godot, Photoshop, Medibang
+                            <span class="font-semibold">Misc:</span> Blender, Godot, Photoshop, Medibang, Xero
                         </p>
                     </div>
 
                     <div class="font-light px-2 mb-5">
-                        <h2 class="text-md font-semibold">Education</h2>
-                        <p class="text-sm my-3 whitespace-pre-line"><span class="font-semibold">Auckland University of Technology </span><span class="text-xs">[2016-2020]</span>
-                            Bachelor of Business (International Business) & Bachelor of Science (Food Science)
+                        <h2 class="font-semibold text-xl">Education</h2>
+                        <p class="mt-3">
+                            <span class="font-semibold">Auckland University of Technology</span> <span class="text-xs">[2016-2020]</span>
+                            <ul class="list-disc">
+                                <li class="ml-4">BBus (International Business)</li>
+                                <li class="ml-4">BSc (Food Science)</li>
+                            </ul>
                         </p>
                         
                     </div>
 
                     <div class="font-light px-2 mb-5">
-                        <h2 class="text-md font-semibold mb-4">Languages</h2>
-                        <p class="text-sm my-3">English & Chinese</p>
+                        <h2 class="font-semibold text-xl mb-4">Languages</h2>
+                        <p class="my-3">English & Chinese</p>
                     </div>
                 </div>
                 <div class="content w-full p-12">
-                    <div id="profile" class="prose">
-                        <h2 class="section-headline text-xl font-semibold">Profile</h2>
+                    <div id="profile">
+                        <h2 class="section-headline border-l-8 border-green-300 mb-4 pl-4 text-xl font-semibold">Profile</h2>
                         <p>
                             My job titles don’t include being a web or game developer, but I ended up doing a lot of coding for work and in my spare time.
-                            It's probably because I self-taught myself the core fundamentals - HTML, CSS and JS - which was followed by more complex backend technologies
-                            powered by PHP or Python. I'm experienced with creating and connecting to APIs.
-                            I've built dynamic sites with Laravel, Wordpress and Django and static sites with Hugo.
+                            It's probably because I self-taught myself the core frontend fundamentals - HTML, CSS and JS - with backends powered by
+                            PHP or Python. I've built sites with Wordpress, Laravel and Flask, but when an API isn't needed, I'll go with Hugo's static site generator.
                         </p>
                     </div>
-                    <hr class="mt-8 mb-12" />
-                    <div id="experience" class="prose">
-                    <h2 class="section-headline">Experience</h2>
-                    <div>
-                        <h3>Example Inc</h3>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Jul.&nbsp;2019:
+                    <hr class="mt-6 mb-6 border-green-200" />
+                    <div id="experience">
+                        <h2 class="text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Experience</h2>
+                        <div>
+                            <h3 class="font-semibold">Divers Group</h3>
+                            <section class="mb-2">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    April 2019 - Present
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    Accounts & Technical Services Assistant
+                                </div>
+                            </section>
+                            <section class="mb-4">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Achievements
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <ul class="list-disc">
+                                        <li class="ml-4">Developed custom solutions (plugin & theme development) for Wordpress according to best practices</li>
+                                        <li class="ml-4">Designed and developed a client reporting portal & API using Laravel with charts based on ApexCharts.js</li>
+                                        <li class="ml-4">Upgraded a warehouse transfer app with vanilla PHP</li>
+                                        <li class="ml-4">Proactively connected an automation app to Xero API using Python Flask, saving accounting time</li>
+                                        <li class="ml-4">Assessed and addressed Microsoft Server & MSSQL issues</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="mb-2">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Main tools
+                                </div>
+                                <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Tailwind</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Bootstrap</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Wordpress</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Laravel</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Livewire</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Flask</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Git</span>
+                                </div>
+                            </section>
                         </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            Fullstack Developer
-                        </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Task:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Description:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Tools:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            <span class="rounded-xl bg-gray-300 px-3">Vue</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Vuex</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Bootstrap</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Docker</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Git</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Bitbucket</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Jira</span>
-                        </div>
-                        </section>
                     </div>
-                    </div>
-                    <hr class="mt-8 mb-12" />
-                    <div id="projects" class="prose">
-                    <h2 class="section-headline">Projects</h2>
-                    <div class="mb-16">
-                        <h3 id="chrisko-headline">Chrisko.io</h3>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Personal blog:
+                    <hr class="mt-6 mb-6 border-green-200" />
+                    <div id="projects">
+                        <h2 class="section-headline text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Projects</h2>
+                        <div class="mb-4">
+                            <h3 class="font-semibold"><a href="https://aileenhuang.dev" class="hover:text-green-600">https://aileenhuang.dev</a></h3>
+                            <section class="mb-2">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Personal website
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    My online presence and territory! I share things I find interesting during my learning journey and previews of my 
+                                    games that are still in development. 
+                                </div>
+                            </section>
+                            <section class="mb-2">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Main tools
+                                </div>
+                                <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Tailwind</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Vanilla JS</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Markdown</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Hugo</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Git</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Netlify</span>
+                                </div>
+                            </section>
                         </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            My blog is the center of my online presence. Here, I share
-                            posts about what I've learnt, tutorials and my thoughts on web
-                            development in general.
+                        <div class="mb-4">
+                            <h3 class="font-semibold">Where'd my money go?</h3>
+                            <section class="mb-2">
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Indie game
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    Based on SEEC's 『ホストのアブナイ世界』, an untranslated game about the dangerous world of hosts.
+                                    This game is intended to demonstrate an even more dangerous world.
+                                </div>
+                            </section>
+                            <section>
+                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                    Main tools
+                                </div>
+                                <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Medibang</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Photoshop</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Blender</span>
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Godot</span>
+                                </div>
+                            </section>
                         </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Deployed to:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            <a
-                            href="https://chrisko.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >chrisko.io</a
-                            >
-                        </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Code on:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            <a
-                            href="https://github.com/christiankozalla/nextjs-blog"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >GitHub/nextjs-blog</a
-                            >
-                        </div>
-                        </section>
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Features:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            <ul>
-                            <li>Static generation</li>
-                            <li>Blog content written in Markdown</li>
-                            <li>Counter for pageviews and likes</li>
-                            <li>My latest tweets</li>
-                            <li>Featured images made with Inkscape</li>
-                            <li>SEO</li>
-                            </ul>
-                        </div>
-                        </section>
-
-                        <section class="mb-6">
-                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                            Built with:
-                        </div>
-                        <div class="lg:inline-block lg:w-8/12 w-full">
-                            <span class="rounded-xl bg-gray-300 px-3">Next.js</span>
-                            <span class="rounded-xl bg-gray-300 px-3">CSS</span>
-                            <span class="rounded-xl bg-gray-300 px-3">styled-jsx</span>
-                            <span class="rounded-xl bg-gray-300 px-3">DynamoDB</span>
-                            <span class="rounded-xl bg-gray-300 px-3">Vercel</span>
-                        </div>
-                        </section>
-                    </div>
-                    </div>
-                    <hr class="mt-8 mb-12" />
-                    <div id="projects" class="prose">
-                    <h2 class="section-headline">Expand my skills</h2>
-                    <div class="mb-16">
-                        <h4 id="expand-knowledge-headline">
-                        I'd like to expand my skills and knowledge in several fields
-                        </h4>
-                        <ul>
-                        <li>TypeScript</li>
-                        <li>Testing, e.g. with Mocha, Chai, Jest</li>
-                        <li>Web Components, e.g. with StencilJS, LitElement</li>
-                        <li>Prototyping and Wireframing, e.g. with Figma, Adobe XD</li>
-                        <li>Scalable Vector Graphics</li>
-                        <li>Databases</li>
-                        <li>Mobile development</li>
-                        <li>
-                            Backend development, e.g. learn additional language like Go,
-                            Python, PHP, Ruby, Java, Rust
-                        </li>
-                        </ul>
-                    </div>
                     </div>
                 </div>
             </main>
