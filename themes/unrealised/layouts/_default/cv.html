@@ -66,11 +66,7 @@
 
                     <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl">Skills</h2>
-                        <p class="whitespace-pre-line my-3"><span class="font-semibold">Programming:</span> HTML/CSS, JavaScript, PHP, Python, R, SQL
-                            <span class="font-semibold">Frameworks:</span> AlpineJS, Bootstrap, Flask, Hugo, JQuery, Laravel, Tailwind CSS, Vue, Wordpress
-                            <span class="font-semibold">Tools:</span> Atom, Docker, Git, VS Code, WSL
-                            <span class="font-semibold">Misc:</span> Blender, Godot, Photoshop, Medibang, Xero
-                        </p>
+                        <p class="whitespace-pre-line my-3">{{ with .Site.GetPage "/cv/skills" }}{{ .Content }}{{ end }}</p>
                     </div>
 
                     <div class="font-light px-2 mb-8">
@@ -93,11 +89,7 @@
                 <div class="content w-full p-12">
                     <div id="profile">
                         <h2 class="section-headline border-l-8 border-green-300 mb-4 pl-4 text-xl font-semibold">Profile</h2>
-                        <p>
-                            My job titles don’t include being a web or game developer, but I ended up doing a lot of coding for work and in my spare time.
-                            It's probably because I self-taught myself the core frontend fundamentals - HTML, CSS and JS - with backends powered by
-                            PHP or Python. I've built sites with Wordpress, Laravel and Flask, but when an API isn't needed, I'll go with Hugo's static site generator.
-                        </p>
+                        {{ with .Site.GetPage "/cv/profile" }}{{ .Content }}{{ end }}
                     </div>
                     <hr class="mt-6 mb-6 border-green-200" />
                     <div id="experience">
