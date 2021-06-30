@@ -93,94 +93,92 @@
                         <h2 class="section-headline border-l-8 border-green-300 mb-4 pl-4 text-xl font-semibold">Profile</h2>
                         {{ with .Site.GetPage "/cv/profile" }}{{ .Content }}{{ end }}
                     </div>
+
                     <hr class="mt-6 mb-6 border-green-200" />
-                    <div id="experience">
-                        <h2 class="text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Experience</h2>
-                        <div>
-                            <h3 class="font-semibold">Divers Group</h3>
-                            <section class="mb-2">
-                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                    April 2019 - Present
-                                </div>
-                                <div class="lg:inline-block lg:w-8/12 w-full">
-                                    Accounts & Technical Services Assistant
-                                </div>
-                            </section>
-                            <section class="mb-4">
-                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                    Achievements
-                                </div>
-                                <div class="lg:inline-block lg:w-8/12 w-full">
-                                    <ul class="list-disc">
-                                        <li class="ml-4">Developed custom solutions (plugin & theme development) for Wordpress according to best practices</li>
-                                        <li class="ml-4">Designed and developed a client reporting portal & API using Laravel with charts based on ApexCharts.js</li>
-                                        <li class="ml-4">Upgraded a warehouse transfer app with vanilla PHP</li>
-                                        <li class="ml-4">Proactively connected an automation app to Xero API using Python Flask, saving accounting time</li>
-                                        <li class="ml-4">Assessed and addressed Microsoft Server & MSSQL issues</li>
-                                    </ul>
-                                </div>
-                            </section>
-                            <section class="mb-2">
-                                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                    Main tools
-                                </div>
-                                <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Tailwind</span>
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Livewire</span>
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Wordpress</span>
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Laravel</span>
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Flask</span>
-                                    <span class="rounded-xl bg-green-300 text-green-700 px-3">Git</span>
-                                </div>
-                            </section>
+
+                    <h2 class="text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Experience</h2>
+                    {{ $experience := where .RegularPages "Type" "in" "experience" }}
+                    {{ range sort $experience "Filename" }}
+                    <div class="mb-4">
+                        <h3 class="font-semibold">{{ .Name }}</h3>
+                        <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                            {{ .Params.attendDate }}
                         </div>
+                        <div class="mb-2 lg:inline-block lg:w-8/12 w-full">
+                            {{ .Params.position }}
+                        </div>
+                        {{ if isset .Params "achievements" }}
+                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                Achievements
+                            </div>
+                            <div class="lg:inline-block lg:w-8/12 w-full mb-4">
+                                <ul class="list-disc">
+                                    {{ range $achievement := .Params.achievements}}
+                                        <li class="ml-4">{{ $achievement }}</li>
+                                    {{ end }}
+                                </ul>
+                        </div>
+                        {{ end }}
+                        {{ if isset .Params "tasks" }}
+                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                Main tasks
+                            </div>
+                            <div class="lg:inline-block lg:w-8/12 w-full mb-4">
+                                <ul class="list-disc">
+                                    {{ range $task := .Params.tasks}}
+                                        <li class="ml-4">{{ $task }}</li>
+                                    {{ end }}
+                                </ul>
+                        </div>
+                        {{ end }}
+                        {{ if isset .Params "tools" }}
+                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                Main tools
+                            </div>
+                            <div class="text-sm mb-2 leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
+                                {{ range $tool := .Params.tools}}
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3 whitespace-nowrap">{{ $tool }}</span>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                        {{ if isset .Params "services" }}
+                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                Services
+                            </div>
+                            <div class="text-sm mb-2 leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
+                                {{ range $service := .Params.services}}
+                                    <span class="rounded-xl bg-green-300 text-green-700 px-3 whitespace-nowrap">{{ $service }}</span>
+                                {{ end }}
+                            </div>
+                        {{ end }}
                     </div>
+                    {{ end }}
                     <hr class="mt-6 mb-6 border-green-200" />
                     <h2 class="section-headline text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Projects</h2>
-                    <div class="mb-4">
-                        <h3 class="font-semibold"><a href="https://aileenhuang.dev" class="hover:text-green-600">https://aileenhuang.dev</a></h3>
-                        <section class="mb-2">
+                    {{ $projectsList := where .RegularPages "Type" "in" "projectShowcase" }}
+                    {{ range $projectsList }}
+                        <div class="mb-4">
+                            <h3 class="font-semibold">
+                                {{ if isset .Params "link" }}
+                                    <a href="{{ .Params.link }}" class="hover:text-green-600">{{ .Name }}</a>
+                                {{ else }}
+                                    {{ .Name }}
+                                {{ end }}
+                            </h3>
                             <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                Personal website
+                                {{ .Params.tagline }}
                             </div>
                             <div class="lg:inline-block mb-2 lg:w-8/12 w-full">
-                                My online presence and territory. I share things I find interesting during my learning journey and previews of my 
-                                games that are still in development. 
+                                {{ .Params.description }}
                             </div>
                             <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
                                 Main tools
                             </div>
-                            <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Tailwind</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Vanilla JS</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Markdown</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Hugo</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Git</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Netlify</span>
+                            <div class="text-sm mb-2 leading-6 align-middle mb-2 lg:inline-block lg:w-8/12 w-full">
+                                {{ .Content | replaceRE "<ul>" "" | replaceRE "</ul>" "" | replaceRE "<li>" "<span class=\"rounded-xl whitespace-nowrap bg-green-300 text-green-700 px-3\">" | replaceRE "</li>" "</span>" | safeHTML}}
                             </div>
-                        </section>
-                    </div>
-                    <div class="mb-4">
-                        <h3 class="font-semibold">Where'd my money go?</h3>
-                        <section class="mb-2">
-                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                Indie game
-                            </div>
-                            <div class="lg:inline-block mb-2 lg:w-8/12 w-full">
-                                Inspired by SEEC's 『ホストのアブナイ世界』, an untranslated game about the dangerous world of hosts.
-                                "Where'd my money go?" is intended to demonstrate an even more dangerous world. In development. 
-                            </div>
-                            <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                                Main tools
-                            </div>
-                            <div class="text-sm leading-6 align-middle lg:inline-block lg:w-8/12 w-full">
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Medibang</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Photoshop</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Blender</span>
-                                <span class="rounded-xl bg-green-300 text-green-700 px-3">Godot</span>
-                            </div>
-                        </section>
-                    </div>
+                        </div>
+                    {{ end }}
                 </div>
             </main>
         </div>
@@ -188,5 +186,4 @@
             {{- partial "cv/nav.html" -}}
         </div>
       </body>
-      <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
 </html>

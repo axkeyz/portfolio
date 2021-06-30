@@ -1,0 +1,17 @@
+---
+title: "https://aileenhuang.dev"
+link: "https://aileenhuang.dev"
+draft: false
+generatePage: false
+type: "projectShowcase"
+
+tagline: "Personal website"
+description: "My online presence and territory. I share things I find interesting during my learning journey and previews of my games that are still in development."
+
+---
+- Tailwind
+- Vanilla JS
+- Markdown
+- Hugo
+- Git
+- Netlify
