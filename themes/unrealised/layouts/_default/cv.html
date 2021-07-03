@@ -18,7 +18,7 @@
                         <h2 class="font-semibold text-xl">Contact</h2>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/web.html" . -}}</span>
-                            <a href="{{ .Site.Params.Website }}" class="hover:text-green-600">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.website }}{{ end }}</a>
+                            <a href="{{ .Site.Params.Website }}" class="hover:text-green-600">{{ with .Site.GetPage "cv/profile" }}{{ .Params.website }}{{ end }}</a>
                         </div>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/email.html" . -}}</span>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/house.html" . -}}</span>
-                            {{ with .Site.GetPage "/cv/profile" }}{{ .Params.location }}{{ end }}
+                            {{ with .Site.GetPage "cv/profile" }}{{ .Params.location }}{{ end }}
                         </div>
                     </div>
 
@@ -35,7 +35,7 @@
                         {{ if isset .Site.Params "github" }}
                             <div class="flex items-center my-3">
                                 <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/github.html" . -}}</span>
-                                <a href="{{ .Site.Params.Github }}" class="hover:text-green-600">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.github }}{{ end }}</a>
+                                <a href="{{ .Site.Params.Github }}" class="hover:text-green-600">{{ with .Site.GetPage "cv/profile" }}{{ .Params.github }}{{ end }}</a>
                             </div>
                         {{ end }}
                         {{ if isset .Site.Params "stackoverflow" }}
@@ -85,13 +85,13 @@
 
                     <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl mb-4">Languages</h2>
-                        <p class="my-3">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.languages }}{{ end }}</p>
+                        <p class="my-3">{{ with .Site.GetPage "cv/profile" }}{{ .Params.languages }}{{ end }}</p>
                     </div>
                 </div>
                 <div class="content w-full p-12">
                     <div id="profile">
                         <h2 class="section-headline border-l-8 border-green-300 mb-4 pl-4 text-xl font-semibold">Profile</h2>
-                        {{ with .Site.GetPage "/cv/profile" }}{{ .Content }}{{ end }}
+                        {{ with .Site.GetPage "cv/profile" }}{{ .Content }}{{ end }}
                     </div>
 
                     <hr class="mt-6 mb-6 border-green-200" />
@@ -156,7 +156,7 @@
                     <hr class="mt-6 mb-6 border-green-200" />
                     <h2 class="section-headline text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Projects</h2>
                     {{ $projectsList := where .RegularPages "Type" "in" "projectShowcase" }}
-                    {{ range $projectsList }}
+                    {{ range sort $projectsList "File.Filename" }}
                         <div class="mb-4">
                             <h3 class="font-semibold">
                                 {{ if isset .Params "link" }}
@@ -185,7 +185,6 @@
         <div class="my-8 py-3 text-center">
             {{- partial "cv/nav.html" -}}
         </div>
-        <div id="canvas"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/pdfmake.min.js" integrity="sha512-q+jWnBtVH327w/3nlp2Th9Dtjmlfj3Mb4tXCGbYjYWUqtFyIhl1Ul8GXoMkzbWvdIRVlS0P1pyteYUzxArKYOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/vfs_fonts.min.js" integrity="sha512-BDZ+kFMtxV2ljEa7OWUu0wuay/PAsJ2yeRsBegaSgdUhqIno33xmD9v3m+a2M3Bdn5xbtJtsJ9sSULmNBjCgYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
@@ -240,9 +239,9 @@
                                                     [
                                                         {
                                                             text: [
-                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.website }}{{ end }}\n', link: '{{ .Site.Params.Website }}', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.website }}{{ end }}\n', link: '{{ .Site.Params.Website }}', fontSize:8},
                                                                 {text: '{{ .Site.Params.Email }}\n', fontSize:8},
-                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.location }}{{ end }}\n', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.location }}{{ end }}\n', fontSize:8},
                                                             ],
                                                             lineHeight: 2.3,
                                                             margin: [ 42, -3, 0, -3 ],
@@ -260,8 +259,8 @@
                                                     [
                                                         {
                                                             text: [
-                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.github }}{{ end }}\n', link: '{{ .Site.Params.Github }}', fontSize:8},
-                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.linkedin }}{{ end }}', link: '{{ .Site.Params.Linkedin }}', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.github }}{{ end }}\n', link: '{{ .Site.Params.Github }}', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.linkedin }}{{ end }}', link: '{{ .Site.Params.Linkedin }}', fontSize:8},
                                                             ],
                                                             lineHeight: 2.3,
                                                             margin: [ 42, -3, 0, -3 ],
@@ -322,7 +321,7 @@
                                                     [
                                                         {
                                                             text: [
-                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.languages }}{{ end }}', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.languages }}{{ end }}', fontSize:8},
                                                             ],
                                                             lineHeight: 1.2,
                                                             margin: [ 21, -3, 21, -3 ],
@@ -342,7 +341,7 @@
                     ],
                     pageMargins: [ 0,0,0,0 ],
                     images: {
-                        test: 'http://localhost:1313/img/pdf-bg.png'
+                        test: '{{ .Site.BaseURL }}/img/pdf-bg.png'
                     }
                 };
     
