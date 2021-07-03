@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <copyright>© {year} Aileen Huang. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Jun 2021 16:54:15 +1200</lastBuildDate><atom:link href="https://aileenhuang.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 14:11:38 +1200</lastBuildDate><atom:link href="https://aileenhuang.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Porting my online CV from HTML to PDF</title>
+      <link>https://aileenhuang.dev/blog/2021/07/html-to-pdf/</link>
+      <pubDate>Sat, 03 Jul 2021 14:11:38 +1200</pubDate>
+      
+      <guid>https://aileenhuang.dev/blog/2021/07/html-to-pdf/</guid>
+      <description>I have an online CV that can be found on this site, at this link.
+Looks pretty good right? The HTML behind it was pretty easy. I&amp;rsquo;ll admit that it&amp;rsquo;s pretty inspired by other HTML templates out there.
+I decided that I wanted to keep my custom text (like the skills &amp;amp; projects) away from my template code. This is so that I can easily add to the content if I say, change a job, without messing out the layout.</description>
+    </item>
+    
     <item>
       <title>List of resources used for this theme (Unrealised)</title>
       <link>https://aileenhuang.dev/blog/2021/06/unrealised-theme-resources/</link>

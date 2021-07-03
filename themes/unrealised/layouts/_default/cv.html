@@ -65,14 +65,6 @@
                     </div>
 
                     <div class="font-light px-2 mb-8">
-                        <h2 class="font-semibold text-xl">Skills</h2>
-                        {{$skillsList := where .RegularPages "Type" "in" "skills"}}
-                        {{ range sort $skillsList "File.Filename" }}
-                            <p class="my-3"><span class="font-semibold">{{ .Name }}:</span> {{ .RawContent }}</p>
-                        {{ end }} 
-                    </div>
-
-                    <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl">Education</h2>
                         {{ $educationList := where .RegularPages "Type" "in" "education" }}
                         {{ range sort $educationList "File.Filename" }}
@@ -81,6 +73,27 @@
                             {{ .Content | replaceRE "<li>" "<li class=\"ml-4\">" | replaceRE "<ul>" "<ul class=\"list-disc\">" | safeHTML}}
                         </p>
                         {{ end }}
+                    </div>
+
+                    <div class="font-light px-2 mb-8">
+                        <h2 class="font-semibold text-xl">Skills</h2>
+                        {{$skillsList := where .RegularPages "Type" "in" "skills"}}
+                        {{ range sort $skillsList "File.Filename" }}
+                            <p class="my-3"><span class="font-semibold">{{ .Name }}:</span> {{ .RawContent }}</p>
+                        {{ end }} 
+                    </div>
+
+                    <div class="font-light px-2 mb-8">
+                        <h2 class="font-semibold text-xl">Interests</h2>
+                        {{$interestsList := where .RegularPages "Type" "in" "interests"}}
+                        {{ range sort $interestsList "File.Filename" }}
+                            <p class="my-3"><span class="font-semibold">{{ .Name }}:</span> {{ .RawContent }}</p>
+                        {{ end }} 
+                    </div>
+
+                    <div class="font-light px-2 mb-8">
+                        <h2 class="font-semibold text-xl mb-4">Hobbies</h2>
+                        <p class="my-3">{{ with .Site.GetPage "cv/profile" }}{{ .Params.hobbies }}{{ end }}</p>
                     </div>
 
                     <div class="font-light px-2 mb-8">
@@ -195,7 +208,7 @@
                     pageSize: 'A4',
                     background: [
                         {
-                            image: 'test',
+                            image: 'backgroundImg',
                             width: 600
                         }
                     ],
@@ -207,13 +220,79 @@
                                 body: [
                                     [ 
                                         {
-                                            text: 'first column',
-                                            color: '#000000',
+                                            table: {
+                                                widths: ['100%'],
+                                                heights: [20, 20, 20, 20, 20, 30],
+                                                body: [
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            columns: [
+                                                                {
+                                                                    image: 'headingBorder',
+                                                                    width: 4
+                                                                },
+                                                                {
+                                                                    width: '*',
+                                                                    text: 'Profile',
+                                                                    margin: [ 8, 1.5 ]
+                                                                },
+                                                            ],
+                                                            margin: [ 20, 0 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: '{{ with .Site.GetPage "cv/profile" }}{{ .RawContent }}{{ end }}',
+                                                            fontSize: 9,
+                                                            margin: [20, -10, 20, 0],
+                                                            lineHeight: 1.4,
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            canvas: [
+                                                                {
+                                                                    type: 'line',
+                                                                    x1: 20,
+                                                                    y1: 5,
+                                                                    x2: 406,
+                                                                    y2: 5,
+                                                                    lineWidth: 0.5,
+                                                                    lineColor: '#D9F99D',
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            columns: [
+                                                                {
+                                                                    image: 'headingBorder',
+                                                                    width: 4
+                                                                },
+                                                                {
+                                                                    width: '*',
+                                                                    text: 'Experience',
+                                                                    margin: [ 8, 1.5 ]
+                                                                },
+                                                            ],
+                                                            margin: [20, -5, 20, 0],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            
+                                                        }
+                                                    ]
+                                                ]
+                                            },
+                                            layout: 'noBorders'
                                         },
                                         {
                                             table: {
                                                 widths: ['100%'],
-                                                heights: [15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 1000],
+                                                heights: [15, 25, 7, 15, 25, 7, 15, 25, 10, 15, 25, 10, 15, 25, 10, 15, 25, 10, 15, 25, 20, 15, '*'],
                                                 body: [
                                                     [{}],
                                                     [
@@ -233,7 +312,7 @@
                                                             text: [
                                                                 {text: 'Contact\n', fontSize:10},
                                                             ],
-                                                            margin: [ 21, -3 ],
+                                                            margin: [ 23, -3 ],
                                                         }
                                                     ],
                                                     [
@@ -253,7 +332,7 @@
                                                             text: [
                                                                 {text: 'Connect\n', fontSize:10},
                                                             ],
-                                                            margin: [ 21, -3 ],
+                                                            margin: [ 23, -3 ],
                                                         }
                                                     ],
                                                     [
@@ -265,6 +344,28 @@
                                                             lineHeight: 2.3,
                                                             margin: [ 42, -3, 0, -3 ],
                                                         }
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Education\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 23, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {{ range sort $educationList "File.Filename" }}
+                                                                    {text: '{{ .Name }} ', fontSize:8, bold:true},
+                                                                    {text: '[{{ .Params.attendDate }}]', fontSize:8},
+                                                                    {text: '{{ .Content | replaceRE "<li>" "- " | replaceRE "</li>" "" | replaceRE "<ul>" "" | replaceRE "</ul>" "" | safeHTML}}', fontSize:8},
+                                                                {{ end }} 
+                                                            ],
+                                                            lineHeight: 1.2,
+                                                            margin: [ 23, -3, 21, -3 ],
+                                                        },
                                                     ],
                                                     [{}],
                                                     [
@@ -284,29 +385,46 @@
                                                                 {{ end }} 
                                                             ],
                                                             lineHeight: 1.2,
-                                                            margin: [ 21, -3, 21, -3 ],
+                                                            margin: [ 23, -3, 21, -3 ],
                                                         },
                                                     ],
                                                     [{}],
                                                     [
                                                         {
                                                             text: [
-                                                                {text: 'Education\n', fontSize:10},
+                                                                {text: 'Interests\n', fontSize:10},
                                                             ],
-                                                            margin: [ 21, -3 ],
+                                                            margin: [ 23, -3 ],
                                                         }
                                                     ],
                                                     [
                                                         {
                                                             text: [
-                                                                {{ range sort $educationList "File.Filename" }}
-                                                                    {text: '{{ .Name }} ', fontSize:8, bold:true},
-                                                                    {text: '[{{ .Params.attendDate }}]', fontSize:8},
-                                                                    {text: '{{ .Content | replaceRE "<li>" "- " | replaceRE "</li>" "" | replaceRE "<ul>" "" | replaceRE "</ul>" "" | safeHTML}}', fontSize:8},
+                                                                {{ range sort $interestsList "File.Filename" }}
+                                                                    {text: '{{ .Name }}: ', fontSize:8, bold:true},
+                                                                    {text: '{{ .RawContent }}\n\n', fontSize:8},
                                                                 {{ end }} 
                                                             ],
                                                             lineHeight: 1.2,
-                                                            margin: [ 21, -3, 21, -3 ],
+                                                            margin: [ 23, -3, 21, -3 ],
+                                                        },
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Hobbies\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 23, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.hobbies }}{{ end }}', fontSize:8},
+                                                            ],
+                                                            lineHeight: 1.2,
+                                                            margin: [ 23, -3, 21, -3 ],
                                                         },
                                                     ],
                                                     [{}],
@@ -315,7 +433,7 @@
                                                             text: [
                                                                 {text: 'Languages\n', fontSize:10},
                                                             ],
-                                                            margin: [ 21, -3 ],
+                                                            margin: [ 23, -3 ],
                                                         }
                                                     ],
                                                     [
@@ -324,7 +442,7 @@
                                                                 {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.languages }}{{ end }}', fontSize:8},
                                                             ],
                                                             lineHeight: 1.2,
-                                                            margin: [ 21, -3, 21, -3 ],
+                                                            margin: [ 23, -3, 21, -3 ],
                                                         },
                                                     ],
                                                 ],
@@ -341,7 +459,8 @@
                     ],
                     pageMargins: [ 0,0,0,0 ],
                     images: {
-                        test: '{{ .Site.BaseURL }}/img/pdf-bg.png'
+                        backgroundImg: '{{ .Site.BaseURL }}/img/pdf-bg.png',
+                        headingBorder: '{{ .Site.BaseURL }}/img/border.png'
                     }
                 };
     

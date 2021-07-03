@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <copyright>© {year} Aileen Huang. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Jun 2021 16:54:15 +1200</lastBuildDate><atom:link href="https://aileenhuang.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 14:11:38 +1200</lastBuildDate><atom:link href="https://aileenhuang.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Porting my online CV from HTML to PDF</title>
+      <link>https://aileenhuang.dev/blog/2021/07/html-to-pdf/</link>
+      <pubDate>Sat, 03 Jul 2021 14:11:38 +1200</pubDate>
+      
+      <guid>https://aileenhuang.dev/blog/2021/07/html-to-pdf/</guid>
+      <description>I have an online CV that can be found on this site, at this link.
+Looks pretty good right? The HTML behind it was pretty easy. I&amp;rsquo;ll admit that it&amp;rsquo;s pretty inspired by other HTML templates out there.
+I decided that I wanted to keep my custom text (like the skills &amp;amp; projects) away from my template code. This is so that I can easily add to the content if I say, change a job, without messing out the layout.</description>
+    </item>
+    
     <item>
       <title>List of resources used for this theme (Unrealised)</title>
       <link>https://aileenhuang.dev/blog/2021/06/unrealised-theme-resources/</link>
@@ -570,6 +581,24 @@ For work, it ends up being client reporting portals, internal tools, Wordpress s
     </item>
     
     <item>
+      <title>Auckland University of Technology</title>
+      <link>https://aileenhuang.dev/cv/education/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/education/2/</guid>
+      <description> BBus (International Business) BSc (Food Science)  </description>
+    </item>
+    
+    <item>
+      <title>Compass Group</title>
+      <link>https://aileenhuang.dev/cv/experience/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/experience/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://aileenhuang.dev/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -579,12 +608,93 @@ For work, it ends up being client reporting portals, internal tools, Wordpress s
     </item>
     
     <item>
-      <title>CV</title>
-      <link>https://aileenhuang.dev/cv/</link>
+      <title>Divers Group</title>
+      <link>https://aileenhuang.dev/cv/experience/1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aileenhuang.dev/cv/</guid>
+      <guid>https://aileenhuang.dev/cv/experience/1/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Frameworks</title>
+      <link>https://aileenhuang.dev/cv/interests/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/3/</guid>
+      <description>Django, Next.js, React, Symfony</description>
+    </item>
+    
+    <item>
+      <title>Frameworks</title>
+      <link>https://aileenhuang.dev/cv/skills/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/3/</guid>
+      <description>AlpineJS, Bootstrap, Flask, Hugo, JQuery, Laravel, Tailwind CSS, Vue, Wordpress</description>
+    </item>
+    
+    <item>
+      <title>https://aileenhuang.dev</title>
+      <link>https://aileenhuang.dev/cv/projects/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/projects/1/</guid>
+      <description> Tailwind Vanilla JS Markdown Hugo Git Netlify  </description>
+    </item>
+    
+    <item>
+      <title>Infrastructure/Database</title>
+      <link>https://aileenhuang.dev/cv/interests/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/1/</guid>
+      <description>Postgres, MongoDB</description>
+    </item>
+    
+    <item>
+      <title>Infrastructure/Database</title>
+      <link>https://aileenhuang.dev/cv/skills/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/1/</guid>
+      <description>Ubuntu, Microsoft Server, MSSQL, MySQL</description>
+    </item>
+    
+    <item>
+      <title>Languages</title>
+      <link>https://aileenhuang.dev/cv/interests/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/2/</guid>
+      <description>Golang, Java, Ruby</description>
+    </item>
+    
+    <item>
+      <title>Languages</title>
+      <link>https://aileenhuang.dev/cv/skills/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/2/</guid>
+      <description>HTML/CSS, JavaScript, Markdown, PHP, Python, R, SQL</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://aileenhuang.dev/cv/skills/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/5/</guid>
+      <description>Blender, Godot, Photoshop, Medibang, Xero</description>
+    </item>
+    
+    <item>
+      <title>Profile Introduction</title>
+      <link>https://aileenhuang.dev/cv/profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/profile/</guid>
+      <description>My job titles don’t include being a web or game developer, but I ended up doing a lot of coding for work and in my spare time. It&amp;rsquo;s probably because I self-taught myself the core frontend fundamentals - HTML, CSS and JS - with backends powered by PHP or Python. I&amp;rsquo;ve built sites with Wordpress, Laravel and Flask, but when an API isn&amp;rsquo;t needed, I&amp;rsquo;ll go with Hugo&amp;rsquo;s static site generator.</description>
     </item>
     
     <item>
@@ -609,6 +719,15 @@ Objectives  Replicate original portal Allow clients to access supplier portals a
     </item>
     
     <item>
+      <title>Tools</title>
+      <link>https://aileenhuang.dev/cv/skills/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/4/</guid>
+      <description>Atom, Docker, Git, VS Code</description>
+    </item>
+    
+    <item>
       <title>Warehouse Transfer App</title>
       <link>https://aileenhuang.dev/projects/warehouse-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -616,6 +735,15 @@ Objectives  Replicate original portal Allow clients to access supplier portals a
       <guid>https://aileenhuang.dev/projects/warehouse-transfer/</guid>
       <description>Background When items get transferred within the warehouse, their location records in the database are updated so people know where to find &amp;lsquo;em. The full company app is simply too complicated to lug around the warehouse, so a slim version of it is used.
 But even if it was slim? It was a pain to use. The slim version had sizes that transformed quite terribly onto tablets used for scanning. Buttons would disappear into the middle of nowhere.</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;d my money go?</title>
+      <link>https://aileenhuang.dev/cv/projects/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/projects/2/</guid>
+      <description> Medibang Photoshop Blender Godot  </description>
     </item>
     
   </channel>

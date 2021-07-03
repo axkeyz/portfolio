@@ -84,7 +84,7 @@ var techStackBranch = {
     "wordpress": ["ubuntu", "windows", "mysql", "mssql", "php"],
     "laravel": ["ubuntu", "windows", "mysql", "mssql", "php"],
     "flask": ["ubuntu", "mysql", "mssql", "python"],
-    "hugo": ["ubuntu", "html", "css", "js"]
+    "hugo": ["html", "css", "js"]
 }
 var previousStack;
 

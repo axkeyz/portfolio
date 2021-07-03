@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CV on Aileen&#39;s Quibbles</title>
+    <link>https://aileenhuang.dev/cv/</link>
+    <description>Recent content in CV on Aileen&#39;s Quibbles</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language>
+    <copyright>© {year} Aileen Huang. All rights reserved.</copyright><atom:link href="https://aileenhuang.dev/cv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auckland University of Technology</title>
+      <link>https://aileenhuang.dev/cv/education/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/education/2/</guid>
+      <description> BBus (International Business) BSc (Food Science)  </description>
+    </item>
+    
+    <item>
+      <title>Compass Group</title>
+      <link>https://aileenhuang.dev/cv/experience/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/experience/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Divers Group</title>
+      <link>https://aileenhuang.dev/cv/experience/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/experience/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frameworks</title>
+      <link>https://aileenhuang.dev/cv/interests/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/3/</guid>
+      <description>Django, Next.js, React, Symfony</description>
+    </item>
+    
+    <item>
+      <title>Frameworks</title>
+      <link>https://aileenhuang.dev/cv/skills/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/3/</guid>
+      <description>AlpineJS, Bootstrap, Flask, Hugo, JQuery, Laravel, Tailwind CSS, Vue, Wordpress</description>
+    </item>
+    
+    <item>
+      <title>https://aileenhuang.dev</title>
+      <link>https://aileenhuang.dev/cv/projects/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/projects/1/</guid>
+      <description> Tailwind Vanilla JS Markdown Hugo Git Netlify  </description>
+    </item>
+    
+    <item>
+      <title>Infrastructure/Database</title>
+      <link>https://aileenhuang.dev/cv/interests/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/1/</guid>
+      <description>Postgres, MongoDB</description>
+    </item>
+    
+    <item>
+      <title>Infrastructure/Database</title>
+      <link>https://aileenhuang.dev/cv/skills/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/1/</guid>
+      <description>Ubuntu, Microsoft Server, MSSQL, MySQL</description>
+    </item>
+    
+    <item>
+      <title>Languages</title>
+      <link>https://aileenhuang.dev/cv/interests/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/2/</guid>
+      <description>Golang, Java, Ruby</description>
+    </item>
+    
+    <item>
+      <title>Languages</title>
+      <link>https://aileenhuang.dev/cv/skills/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/2/</guid>
+      <description>HTML/CSS, JavaScript, Markdown, PHP, Python, R, SQL</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://aileenhuang.dev/cv/skills/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/5/</guid>
+      <description>Blender, Godot, Photoshop, Medibang, Xero</description>
+    </item>
+    
+    <item>
+      <title>Profile Introduction</title>
+      <link>https://aileenhuang.dev/cv/profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/profile/</guid>
+      <description>My job titles don’t include being a web or game developer, but I ended up doing a lot of coding for work and in my spare time. It&amp;rsquo;s probably because I self-taught myself the core frontend fundamentals - HTML, CSS and JS - with backends powered by PHP or Python. I&amp;rsquo;ve built sites with Wordpress, Laravel and Flask, but when an API isn&amp;rsquo;t needed, I&amp;rsquo;ll go with Hugo&amp;rsquo;s static site generator.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://aileenhuang.dev/cv/skills/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/skills/4/</guid>
+      <description>Atom, Docker, Git, VS Code</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;d my money go?</title>
+      <link>https://aileenhuang.dev/cv/projects/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/projects/2/</guid>
+      <description> Medibang Photoshop Blender Godot  </description>
+    </item>
+    
+  </channel>
+</rss>
