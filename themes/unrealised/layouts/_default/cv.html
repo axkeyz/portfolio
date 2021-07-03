@@ -75,7 +75,7 @@
                     <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl">Education</h2>
                         {{ $educationList := where .RegularPages "Type" "in" "education" }}
-                        {{ range $educationList }}
+                        {{ range sort $educationList "File.Filename" }}
                         <p class="mt-3">
                             <span class="font-semibold">{{ .Name }}</span> <span class="text-xs">[{{ .Params.attendDate }}]</span>
                             {{ .Content | replaceRE "<li>" "<li class=\"ml-4\">" | replaceRE "<ul>" "<ul class=\"list-disc\">" | safeHTML}}
@@ -302,7 +302,7 @@
                                                                 {{ range sort $educationList "File.Filename" }}
                                                                     {text: '{{ .Name }} ', fontSize:8, bold:true},
                                                                     {text: '[{{ .Params.attendDate }}]', fontSize:8},
-                                                                    {text: '{{ .Content | replaceRE "<li>" "- " | replaceRE "</li>" "" | replaceRE "<ul>" "" | replaceRE "</ul>" "" | safeHTML}}', fontSize:8}
+                                                                    {text: '{{ .Content | replaceRE "<li>" "- " | replaceRE "</li>" "" | replaceRE "<ul>" "" | replaceRE "</ul>" "" | safeHTML}}', fontSize:8},
                                                                 {{ end }} 
                                                             ],
                                                             lineHeight: 1.2,
