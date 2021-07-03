@@ -5,24 +5,24 @@
         <div class="mt-8 py-3 text-center">
             {{- partial "cv/nav.html" -}}
         </div>
-        <div class="container mx-auto my-8 max-w-screen-xl">
+        <div id="cv-content" class="container mx-auto my-8 max-w-screen-xl">
             <main class="flex flex-col sm:flex-row-reverse shadow-2xl">
                 <div id="sidebar" class="w-full sm:max-w-sm p-12 bg-green-50">
                     <div class="px-2 mb-8">
-                        <h1 class="text-center text-3xl font-semibold mb">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.myName }}{{ end }}</h1>
-                        <h2 class="text-center text-md font-light mb-1">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.position }}{{ end }}</h2>
-                        <h3 class="text-center font-light text-sm">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.subPosition }}{{ end }}</h3>
+                        <h1 class="text-center text-3xl font-semibold mb">{{ with .Site.GetPage "cv/profile" }}{{ .Params.myName }}{{ end }}</h1>
+                        <h2 class="text-center text-md font-light mb-1">{{ with .Site.GetPage "cv/profile" }}{{ .Params.position }}{{ end }}</h2>
+                        <h3 class="text-center font-light text-sm">{{ with .Site.GetPage "cv/profile" }}{{ .Params.subPosition }}{{ end }}</h3>
                     </div>
 
                     <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl">Contact</h2>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/web.html" . -}}</span>
-                            <a href="https://aileenhuang.dev" class="hover:text-green-600">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.website }}{{ end }}</a>
+                            <a href="{{ .Site.Params.Website }}" class="hover:text-green-600">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.website }}{{ end }}</a>
                         </div>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/email.html" . -}}</span>
-                            <a href="mailto:" class="hover:text-green-600">{{ with .Site.GetPage "/cv/profile" }}{{ .Params.email }}{{ end }}</a>
+                            <a href="mailto:{{ .Site.Params.Email }}" class="hover:text-green-600">{{ .Site.Params.Email }}</a>
                         </div>
                         <div class="flex items-center my-3">
                             <span class="p-1 rounded-full mr-2 bg-green-300 text-green-600">{{- partial "svg/house.html" . -}}</span>
@@ -67,7 +67,7 @@
                     <div class="font-light px-2 mb-8">
                         <h2 class="font-semibold text-xl">Skills</h2>
                         {{$skillsList := where .RegularPages "Type" "in" "skills"}}
-                        {{ range $skillsList }}
+                        {{ range sort $skillsList "File.Filename" }}
                             <p class="my-3"><span class="font-semibold">{{ .Name }}:</span> {{ .RawContent }}</p>
                         {{ end }} 
                     </div>
@@ -98,7 +98,7 @@
 
                     <h2 class="text-xl border-l-8 border-green-300 pl-4 mb-4 font-semibold">Experience</h2>
                     {{ $experience := where .RegularPages "Type" "in" "experience" }}
-                    {{ range sort $experience "Filename" }}
+                    {{ range sort $experience "File.Filename" }}
                     <div class="mb-4">
                         <h3 class="font-semibold">{{ .Name }}</h3>
                         <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
@@ -185,5 +185,175 @@
         <div class="my-8 py-3 text-center">
             {{- partial "cv/nav.html" -}}
         </div>
+        <div id="canvas"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/pdfmake.min.js" integrity="sha512-q+jWnBtVH327w/3nlp2Th9Dtjmlfj3Mb4tXCGbYjYWUqtFyIhl1Ul8GXoMkzbWvdIRVlS0P1pyteYUzxArKYOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/vfs_fonts.min.js" integrity="sha512-BDZ+kFMtxV2ljEa7OWUu0wuay/PAsJ2yeRsBegaSgdUhqIno33xmD9v3m+a2M3Bdn5xbtJtsJ9sSULmNBjCgYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var canvasElement = document.getElementById("canvas");
+
+            function printPdf(action) {
+                var docDefinition = {
+                    pageSize: 'A4',
+                    background: [
+                        {
+                            image: 'test',
+                            width: 600
+                        }
+                    ],
+                    content: [
+                        {
+                            style: 'section',
+                            table: {
+                                widths: [ '71%', '29%'],
+                                body: [
+                                    [ 
+                                        {
+                                            text: 'first column',
+                                            color: '#000000',
+                                        },
+                                        {
+                                            table: {
+                                                widths: ['100%'],
+                                                heights: [15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 25, 7, 15, 1000],
+                                                body: [
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.myName }}{{ end }}', fontSize:20, alignment: 'center'},
+                                                                {text: '\n{{ with .Site.GetPage "cv/profile" }}{{ .Params.position }}{{ end }}\n'},
+                                                                {text: '{{ with .Site.GetPage "cv/profile" }}{{ .Params.subPosition }}{{ end }}', margin:[ 0, 5, 0, 0], fontSize: 7},
+                                                            ],
+                                                            fontSize: 9,
+                                                            alignment: 'center',
+                                                        }
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Contact\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 21, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.website }}{{ end }}\n', link: '{{ .Site.Params.Website }}', fontSize:8},
+                                                                {text: '{{ .Site.Params.Email }}\n', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.location }}{{ end }}\n', fontSize:8},
+                                                            ],
+                                                            lineHeight: 2.3,
+                                                            margin: [ 42, -3, 0, -3 ],
+                                                        }
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Connect\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 21, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.github }}{{ end }}\n', link: '{{ .Site.Params.Github }}', fontSize:8},
+                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.linkedin }}{{ end }}', link: '{{ .Site.Params.Linkedin }}', fontSize:8},
+                                                            ],
+                                                            lineHeight: 2.3,
+                                                            margin: [ 42, -3, 0, -3 ],
+                                                        }
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Skills\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 21, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {{ range sort $skillsList "File.Filename" }}
+                                                                    {text: '{{ .Name }}: ', fontSize:8, bold:true},
+                                                                    {text: '{{ .RawContent }}\n\n', fontSize:8},
+                                                                {{ end }} 
+                                                            ],
+                                                            lineHeight: 1.2,
+                                                            margin: [ 21, -3, 21, -3 ],
+                                                        },
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Education\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 21, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {{ range sort $educationList "File.Filename" }}
+                                                                    {text: '{{ .Name }} ', fontSize:8, bold:true},
+                                                                    {text: '[{{ .Params.attendDate }}]', fontSize:8},
+                                                                    {text: '{{ .Content | replaceRE "<li>" "- " | replaceRE "</li>" "" | replaceRE "<ul>" "" | replaceRE "</ul>" "" | safeHTML}}', fontSize:8}
+                                                                {{ end }} 
+                                                            ],
+                                                            lineHeight: 1.2,
+                                                            margin: [ 21, -3, 21, -3 ],
+                                                        },
+                                                    ],
+                                                    [{}],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: 'Languages\n', fontSize:10},
+                                                            ],
+                                                            margin: [ 21, -3 ],
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            text: [
+                                                                {text: '{{ with .Site.GetPage "/cv/profile" }}{{ .Params.languages }}{{ end }}', fontSize:8},
+                                                            ],
+                                                            lineHeight: 1.2,
+                                                            margin: [ 21, -3, 21, -3 ],
+                                                        },
+                                                    ],
+                                                ],
+                                            },
+                                            // fillColor: '#F7FEE7',
+                                            color: '#000000',
+                                            layout: 'noBorders'
+                                        },
+                                    ]
+                                ]
+                            },
+                            layout: 'noBorders'
+                        },
+                    ],
+                    pageMargins: [ 0,0,0,0 ],
+                    images: {
+                        test: 'http://localhost:1313/img/pdf-bg.png'
+                    }
+                };
+    
+                if (action === 1) {
+                    pdfMake.createPdf(docDefinition).print({}, window);
+                }
+                else if (action === 2) {
+                    var pdf = createPdf(docDefinition);
+                    pdf.download('PPRA.pdf');
+                }
+            }
+        </script>
       </body>
 </html>
