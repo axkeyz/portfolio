@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Automate the Accounting</title>
+      <link>https://aileenhuang.dev/cv/projects/3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/projects/3/</guid>
+      <description> Bootstrap Flask Git  </description>
+    </item>
+    
+    <item>
       <title>Compass Group</title>
       <link>https://aileenhuang.dev/cv/experience/2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -40,7 +49,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://aileenhuang.dev/cv/interests/3/</guid>
-      <description>Django, Next.js, React, Symfony</description>
+      <description>Django, Next.js, Rails, React, Symfony</description>
     </item>
     
     <item>
@@ -67,7 +76,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://aileenhuang.dev/cv/interests/1/</guid>
-      <description>Postgres, MongoDB</description>
+      <description>Firebase, MongoDB, Postgres</description>
     </item>
     
     <item>
@@ -99,11 +108,20 @@
     
     <item>
       <title>Misc</title>
+      <link>https://aileenhuang.dev/cv/interests/5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aileenhuang.dev/cv/interests/5/</guid>
+      <description>Latex, D3.js</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
       <link>https://aileenhuang.dev/cv/skills/5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://aileenhuang.dev/cv/skills/5/</guid>
-      <description>Blender, Godot, Photoshop, Medibang, Xero</description>
+      <description>Blender, Godot, Photoshop, Medibang, Sibelius, Xero</description>
     </item>
     
     <item>
@@ -121,15 +139,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://aileenhuang.dev/cv/skills/4/</guid>
-      <description>Atom, Docker, Git, VS Code</description>
+      <description>Atom, Docker, Git, VS Code, WSL</description>
     </item>
     
     <item>
       <title>Where&#39;d my money go?</title>
-      <link>https://aileenhuang.dev/cv/projects/2/</link>
+      <link>https://aileenhuang.dev/cv/projects/4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://aileenhuang.dev/cv/projects/2/</guid>
+      <guid>https://aileenhuang.dev/cv/projects/4/</guid>
       <description> Medibang Photoshop Blender Godot  </description>
     </item>
     
