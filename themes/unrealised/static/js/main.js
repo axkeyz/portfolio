@@ -64,7 +64,7 @@ var techStackExplanations = {
     "laravel": "Laravel",
     "flask": "Flask:",
     "hugo": "Hugo (Static Site Generation)",
-    "godot": "Godot: An Awesome Open Source Game Engine",
+    "godot": "Godot",
     "rstudio": "R/RStudio"
 };
 var techStackBranch = {
@@ -81,7 +81,7 @@ var techStackBranch = {
     "alpinejs": ["js"],
     "vuejs": ["js"],
     "jquery": ["js"],
-    "wordpress": ["ubuntu", "windows", "mysql", "mssql", "php"],
+    "wordpress": ["ubuntu", "windows", "mysql", "php"],
     "laravel": ["ubuntu", "windows", "mysql", "mssql", "php"],
     "flask": ["ubuntu", "mysql", "mssql", "python"],
     "hugo": ["html", "css", "js"]
