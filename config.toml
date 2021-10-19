@@ -1,0 +1,5 @@
+baseURL = "https://aileenhuang.dev/"
+languageCode = "en-nz"
+title = "A Huang"
+
+theme = "unrealised"
