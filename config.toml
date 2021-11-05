@@ -1,5 +1,51 @@
-baseURL = "https://aileenhuang.dev/"
+baseURL = "https://aileenhuang.dev"
 languageCode = "en-nz"
-title = "A Huang"
+title = "Aileen Huang"
+copyright = "© {year} Aileen Huang (axkeyz)"
 
 theme = "unrealised"
+assetDir = "assets"
+
+[params]
+    author = "Aileen Huang"
+    logo = "HUANG"
+    keywords = "aileen huang, portfolio, coding, programmer, engineer, game, software"
+    description = "Aileen Huang's online dump of coding projects from web to game and other musings."
+
+[menu]
+    [[menu.unrealised]]
+        identifier="about-me"
+        name="svg/identification.html"
+    [[menu.unrealised]]
+        parent="about-me"
+        url="/about"
+        name="About Me"
+    [[menu.unrealised]]
+        parent="about-me"
+        url="/blog"
+        name="Blog"
+    [[menu.unrealised]]
+        parent="about-me"
+        url="/cv"
+        name="CV"
+    [[menu.unrealised]]
+        identifier="projects"
+        name="svg/briefcase.html"
+        weight="2"
+    [[menu.unrealised]]
+        parent="projects"
+        url="/projects"
+        name="Personal"
+    [[menu.unrealised]]
+        parent="projects"
+        url="/work"
+        name="Work"
+    [[menu.unrealised]]
+        url="/contact"
+        name="svg/email.html"
+        weight="3"
+    [[menu.unrealised]]
+        parent="projects"
+        url="/sheppa-games"
+        name="Sheppa Games"
+        
