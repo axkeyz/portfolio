@@ -6,7 +6,7 @@ tagline_description: "Making time for the interesting stuff."
 cards:
     - Your choice of framework: 
         - svg/adjustments.html
-        - PHP, Python, Go, C, CSS & JS, Matlab/R. With frameworks or good 'ol vanilla.
+        - PHP, Python, Go, C, Matlab. With frameworks or good 'ol vanilla.
         - flipx
 
     - Seamlessly connect:
@@ -16,37 +16,44 @@ cards:
     
     - Optimised for speed:
         - svg/fast-forward.html
-        - Let your website fly with minimal, clean and cached code.
+        - Minimal, clean code to maximise speed. Let your website fly.
         - right
 
 # block 1
 b1_heading: Hey, I'm Aileen. Nice to meet you.
 b1_description:
     - I code to speed up the boring parts of my job and tasks my family finds boring. That gives me a bit of time to make the interesting stuff (games & websites).
-    - I can't design, but I can appreciate a good one. Perhaps that means I'll hit a decent design eventually. I designed & coded this site from scratch.
+    - More or less a full stack developer minus design. Can't design, but can appreciate a good one. Hopefully, that includes this site.
 
 # block 2
-b2_heading: The shiny stuff. Projects.
+b2_heading: My workflow
 b2_description: 
-    - I brought these into the world after wrestling with the bugs. Clients claimed they were satisfied.
+    - Receive project requirements.
 
 # block 3
-b3_heading: Skills. The powa!
+b3_heading: My projects
 b3_description:
     - My skill points are a bit stacked on PHP and Python, but I'm kinda open to anything.
 
 # block 4
-b4_heading: "But these designs are boring."
-b4_subheading: "I must admit I'm more of a coder than a designer. Maybe check out the alternate landing pages."
+b4_heading: Site is fast and elegant... but so boring.
 b4_description:
-    - Animated svgs:
+    - Perhaps you agree that this site loads fast, but the design isn't quite interesting enough. Maybe you think it needs more images, more animations, more fun.
+    - Perhaps try my former landing pages. Similar content, but different style. All of them load blazing quick.
+b4_tabs:
+    - Animated SVGs:
+        - /img/500h_placeholder.png
         - /svg-landing
-    - Animated photos:
+        - With a ton of words, svgs and fancy scroll animations. Progressive web-app style.
+    - Animated Photos:
+        - /img/500h_placeholder.png
         - /photo-landing
-        - A similar landing page to this version, but with
-    - Super wordy:
-        - /wordy-landy
+        - With a ton of photos and fancy scroll animations. Progressive web-app style.
+    - Photographic WP:
+        - /img/500h_placeholder.png
+        - https://wpdev.aileenhuang.dev
+        - With a ton of photos, fancy scroll animations. Wordpress style.
 
-contact_form_heading: Not enough? Get in touch!
+contact_form_heading: Not quite enough? Get in touch!
 
 ---
