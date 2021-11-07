@@ -1,7 +1,7 @@
 baseURL = "https://aileenhuang.dev"
 languageCode = "en-nz"
 title = "Aileen Huang"
-copyright = "© {year} Aileen Huang."
+copyright = "© {year} Aileen Huang"
 
 theme = "unrealised"
 assetDir = "assets"
@@ -9,7 +9,7 @@ assetDir = "assets"
 [params]
     author = "Aileen Huang"
     logo = "HUANG"
-    keywords = "aileen huang, portfolio, coding, programmer, engineer, games, software"
+    keywords = "aileen huang, portfolio, web design, web developer, games, software"
     description = "Aileen Huang's online dump of coding projects from web to game and other musings."
     github = "axkeyz"
     linkedin = "aileen-huang"

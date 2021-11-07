@@ -2,6 +2,7 @@
 tagline1: "I create websites."
 tagline2: "Fast and elegant."
 tagline_description: "Making time for the interesting stuff."
+tagimage: "svg/webdev-og.html"
 
 cards:
     - Your choice of framework: 
@@ -23,36 +24,55 @@ cards:
 b1_heading: Hey, I'm Aileen. Nice to meet you.
 b1_description:
     - I code to speed up the boring parts of my job and tasks my family finds boring. That gives me a bit of time to make the interesting stuff (games & websites).
-    - More or less a full stack developer minus design. Can't design, but can appreciate a good one. Hopefully, that includes this site.
+    - I consider myself a full-stack developer minus design. But even I can appreciate a good design for hours.
 
 # block 2
-b2_heading: My workflow
-b2_description: 
-    - Receive project requirements.
+b2_heading: Here's what I can do for you.
+b2_cards:
+    - design integration:
+        - svg/easel.html
+        - Integrate your concepts, wireframes, designs with lightweight code
+        - greenbg
+    - website responsiveness:
+        - svg/phone.html
+        - Make the mobile viewing experience as pleasant as the desktop experience
+    - CMS integration:
+        - svg/edit.html
+        - Add Wordpress, October, Netlify to allow you to manage your own content
+    - e-commerce integration:
+        - svg/ecommerce.html
+        - Integrate e-commerce with your website, complete with payment & shipping
+    - progressive web app:
+        - svg/pga.html
+        - Let your readers save a copy of your website for offline reading
+    - API integration:
+        - svg/bound-box.html
+        - Automate tasks across external sites without ever leaving your company app
+    - metric dashboards:
+        - svg/chart.html
+        - Create dashboards for your clients and staff by retrieving relevant data
+    - hosting management:
+        - svg/server.html
+        - Prevent website downtime from hosting renewal, with free layout edits
+    - speed optimisation:
+        - svg/speed.html
+        - Score well ahead according to Page Speed Index, GTMetrix and Lighthouse
 
 # block 3
-b3_heading: My projects
+b3_heading: Stuff I built for work.
 b3_description:
-    - My skill points are a bit stacked on PHP and Python, but I'm kinda open to anything.
+    - The place I work mainly uses PHP (Vanilla, Wordpress & Laravel), but my personal choice is anything really. [See more projects.](/projects)
 
-# block 4
-b4_heading: Site is fast and elegant... but so boring.
+#block 4
+b4_heading: Stuff I built for fun.
 b4_description:
-    - Perhaps you agree that this site loads fast, but the design isn't quite interesting enough. Maybe you think it needs more images, more animations, more fun.
-    - Perhaps try my former landing pages. Similar content, but different style. All of them load blazing quick.
-b4_tabs:
-    - Animated SVGs:
-        - /img/500h_placeholder.png
-        - /svg-landing
-        - With a ton of words, svgs and fancy scroll animations. Progressive web-app style.
-    - Animated Photos:
-        - /img/500h_placeholder.png
-        - /photo-landing
-        - With a ton of photos and fancy scroll animations. Progressive web-app style.
-    - Photographic WP:
-        - /img/500h_placeholder.png
-        - https://wpdev.aileenhuang.dev
-        - With a ton of photos, fancy scroll animations. Wordpress style.
+    - Probably the most important part of all the work I do! Haha.
+
+# block 5
+b5_heading: Stats for this website
+b5_description:
+    - Built with: Hugo & GSAP
+    - GTMetrix: Add report
 
 contact_form_heading: Not quite enough? Get in touch!
 
