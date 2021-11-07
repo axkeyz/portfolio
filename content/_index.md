@@ -61,19 +61,24 @@ b2_cards:
 # block 3
 b3_heading: Stuff I built for work.
 b3_description:
-    - The place I work mainly uses PHP (Vanilla, Wordpress & Laravel), but my personal choice is anything really. [See more projects.](/projects)
+    - The place I work mainly uses PHP (Vanilla, Wordpress & Laravel), but anything goes really. I especially like JAMStack + API these days. [See more projects.](/projects)
 
 #block 4
 b4_heading: Stuff I built for fun.
 b4_description:
-    - Probably the most important part of all the work I do! Haha.
+    - Probably the funnest part of all the work I do! Haha. [More projects here.](/projects)
+b4_cards:
+    - Print-friendly CV:
+        - Minimalistic sites are slightly favoured with Ctrl/Cmd+P
 
 # block 5
 b5_heading: Stats for this website
 b5_description:
-    - Built with: Hugo & GSAP
-    - GTMetrix: Add report
+    - stats:
+        -
+    - fun fact:
+        - It's printer friendly! Not too tree friendly though!
 
-contact_form_heading: Not quite enough? Get in touch!
+contact_form_heading: Let me know if you want to get in touch.
 
 ---
