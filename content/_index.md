@@ -33,30 +33,30 @@ b2_cards:
         - svg/easel.html
         - Integrate your concepts, wireframes, designs with lightweight code
         - greenbg
-    - website responsiveness:
-        - svg/phone.html
-        - Make the mobile viewing experience as pleasant as the desktop experience
     - CMS integration:
         - svg/edit.html
         - Add Wordpress, October, Netlify to allow you to manage your own content
     - e-commerce integration:
         - svg/ecommerce.html
         - Integrate e-commerce with your website, complete with payment & shipping
-    - progressive web app:
-        - svg/pga.html
-        - Let your readers save a copy of your website for offline reading
     - API integration:
         - svg/bound-box.html
         - Automate tasks across external sites without ever leaving your company app
     - metric dashboards:
         - svg/chart.html
         - Create dashboards for your clients and staff by retrieving relevant data
+    - website responsiveness:
+        - svg/phone.html
+        - Make the mobile viewing experience as pleasant as the desktop experience
+    - progressive web app:
+        - svg/pga.html
+        - Let your readers save a copy of your website for offline reading
     - hosting management:
         - svg/server.html
         - Prevent website downtime from hosting renewal, with free layout edits
     - speed optimisation:
         - svg/speed.html
-        - Score well ahead according to Page Speed Index, GTMetrix and Lighthouse
+        - Score well ahead according to GTMetrix and Google PageSpeed
 
 # block 3
 b3_heading: Stuff I built for work.
