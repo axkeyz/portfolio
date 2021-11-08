@@ -1,16 +1,32 @@
 baseURL = "https://aileenhuang.dev"
-languageCode = "en-nz"
-title = "Aileen Huang"
-copyright = "© {year} Aileen Huang"
-
 theme = "unrealised"
-assetDir = "assets"
+defaultContentLanguage = "en-nz"
+
+[Languages]
+    [Languages.en-nz]
+        languageCode = "en-nz"
+        title = "Aileen Huang"
+        copyright = "© {year} Aileen Huang"
+        languageName = "English - New Zealand"
+    [Languages.en-nz.params]
+        author = "Aileen Huang"
+        keywords = "aileen huang, portfolio, web design, web developer, games, software"
+        description = "Need a website or app? I optimise for speed while being seamlessly connected to your database & APIs. Contact me today to discuss your project requirements."
+    [Languages.zh-cn]
+        languageCode = "zh-cn"
+        title = "黄蔼龄"
+        copyright = "© {year} 黄蔼龄"
+        languageName = "Chinese - Mandarin"
+    [Languages.zh-cn.params]
+        author = "黄蔼龄"
+        keywords = "黄蔼龄, 简历, 网页设计, 速度优化, 游戏, 软件"
+        description = "需要程序或网站吗？我可以帮您链接您的数据库和API或速度优化您的网站。今天就联系我讨论您的项目要求吧。"
+
+[permalinks]
+    page = "/:filename"
 
 [params]
-    author = "Aileen Huang"
     logo = "HUANG"
-    keywords = "aileen huang, portfolio, web design, web developer, games, software"
-    description = "Aileen Huang's online dump of coding projects from web to game and other musings."
     github = "axkeyz"
     linkedin = "aileen-huang"
     email = "/contact"

@@ -1,27 +1,27 @@
 ---
-tagline1: "I create websites."
-tagline2: "Fast and elegant."
-tagline_description: "Making time for the interesting stuff."
+tagline1: "我会做网站。"
+tagline2: "快输和优雅。"
+tagline_description: "让时间放在有趣的东西上。"
 tagimage: "svg/webdev-og.html"
 
 cards:
-    - Your choice of framework: 
+    - 您选的框架: 
         - svg/adjustments.html
-        - PHP, Python, Go, C, Matlab. With frameworks or good 'ol vanilla.
+        - PHP，Python，Go，C 或 Matlab. 用不用框架都可以。
 
-    - Seamlessly connect:
+    - 完美链接:
         - svg/refresh.html
-        - Connect to your database, APIs or go headless. From internal to external.
+        - 连接到您的数据库，API 或无头CMS。 从内到外。
     
-    - Optimised for speed:
+    - 速度优化:
         - svg/fast-forward.html
-        - Minimal, clean code to maximise speed. Let your website fly.
+        - 干净的程序以最大限度地提高速度。 让您的网站飞吧。 
 
 # block 1
-b1_heading: Hey, I'm Aileen. Nice to meet you.
+b1_heading: 你好，我叫蔼龄。很高兴认识您。
 b1_description:
-    - I code to speed up the boring parts of my job and tasks my family finds boring. That gives me a bit of time to make the interesting stuff (games & websites).
-    - I consider myself a full-stack developer minus design. But even I can appreciate a good design for hours. So maybe I'm not that bad after all.
+    - 我编程是为了加快我工作中无聊的部分，以及我的家人觉得无聊的任务。 这给了我一些时间来制作更有趣的东西（比如游戏和网站）。
+    - 我认为自己是个全栈工程师减设计。 但这样的我还是能有几个小时内欣赏一个好的设计。所以也许我没想象的那么不会设计。 
 
 # block 2
 b2_heading: Here's what I can do for you.
@@ -71,7 +71,7 @@ b4_cards:
         - Minimalistic sites are slightly favoured with Ctrl/Cmd+P
 
 # block 5
-b5_heading: About this website.
+b5_heading: 关于这个网站。
 b5_description:
     - template: partial/b5-template.html
     - design concept: Fast and elegant
@@ -93,6 +93,6 @@ b5_description:
     - fun fact:
         - This site is printer friendly! Coz what is saving trees, right? (Ahem, please save this site as a PDF instead)
 
-contact_form_heading: Let me know if you want to get in touch.
+contact_form_heading: 如果您想联系我，请填一下的表格。
 
 ---

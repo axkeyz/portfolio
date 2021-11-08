@@ -1,8 +1,7 @@
 ---
 title: "Thank you."
 date: 2021-11-08T01:45:52+13:00
-draft: false
-template: "thank-you"
+draft: true
 
 description: "Thank you for submitting your query."
 ---
