@@ -18,7 +18,7 @@ cards:
         - 干净的程序以最大限度地提高速度。 让您的网站飞吧。 
 
 # block 1
-b1_heading: 你好，我叫蔼龄。很高兴认识您。
+b1_heading: 您好，我叫蔼龄。很高兴认识您。
 b1_description:
     - 我编程是为了加快我工作中无聊的部分，以及我的家人觉得无聊的任务。 这给了我一些时间来制作更有趣的东西（比如游戏和网站）。
     - 我认为自己是个全栈工程师减设计。 但这样的我还是能有几个小时内欣赏一个好的设计。所以也许我没想象的那么不会设计。 
@@ -93,6 +93,6 @@ b5_description:
     - fun fact:
         - This site is printer friendly! Coz what is saving trees, right? (Ahem, please save this site as a PDF instead)
 
-contact_form_heading: 如果您想联系我，请填一下的表格。
+contact_form_heading: 如果您想联系我，请填以下的表格。
 
 ---
