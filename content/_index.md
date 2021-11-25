@@ -7,7 +7,7 @@ tagimage: "svg/webdev-og.html"
 cards:
     - Your choice of framework: 
         - svg/adjustments.html
-        - PHP, Python, Go, C, Matlab. With frameworks or good 'ol vanilla.
+        - HTML, CSS, JS, PHP, Python, Go, C, Matlab. With frameworks or vanilla.
 
     - Seamlessly connect:
         - svg/refresh.html
@@ -20,13 +20,11 @@ cards:
 # block 1
 b1_heading: Hey, I'm Aileen. Nice to meet you.
 b1_description:
-    - I code to speed up the boring parts of my job and tasks my family finds boring. That gives me a bit of time to make the interesting stuff (games & websites).
-    - I consider myself a full-stack developer minus design. But even I can appreciate a good design for hours. So maybe I'm not that bad after all.
+    - I'm lazy, so I code to speed up the boring parts of my job and boring family things. That gives me a bit of time to make the interesting stuff (games & websites).
+    - I consider myself a full-stack developer minus design. But at least I can kinda tell what looks good. So maybe I'm not that bad after all.
 
 # block 2
 b2_heading: Here's what I can do for you.
-b2_description:
-    - And it's not an exhaustive list.
 b2_cards:
     - design integration:
         - svg/easel.html
@@ -58,12 +56,72 @@ b2_cards:
         - Score well ahead according to GTMetrix and Google PageSpeed
 
 # block 3
-b3_heading: Stuff I built for work.
+b3_heading: Stuff I built for work & fun.
 b3_description:
-    - The place I work mainly uses PHP (Vanilla, Wordpress & Laravel), but anything goes really. [See more projects.](/projects)
+    - The place I work mainly uses PHP (Vanilla, Wordpress & Laravel), but anything goes really. I occasionally [See all projects.](/projects)
+b3_template: front/b3-template.html
+b3_cards:
+    Warehouse Scan App:
+        link: /project/warehouse-scan
+        type: Work
+        intention: Improve warehouse item transfer.
+        image: /img/dg-portal-small.webp
+        built_with:
+            - backend: PHP
+            - database: MSSQL
+            - JS: Vanilla
+            - CSS: Bootstrap
+    DG Client App:
+        link: /projects/dg-client-app
+        type: Work
+        intention: Create a modern reporting portal for clients.
+        image: /img/dg-portal-small.webp
+        built_with: 
+            - backend: PHP (Laravel)
+            - database: MSSQL
+            - JS: Livewire
+            - JS: Alpine
+            - CSS: Tailwind
+    Water Outage:
+        link: /project/water-dashboard
+        type: Fun
+        image: /img/dg-portal-small.webp
+        intention: Prove that outages suck.
+        built_with: 
+            - backend: Go
+            - database: Postgres
+            - JS: Vue
+            - CSS: Tailwind
+    Accounting App:
+        link: /project/accounting
+        type: Work
+        image: /img/dg-portal-small.webp
+        intention: Speed up the boring parts of my job.
+        built_with:
+            - backend: Python (Flask)
+            - database: MSSQL
+            - database: MySQL
+            - JS: Vanilla
+            - CSS: Bootstrap
+    Scam Club Game:
+        link: /sheppa-games/scam-club
+        type: Fun
+        image: /img/dg-portal-small.webp
+        intention: A game all about money. WIP.
+        built_with:
+            - database: Postgres
+            - engine: Godot
+    Print-friendly Wordpress:
+        link: /projects/print-friendly
+        type:  Fun
+        image: /img/dg-portal-small.webp
+        intention: Text-heavy, print-friendly Wordpress theme.
+        built_with:
+            - backend: PHP (Wordpress)
+            - database: MySQL
 
 #block 4
-b4_heading: Stuff I built for fun.
+b4_heading: And the stacks behind everything.
 b4_description:
     - Probably the funnest part of all the work I do! Haha. [More projects here.](/projects)
 b4_cards:
@@ -73,25 +131,46 @@ b4_cards:
 # block 5
 b5_heading: About this website.
 b5_description:
-    - template: partial/b5-template.html
-    - design concept: Fast and elegant
-    - built with:
-        - static site generator: "[Hugo](https://gohugo.io/)"
-        - css/js frameworks: None!
-        - svg sources: "[undraw.co](https://undraw.co/), [Bootstrap Icons](https://icons.getbootstrap.com/), [Heroicons](https://heroicons.com/)"
-    - alternate versions:
-        - description: I'm guessing this landing page wasn't quite to your taste? It matters not, I present you with alternate designs! Similar content; different concepts. Hopefully there's one you like.
-        - fancy photo scroll: 
-            - url: /photo-scroll
-            - description: A photo-heavy concept with lots of fancy scroll-based effects
-        - animated svg story:
-            - url: /svg-story
-            - description: A concept that animates several svgs to tell a story
-        - it's dark technology:
-            - url: /dark-technology
-            - description: A concept that attempts present 
-    - fun fact:
-        - This site is printer friendly! Coz what is saving trees, right? (Ahem, please save this site as a PDF instead)
+    template: front/b5-template.html
+    concept: Fast and elegant.
+    image: svg/tothestars.html
+    builtwith:
+        static site generator: 
+            partial: svg/hugo.html
+            url: https://gohugo.io/
+        bootstrap icons:
+            partial: svg/boostrapicons.html
+            url: https://icons.getbootstrap.com/
+        heroicons:
+            partial: svg/heroicons.html
+            url: https://heroicons.com/
+        undraw.co:
+            partial: svg/undraw.html
+            url: https://undraw.co/
+        css (vanilla):
+            partial: svg/css.html
+            url: https://www.w3.org/Style/CSS/Overview.en.html
+        js (vanilla):
+            partial: svg/js.html
+            url: https://www.javascript.com/
+    altversion:
+        description: Similar content; different concepts.
+        items:
+            fancy photo scroll: 
+                colour: yellow
+                url: /photo-scroll
+                description: A photo-heavy concept with lots of fancy scroll-based effects
+            animated SVG story:
+                colour: green
+                url: /svg-story
+                description: A concept that animates several svgs to tell a story
+            it's dark technology:
+                colour: blue
+                url: /dark-technology
+                description: A concept that attempts present 
+    fun: 
+        - This site is printer friendly! Coz what is saving trees, right?
+        - (Alternately, save the site as a PDF)
 
 contact_form_heading: Let me know if you want to get in touch.
 

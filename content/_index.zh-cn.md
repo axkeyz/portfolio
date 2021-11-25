@@ -73,13 +73,13 @@ b4_cards:
 # block 5
 b5_heading: 关于这个网站。
 b5_description:
-    - template: partial/b5-template.html
-    - design concept: Fast and elegant
-    - built with:
+    template: front/b5-template.html
+    concept: Fast and elegant
+    builtwith:
         - static site generator: "[Hugo](https://gohugo.io/)"
         - css/js frameworks: None!
         - svg sources: "[undraw.co](https://undraw.co/), [Bootstrap Icons](https://icons.getbootstrap.com/), [Heroicons](https://heroicons.com/)"
-    - alternate versions:
+    altversion:
         - description: I'm guessing this landing page wasn't quite to your taste? It matters not, I present you with alternate designs! Similar content; different concepts. Hopefully there's one you like.
         - fancy photo scroll: 
             - url: /photo-scroll
@@ -90,8 +90,9 @@ b5_description:
         - it's dark technology:
             - url: /dark-technology
             - description: A concept that attempts present 
-    - fun fact:
-        - This site is printer friendly! Coz what is saving trees, right? (Ahem, please save this site as a PDF instead)
+    fun:
+        - This site is printer friendly! Coz what is saving trees, right?
+        - (Ahem, please save this site as a PDF instead)
 
 contact_form_heading: 如果您想联系我，请填以下的表格。
 
