@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <article class="dspecial">
+        <div class="m-400 center m-auto">
+            <h1>{{ .Title }}</h1>
+            {{ range .Pages }}
+                <li class="left">
+                    <a href="{{.Permalink}}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </div>
+    </article>
+{{ end }}

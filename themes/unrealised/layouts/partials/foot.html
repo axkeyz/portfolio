@@ -1,0 +1,14 @@
+{{ $fusejs := resources.Get "js/fuse.js" }}
+{{ $fastsearchjs := resources.Get "js/fastsearch.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $main | resources.Concat "js/bundle.js" | minify }}
+
+<script defer src="{{ $js.RelPermalink }}"></script>  
+
+{{ if .Site.Params.ga }}
+<script>                                             
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+ga('create', '{{- .Site.Params.ga -}}', 'auto'); ga('send', 'pageview')
+</script>                                            
+<script src="//www.google-analytics.com/analytics.js" async defer></script>
+{{ end }}

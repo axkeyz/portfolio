@@ -1,0 +1,26 @@
+[message-404]
+other = "网页未找到"
+
+[message-404-description]
+other = "哎哟。 这页面好像不存在。 `\\('_')/` 您可以试试查一下?"
+
+[more-details-here]
+other="更多细节。"
+
+[form-name]
+other = "名字"
+[form-email]
+other = "邮箱"
+[form-message]
+other = "信息"
+[form-send]
+other = "发送"
+
+[design-concept]
+other="设计理念"
+[built-with]
+other="建造于"
+[alternate-versions]
+other="其他版本"
+[fun-fact]
+other="有趣的事实"

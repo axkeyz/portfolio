@@ -1,0 +1,13 @@
+<card{{ if .class }} class="{{ .class }}"{{end}}>
+    <div class="p-5">
+        <div class="skill-card-svg db-text keep-uncut"> 
+            <div {{ if .color }}class="{{ .color }}"{{end}}>
+                {{ partial .icon (dict "context" . "class" "small-svg m-5") }}
+            </div>
+        </div>
+        <div class="keep-uncut">
+            <h2 class="bold">{{ .heading | title }}</h2>
+            <p class="text-sm">{{ .description }}</p>
+        </div>
+    </div>
+</card>

@@ -1,0 +1,40 @@
+@media (min-width: 640px) { 
+    .new-grid, .new-grid-reverse {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 2rem;
+    }
+    
+    .grid-onequart {
+        grid-column: span 3 / span 3;
+    }
+    
+    .grid-onethird {
+        grid-column: span 4 / span 4;
+    }
+
+    .title-block {
+        min-height: 85vh;
+    }
+    
+    .grid-twothird {
+        grid-column: span 8 / span 8;
+    }
+    
+    .grid-onehalf {
+        grid-column: span 6 / span 6;
+    }
+
+    .new-grid-reverse svg, .new-grid svg {
+        max-height: none;
+    }
+
+    .vertical-align {
+        display: flex;
+        align-items: center;
+    }
+
+    .questions-image {
+        display:block;
+    }
+}

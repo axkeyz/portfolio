@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="p-2">
+<h1>{{ .Title | title }}</h1>
+
+{{ .Content }}
+
+<p>Date: {{ .Date.Format "January 2, 2006" }}
+    <br/>Author: {{ delimit .Params.Authors ", " }}
+</p>
+</div>
+{{ end }}

@@ -1,0 +1,74 @@
+{{ define "main" }}
+  <!-- Title block -->
+  <div class="new-grid-reverse content-wrapper margin-bottom">
+    <div class="grid-onehalf vertical-align title-block">
+      <div>
+        <h1 class="special">{{ .Title }}<br/>{{ .Params.tagline }}</h1>
+        <p>{{ .Params.title_descrip }}</p>
+        <div class="margin-h1-p-button"><a href="{{ .Params.title_button_url }}" class="dark" type="button">{{ .Params.title_button }}</a>
+          &nbsp; &nbsp;<a href="{{ .Params.cv_button_url }}" type="button">{{ .Params.cv_button }}</a></div>
+      </div>
+    </div>
+    <div class="grid-onehalf vertical-align title-block">
+      <div class="max-40-width-wrapper">{{ partial .Params.cover_image }}</div>
+    </div>
+  </div>
+  <!-- Services -->
+  <div class="new-grid content-wrapper screen-height-block">
+    <div class="grid-onethird vertical-align">
+      <div class="max-40-width-wrapper mobile-center">{{ partial .Params.services_image }}</div>
+    </div>
+    <div class="grid-twothird vertical-align block">
+      <div>
+        <h1>{{ .Params.services_heading }}</h1>
+        {{ range .Params.services_descrip }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="">
+    <div class="content-wrapper">
+        <h1 class="special">{{ .Params.projects_heading }}</h1>
+        <div class="new-grid">
+          <div class="grid-onequart">
+              This is a grid
+          </div>
+          <div class="grid-onequart">This is a grid</div>
+          <div class="grid-onequart">
+            This is a grid
+        </div>
+        <div class="grid-onequart">
+          This is a grid
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-height-block vertical-align">
+    <div class="max-40-width-wrapper text-center">
+      <h1 class="special">{{ .Params.stack_heading }}</h1>
+      <p>{{ .Params.stack_descrip | markdownify }}</p>
+      {{ range $i := .Params.stacks }}
+        {{ range $j, $k := $i }}
+          <div class="margin-bottom-large">
+            <h2>{{ $j | upper }}</h2>
+            {{ range $u := $k }}
+              {{ range $v, $w := $u }}
+                <button class="pseudo" aria-label="{{ $v }}">{{ $v | upper }}</button>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ end }}
+      <p>{{ .Params.stack_andmore | markdownify }}</p>
+    </div>
+  </div>
+  <hr />
+  <!-- Contact form -->
+  <div class="screen-height-block vertical-align">
+    <div class="max-40-width-wrapper">
+      <h1 class="text-center">{{ .Params.contact_form_heading }}</h1>
+      {{ partial "cards/contact_form.html" }}
+    </div>
+  </div>
+{{ end }}

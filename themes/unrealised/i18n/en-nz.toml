@@ -1,0 +1,26 @@
+[message-404]
+other = "Page not found"
+
+[message-404-description]
+other = "Oops. This page was not found. `\\('_')/` \nYou can try searching for it?"
+
+[more-details-here]
+other="Read more."
+
+[form-name]
+other = "Name"
+[form-email]
+other = "Email"
+[form-message]
+other = "Message"
+[form-send]
+other = "Send"
+
+[design-concept]
+other="Design Concept"
+[built-with]
+other="Built With"
+[alternate-versions]
+other="Alternate Versions"
+[fun-fact]
+other="Fun Fact"

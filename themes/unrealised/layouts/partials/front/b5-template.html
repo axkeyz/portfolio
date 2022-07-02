@@ -1,0 +1,21 @@
+
+<div class="center m-auto m-600">
+    <div class="center m-auto">{{ partial .params.image }}</div>
+    <p class="center m-auto"><span class="bold">{{ T "design-concept" }}:</span> {{ .params.concept }}</p>
+    <p>
+        <span class="bold">{{ T "built-with" }}:</span>
+        {{ range $index, $val := .params.builtwith }}
+            {{ if (not (eq $val.url "N/A"))}}<a href="{{ $val.url }}" aria-label="{{ $index }}">{{ end }}
+                {{ partial $val.partial (dict "class" "small-svg-height" ) }}
+            {{ if (not (eq $val.url "N/A"))}}</a>{{ end }}
+        {{ end }}
+    </p>
+    <p>
+        <span class="bold">{{ T "alternate-versions" }}:</span> {{ .params.altversion.description }}<br/>
+        {{ range $index, $value := .params.altversion.items }}
+        <a class="label label-{{ $value.colour }}" href="{{ $value.url }}">{{ replace $index "svg" "SVG" | title }}</a>
+        {{ end }}
+    </p>
+    <p class="p-5"><span class="bold">{{ T "fun-fact" }}:</span> {{ index .params.fun 0 }}<br />
+    {{ index .params.fun 1 }}</p>
+</div>

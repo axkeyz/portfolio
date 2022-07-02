@@ -1,0 +1,33 @@
+{{ $index := 0 }}
+<div class="no-print">
+    <p>
+        {{ $colours := shuffle (slice "label-yellow" "label-pink" "label-purple" "label-brown" "label-blue" "label-green") }}
+        {{ range $heading, $description := .items }}
+            <button class="label {{ index $colours $index }}" onclick="openCity('{{ replace $heading " " "-" }}')">
+                {{ $heading | title }}
+            </button>
+            {{ $index = add $index 1 }}
+        {{ end }}
+    </p>
+</div>
+
+<div class="p-5 a-button-border">
+    {{ $index = 0 }}
+    {{ range $heading, $description := .items }}
+        <div id='{{ replace $heading " " "-" }}' class="tabbed{{ if gt $index 1 }} p-p-5{{end}}" {{ if eq $index 0 }}style="display:block"{{ end }}>
+            <h2 class="text-medium">{{ $heading | title }}  [{{ $description.type | title }}]</h2>
+            <p>{{ $description.intention }} <a href="{{ $description.link }}">{{ T "more-details-here" }}</a></p>
+            {{ if $description.image }}<img class="m-auto center" width="500px" height="217px" src="{{ $description.image }}">{{ end }}
+            <p>
+                {{ range $h, $d := $description.built_with }}
+                    {{ range $dk, $v := $d }}
+                        <span class="label">
+                            {{ partial "svg/tag.html" (dict "class" "small-svg") }} {{ replace (replace $dk "css" "CSS") "js" "JS" | title }}: {{ $v }}
+                        </span>
+                    {{ end }}
+                {{ end}}
+            </p>
+        </div>
+        {{ $index = add $index 1 }}
+    {{ end }}
+</div>

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="content-wrapper">
+    <h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content | safeHTML }}
+    </div>
+
+    <div>
+        <p>Date: {{ .Date.Format "January 2, 2006" }}
+            <br/>Author: {{ delimit .Author ", " }}
+        </p>
+    </div>
+</article>
+{{ end }}

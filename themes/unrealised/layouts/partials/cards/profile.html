@@ -1,0 +1,9 @@
+<card class="flex text-sm{{ if .class }} {{ .class }}{{end}}">
+    <div>
+        {{ partial .icon (dict "context" . "class" "small-svg m-5") }}
+    </div>
+    <div>
+        <h2 class="bold">{{ .heading }}</h2>
+        <p>{{ .description }}</p>
+    </div>
+</card>
