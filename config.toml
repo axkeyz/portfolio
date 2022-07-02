@@ -17,7 +17,7 @@ defaultContentLanguage = "en-nz"
     page = "/:filename"
 
 [params]
-    logo = "HUANG"
+    logo = "A HUANG"
     github = "axkeyz"
     linkedin = "aileen-huang"
     pastebin = "https://pastebin.com/u/xah/1/XYjeTSBh"
@@ -27,7 +27,7 @@ defaultContentLanguage = "en-nz"
 [menu]
     [[menu.unrealised]]
         identifier="about-me"
-        name="svg/identification.html"
+        name="About Me"
     [[menu.unrealised]]
         parent="about-me"
         url="/about"
@@ -42,7 +42,7 @@ defaultContentLanguage = "en-nz"
         name="CV"
     [[menu.unrealised]]
         identifier="projects"
-        name="svg/briefcase.html"
+        name="Projects"
         weight="2"
     [[menu.unrealised]]
         parent="projects"
@@ -54,7 +54,7 @@ defaultContentLanguage = "en-nz"
         name="Work"
     [[menu.unrealised]]
         url="/contact"
-        name="svg/email.html"
+        name="Contact"
         weight="3"
     [[menu.unrealised]]
         parent="projects"
