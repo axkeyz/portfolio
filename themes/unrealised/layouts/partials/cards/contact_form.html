@@ -1,5 +1,8 @@
+{{ $hash := delimit (shuffle (split (md5 "axis") "" )) "" }}
 <div class="contact-form-wrapper">
-  <form name="contact-form" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
+    data-netlify-recaptcha="true" data-netlify="true"
+  >
     <div class="margin-bottom">
       <label for="name">Name<span>*</span></label>
       <input class="full-width" type="text" name="name" id="name" value="" tabindex="1" />
@@ -8,10 +11,14 @@
       <label for="email">Email<span>*</span></label>
       <input class="full-width" type="email" name="email" id="email" value="" tabindex="1" />
     </div>
+    <div class="hidden">
+      <label>Don’t fill this out if you’re human:</label> <input name="a_{{ $hash }}" />
+    </div>
     <div class="margin-bottom">
       <label for="message">Message<span>*</span></label>
       <textarea cols="40" rows="8" name="message" id="message" class="full-width"></textarea>
     </div>
+    <div class="margin-bottom" data-netlify-recaptcha="true"></div>
     <div class="margin-bottom relative-wrapper">
       <button type="submit" class="full-width">
         Submit

@@ -334,3 +334,7 @@ p.speech:after {
     margin-left: 6rem;
     margin-top: 2rem;
 }
+
+.hidden {
+    display: none;
+}
