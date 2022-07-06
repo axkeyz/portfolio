@@ -20,32 +20,36 @@
     </div>
     <div class="grid-twothird vertical-align block">
       <div>
-        <h1>{{ .Params.services_heading }}</h1>
+        <h1 class="mobile-m-n1rem">{{ .Params.services_heading }}</h1>
         {{ range .Params.services_descrip }}<p>{{ . }}</p>{{ end }}
       </div>
     </div>
   </div>
 
   <!-- Projects -->
-  <div class="">
+  <div class="projects screen-height-block vertical-align block">
     <div class="content-wrapper">
-        <h1 class="special">{{ .Params.projects_heading }}</h1>
-        <div class="new-grid">
-          <div class="grid-onequart">
-              This is a grid
-          </div>
-          <div class="grid-onequart">This is a grid</div>
-          <div class="grid-onequart">
-            This is a grid
+        <div>
+          <h1 class="special">{{ .Params.projects_heading }}</h1>
         </div>
-        <div class="grid-onequart">
-          This is a grid
-      </div>
+        <div class="new-grid print-collapsable">
+          <div class="grid-onethird green-border">
+            <h2>PROJECT NAME</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+          <div class="grid-onethird green-border">
+            <h2>PROJECT NAME</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+          <div class="grid-onethird green-border">
+            <h2>PROJECT NAME</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
       </div>
     </div>
   </div>
   <div class="screen-height-block vertical-align">
-    <div class="max-40-width-wrapper text-center">
+    <div class="max-40-width-wrapper text-center relative-wrapper">
       <h1 class="special">{{ .Params.stack_heading }}</h1>
       <p>{{ .Params.stack_descrip | markdownify }}</p>
       {{ range $i := .Params.stacks }}
@@ -53,17 +57,18 @@
           <div class="margin-bottom-large">
             <h2>{{ $j | upper }}</h2>
             {{ range $u := $k }}
-              {{ range $v, $w := $u }}
-                <button class="pseudo" aria-label="{{ $v }}">{{ $v | upper }}</button>
-              {{ end }}
+                <button class="pseudo" aria-label="{{ $u }}">{{ $u | upper }}</button>
             {{ end }}
           </div>
         {{ end }}
       {{ end }}
-      <p>{{ .Params.stack_andmore | markdownify }}</p>
+      <div class="max-17-width-wrapper speech-bubble-svg">{{ partial "svg/comment.svg" . }}</div>
+      <div class="speech-bubble-wrapper">
+        <p class="bubble speech">{{ .Params.speech_bubble_text | markdownify }}</p>
+      </div>
     </div>
   </div>
-  <hr />
+  <hr class="no-print">
   <!-- Contact form -->
   <div class="screen-height-block vertical-align">
     <div class="max-40-width-wrapper">

@@ -1,5 +1,7 @@
-<nav class="float-right">
-    {{ if .Site.Menus.unrealised }}
-    Show something
+{{ if .Site.Menus.unrealised }}
+<div class="nav-wrapper">
+    {{ range .Site.Menus.unrealised.Sort.ByWeight }}
+        <div class="nav-item"><a class="black-link" href="{{ .URL }}">{{ .Name }}</a></div>
     {{ end }}
-</nav>
+</div>
+{{ end }}

@@ -1,5 +1,8 @@
 <header class="header">
-    <div class="header-wrapper">
-        <a href="{{ .Site.BaseURL }}" class="black-link">{{ .Site.Params.logo }}</a>
+    <div class="header-wrapper flex-space-between">
+        <div class="logo">
+            <a href="{{ .Site.BaseURL }}" class="black-link">{{ .Site.Params.logo }}</a>
+        </div>
+        <nav class="nav">{{ partial "nav.html" . }}</nav>
     </div>
 </header>
