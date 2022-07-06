@@ -17,8 +17,8 @@ if('serviceWorker' in navigator) {
 if(document.querySelector("form")){
     const handleSubmit = (e) => {
     e.preventDefault()
-    let myForm = document.getElementById('contactform');
-    let formcontainer = document.getElementById('contactformcontainer');
+    let myForm = document.getElementById('contact-form');
+    let formcontainer = document.getElementById('contact-form-wrapper');
     let formData = new FormData(myForm)
     fetch('/', {
         method: 'POST',
@@ -32,14 +32,14 @@ if(document.querySelector("form")){
 }
 
 // Navigation tab
-function openCity(cityName) {
-    var i;
-    var x = document.getElementsByClassName("tabbed");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    document.getElementById(cityName).style.display = "block";  
-}
+// function openCity(cityName) {
+//     var i;
+//     var x = document.getElementsByClassName("tabbed");
+//     for (i = 0; i < x.length; i++) {
+//       x[i].style.display = "none";  
+//     }
+//     document.getElementById(cityName).style.display = "block";  
+// }
 
 // Hamburg menu
 // var menuVisible = false; 
