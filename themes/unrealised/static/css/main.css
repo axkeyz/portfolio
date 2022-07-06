@@ -52,8 +52,6 @@ a.black-link:hover, a.black-link:active {
 hr {
     border-width: 0px;
     border-top: 0.15em dashed #E9C46A;
-    margin-bottom: 5rem;
-    margin-top: 7.5rem;
 }
 
 header {
@@ -67,7 +65,7 @@ header {
 }
 
 footer {
-    margin-top: 5rem;
+    margin-top: 2rem;
     border-top: 0.15em dashed #E9C46A;
     background-color: #fdfaf3;
     padding: 1rem;
@@ -77,10 +75,21 @@ footer svg {
     height: 1.5rem;
 }
 
+.nav-wrapper svg {
+    height: 1.1rem;
+}
+
 input, textarea, select {
     border-radius: 0.5rem;
     border: 0.15rem solid #2A9D8F;
     padding: 1rem;
+}
+
+.green-border {
+    border-radius: 0.5rem;
+    border: 0.15rem solid #2A9D8F;
+    padding-left:1rem;
+    padding-right:1rem;
 }
 
 button, [type="button"], [type="submit"] {
@@ -121,6 +130,11 @@ label {
     margin: auto;
 }
 
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 .content-wrapper {
     max-width: 64rem;
     margin: auto;
@@ -128,7 +142,9 @@ label {
 }
 
 .new-grid {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
 }
 
 .max-40-width-wrapper {
@@ -137,8 +153,14 @@ label {
     padding: 1rem;
 }
 
+.max-17-width-wrapper {
+    max-width: 17rem;
+    margin: auto;
+    padding: 1rem;
+}
+
 .screen-height-block {
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .vertical-align {
@@ -250,4 +272,65 @@ button.pseudo {
     border: 0.15rem solid #e9c46a;
     background-color: #fdfaf3;
     padding: 0.25rem 1.5rem;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+.nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.mobile-m-n1rem {
+    margin-top: -.67rem;
+}
+
+.no-print, .no-print *
+{
+    display: block;
+}
+
+p.bubble {
+	position: relative;
+	width: 20rem;
+	text-align: center;
+	border: 0.15rem solid #2A9D8F;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+p.bubble:before,
+p.bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+p.speech:before {
+	left: 0.8rem;
+	bottom: -1.6rem;
+	border: 0.75rem solid;
+	border-color: #2A9D8F transparent transparent #2A9D8F;
+}
+
+p.speech:after {
+	left: 0.95rem;
+	bottom: -1.25rem;
+	border: 1rem solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+.speech-bubble-svg {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1rem;
+}
+
+.speech-bubble-wrapper {
+    margin-bottom: 5rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
 }
