@@ -1,14 +1,19 @@
 {{ define "main" }}
-<article class="content-wrapper">
+<article class="content-wrapper {{ .Params.partial_classes }}">
     <h1>{{ .Title }}</h1>
+
+    {{ if isset .Params "partial" }}
     <div>
-        {{ .Content | safeHTML }}
+        {{ partial .Params.partial . }}
+    </div>
+    {{ else }}
+    <div>
+    {{ .Content | safeHTML }}
     </div>
 
     <div>
-        <p>Date: {{ .Date.Format "January 2, 2006" }}
-            <br/>Author: {{ .Author }}
-        </p>
+        <p>Author: {{ .Site.Params.Author }} | Date: {{ .Date.Format "January 2, 2006" }}</p>
     </div>
+    {{ end }}
 </article>
 {{ end }}
