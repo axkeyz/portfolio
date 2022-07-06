@@ -15,9 +15,10 @@ defaultContentLanguage = "en-nz"
 
 [permalinks]
     page = "/:filename"
+    blog = "/blog/:year/:month/:filename"
 
 [params]
-    logo = "A HUANG"
+    logo = "HUANG"
     github = "axkeyz"
     linkedin = "aileen-huang"
     pastebin = "https://pastebin.com/u/xah/1/XYjeTSBh"
@@ -26,38 +27,25 @@ defaultContentLanguage = "en-nz"
 
 [menu]
     [[menu.unrealised]]
-        identifier="about-me"
-        name="About Me"
-    [[menu.unrealised]]
-        parent="about-me"
         url="/about"
         name="About Me"
+        identifier="about"
+        weight=1
     [[menu.unrealised]]
-        parent="about-me"
+        parent="about"
+        url="/cv"
+        name="Resume"
+        weight=2
+    [[menu.unrealised]]
+        url="/projects"
+        name="Projects"
+        weight=3
+    [[menu.unrealised]]
         url="/blog"
         name="Blog"
-    [[menu.unrealised]]
-        parent="about-me"
-        url="/cv"
-        name="CV"
-    [[menu.unrealised]]
-        identifier="projects"
-        name="Projects"
-        weight="2"
-    [[menu.unrealised]]
-        parent="projects"
-        url="/projects"
-        name="Personal"
-    [[menu.unrealised]]
-        parent="projects"
-        url="/work"
-        name="Work"
+        weight=5
     [[menu.unrealised]]
         url="/contact"
         name="Contact"
-        weight="3"
-    [[menu.unrealised]]
-        parent="projects"
-        url="/sheppa-games"
-        name="Sheppa Games"
+        weight=6
         
