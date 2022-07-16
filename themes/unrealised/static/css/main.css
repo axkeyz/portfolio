@@ -295,7 +295,7 @@ button.pseudo {
 p.bubble {
 	position: relative;
 	width: 20rem;
-    max-width: 60%;
+    max-width: 80%;
 	text-align: center;
 	border: 0.15rem solid #2A9D8F;
 	border-radius: 0.5rem;
