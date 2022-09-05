@@ -45,7 +45,7 @@ a.black-link, a.black-link:visited {
     color: #264653;
 }
 
-a.black-link:hover, a.black-link:active {
+a.black-link:hover, a.black-link:active, [type="button"]:visited {
     color: #2A9D8F;
 }
 
