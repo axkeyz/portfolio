@@ -1,12 +1,18 @@
 {{ define "main" }}
     <article class="dspecial">
-        <div class="m-400 center m-auto">
+        <div class="max-40-width-wrapper m-auto">
             <h1>{{ .Title }}</h1>
-            {{ range .Pages }}
-                <li class="left">
-                    <a href="{{.Permalink}}">{{ .Title }}</a>
-                </li>
-            {{ end }}
+            <p>{{ .Params.comments | markdownify }}</p>
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <h2 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <p>
+                            {{ .Params.description }}
+                        </p>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
     </article>
 {{ end }}
