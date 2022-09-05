@@ -19,8 +19,19 @@ services_image: svg/services_image.svg
 
 projects_heading: Here are some projects I've worked on.
 projects: 
-    - The work I've done for Divers Group:
-        Built with: Laravel, TailwindCSS
+    - dg-client-app:
+        name: Divers Group client portal
+        built_with: Laravel (PHP), AlpineJS, TailwindCSS
+        description: A project that completely upgrades the existing portal with reactive Javascript and modern design practices.
+    - pbt-parser:
+        name: PBT spreadsheet parser
+        built_with: Go, SQLite
+        description: An automation project that extracts information from PBTOne runsheets and invoices and outputs them in a Divers Group accounting format.
+        more_at: pbt-parser
+    - water:
+        name: Water API & Dashboard
+        built_with: Go, Postgres (PostGIS), Hugo, Vue (CDN)
+        description: A project that intends to prove that certain non-rural regions of Auckland get more water outages than others.
 projects_button: "& more..."
 
 stack_heading: This is my tech stack I use to build stuff.
@@ -42,10 +53,9 @@ stacks:
         - Tailwind
         - Bootstrap
         - jQuery
-        - React
         - Vue
 
-speech_bubble_text: I prioritised website printability [amongst other things](/blog/2022/07/portfolio-design/), so some may consider this design boring. I've got a [slightly fancier version](/projects/landing-alt) too!
+speech_bubble_text: I prioritised website printability [amongst other things](/blog/2022/07/portfolio-design/), so not too many frameworks used here.
 
 contact_form_heading: Feel free to contact me.
 ---

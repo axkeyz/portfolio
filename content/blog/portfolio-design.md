@@ -34,9 +34,9 @@ As someone who likes backend slightly more than frontend, I like to make sure my
 
 I designed my portfolio landing page hoping that the reader would get exactly what they wanted from this website, as fast as possible. There isn't any javascript at all, except for the mobile menu.
 
-My portfolio doesn't show off my frontend skills though, and it may even look a bit static to some (= boring). Hence, I made a [slightly fancier version](/projects/landing-alt) too. It's the exact same design with printability, but with animations and other stuff. Is it truly better and worth the trade-off with slightly higher waiting times? I'm not sure. 
+My portfolio doesn't show off my frontend skills though, and it may even look a bit static to some (= boring). Hence, I really do plan to make a fancier version some day. It'd the exact same design with printability, but with animations and other stuff. Would it be truly better and worth the trade-off with slightly higher waiting times? I'm not sure. 
 
 ## Closing comments
 I think I'll forever consider myself a bad designer. I may have grabbed a couple of books on graphic design from the library, but I've never had formal training as a mostly sciences student and I just don't have the intuitive feel for placement, colour, typography and a lot of other important tools in the graphics toolbox.
 
-But at least I can appreciate a good design (or so I hope) and eventually forge out something decent. Something that fits my needs
+But at least I can appreciate a good design (or so I hope) and eventually forge out something decent. Something that fits my needs.
