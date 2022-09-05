@@ -339,3 +339,24 @@ p.speech:after {
 .hidden {
     display: none;
 }
+
+th {
+    border-bottom: 0.15em dashed #E9C46A;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: #2A9D8F;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+.pt-100 {
+    padding-top: 1rem;
+}
+
+.left {
+    text-align: left;
+}
