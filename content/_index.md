@@ -28,7 +28,7 @@ projects:
         built_with: Go, SQLite
         description: An automation project that extracts information from PBTOne runsheets and invoices and outputs them in a Divers Group accounting format.
         more_at: pbt-parser
-    - water:
+    - water-outages:
         name: Water API & Dashboard
         built_with: Go, Postgres (PostGIS), Hugo, Vue (CDN)
         description: A project that intends to prove that certain non-rural regions of Auckland get more water outages than others.
