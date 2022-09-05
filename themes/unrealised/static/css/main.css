@@ -27,7 +27,7 @@ h3.special {
     font-size: 1.25rem;
 }
 
-p {
+p, li, td {
     line-height: 1.5rem;
 }
 
@@ -145,6 +145,12 @@ label {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 0.5rem;
+}
+
+.max-75-width-wrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding: 1rem;
 }
 
 .max-40-width-wrapper {

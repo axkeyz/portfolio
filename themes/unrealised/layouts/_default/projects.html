@@ -1,0 +1,52 @@
+{{ define "main" }}
+    <article class="dspecial">
+        <div class="max-40-width-wrapper m-auto">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.comments | markdownify }}</p>
+
+            <h2>COMPLETED (?)</h2>
+            <p>{{ .Params.completed }}</p>
+                <table>
+                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
+                {{ range sort .Pages "Title" "asc" }}
+                <tr>
+                    {{ if eq .Params.status "completed" }}
+                    <td>
+                        <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    </td>
+                    <td>
+                        {{ .Params.project_type | title }}
+                    </td>
+                    <td>
+                        {{ .Params.description }}
+                    </td>
+                    {{ end }}
+                </tr>   
+                {{ end }}
+                </table>
+
+            <h2>IN PROGRESS/PLANNED</h2>
+            <p>{{ .Params.planned }}</p>
+            <div>
+                <table>
+                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
+                    {{ range sort .Pages "Title" "asc" }}
+                    <tr>
+                        {{ if eq .Params.status "planned" }}
+                        <td>
+                            <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                        </td>
+                        <td>
+                            {{ .Params.project_type | title }}
+                        </td>
+                        <td>
+                            {{ .Params.description }}
+                        </td>
+                        {{ end }}
+                    </tr>   
+                    {{ end }}
+                    </table>
+            </div>
+        </div>
+    </article>
+{{ end }}
