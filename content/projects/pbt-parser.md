@@ -25,6 +25,10 @@ This tool had to:
 - Extract info from previous months if necessary
 - Create a monthly export in the right format
 
+## TECH
+
+Go with SQLite.
+
 ## LEARNING
 
 - SQLite is really barebones. Go doesn't seem to support some of the functions either. However, it's lightweight and definitely useable for a small project like this one.

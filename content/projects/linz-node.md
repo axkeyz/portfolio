@@ -11,7 +11,9 @@ status: planned
 project_type: [personal]
 ---
 
-*Project has not been started. Future GitHub Project Link - https://github.com/axkeyz/linz-node*
+*Project has not been started.*
+
+*Future GitHub Project Link - https://github.com/axkeyz/linz-node*
 
 ## PURPOSE
 

@@ -10,7 +10,9 @@ project_type: [work]
 tags: [PHP, jQuery, Bootstrap, Work, Solo]
 ---
 
-*One of the first things I built for work in vanilla PHP, jQuery and Bootstrap. Not too secure, I'd probably replace with Symfony ORM and routing at least. GitHub Project Link - https://github.com/axkeyz/dg-warehouse-scan*
+*One of the first things I built for work in vanilla PHP, jQuery and Bootstrap. Not too secure, I'd probably replace with Symfony ORM and routing at least.*
+
+*GitHub Project Link - https://github.com/axkeyz/dg-warehouse-scan*
 
 ## PURPOSE
 
