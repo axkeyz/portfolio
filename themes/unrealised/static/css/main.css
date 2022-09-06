@@ -38,7 +38,7 @@ a, a:visited {
 
 a:hover, a:active {
     color:#F4A261;
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 a.black-link, a.black-link:visited {
@@ -75,10 +75,6 @@ footer svg {
     height: 1.5rem;
 }
 
-.nav-wrapper svg {
-    height: 1.1rem;
-}
-
 input, textarea, select {
     border-radius: 0.5rem;
     border: 0.15rem solid #2A9D8F;
@@ -106,7 +102,7 @@ button, [type="button"], [type="submit"] {
 
 button:hover, [type="button"]:hover, [type="submit"]:hover {
     border: 0.15rem solid #E9C46A;
-    transition: 1.5s;
+    transition: 0.5s;
     color: #2A9D8F;
     box-shadow: 0 0 0.5em #e9c46a;
 }
@@ -265,7 +261,7 @@ input:focus, textarea:focus {
     outline: none !important;
     border-color: #e9c46a;
     box-shadow: 0 0 0.5em #e9c46a;
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 .main-bg-color {
@@ -282,15 +278,6 @@ button.pseudo {
     border: 0.15rem solid #e9c46a;
     background-color: #fdfaf3;
     padding: 0.25rem 1.5rem;
-}
-
-.nav-wrapper {
-    display: flex;
-}
-
-.nav-item {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 .mobile-m-n1rem {
@@ -377,4 +364,28 @@ table > tbody > tr:last-child > td {
 
 .p-mobile-100 {
     margin-bottom: 3.5rem;
+}
+
+.hamburg-icon {
+    display: block;
+    width: 1.1rem;
+    float: right;
+}
+
+.nav-wrapper {
+    display: block;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-wrapper .nav-item {
+    padding: 2rem 0.5rem;
+    text-align: center;
+    display: none;
+}
+
+.nav-wrapper.responsive .nav-item {
+    display: block;
 }

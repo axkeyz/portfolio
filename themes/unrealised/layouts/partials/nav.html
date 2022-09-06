@@ -1,5 +1,10 @@
 {{ if .Site.Menus.unrealised }}
-<div class="nav-wrapper">
+<a href="javascript:void(0);" aria-label="hamburg-menu" 
+    class="hamburg-icon nav-item black-link" onclick="navigation()">
+        {{ partial "svg/hamburg.svg" }}
+</a>
+
+<div class="nav-wrapper" id="navbar">
     {{ range .Site.Menus.unrealised.Sort.ByWeight }}
         <div class="nav-item"><a class="black-link" href="{{ .URL }}">{{ .Name }}</a></div>
     {{ end }}

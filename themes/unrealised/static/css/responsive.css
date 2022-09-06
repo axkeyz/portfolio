@@ -70,4 +70,18 @@
     .p-mobile-100 {
         margin-bottom: 0;
     }
+
+    .hamburg-icon {
+        display: none;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-wrapper .nav-item {
+        padding: 0rem 0.5rem;
+        display: block;
+    }
 }
