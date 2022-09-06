@@ -394,7 +394,7 @@ table > tbody > tr:last-child > td {
 
 .nav-wrapper .nav-item {
     padding: 2rem 0.5rem;
-    text-align: center;
+    text-align: right;
     display: none;
 }
 
