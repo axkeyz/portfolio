@@ -6,8 +6,8 @@ draft: false
 description: A planned Laravel project that can generate randomised API data for testing based off a given JSON template and fake data using faker.js.
 
 status: planned
-project_type: [hobby]
-tags: [Laravel, Hobby, Solo, Planned]
+project_type: [personal]
+tags: [Laravel, Personal, Solo, Planned]
 ---
 
 *GitHub Project Link - https://github.com/axkeyz/api-generator*

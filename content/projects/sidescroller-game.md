@@ -6,8 +6,8 @@ draft: false
 description: "A sidescrolling 2D tower defence that is planned to target the anime-style male-loving population. I'm probably spending most of my time on this these days. Using Godot with GDScript, for now."
 
 status: planned
-project_type: [hobby]
-tags: [Hobby, Solo, Godot, Planned]
+project_type: [personal]
+tags: [Personal, Solo, Godot, Planned]
 ---
 
 *GitHub Project Link - https://github.com/axkeyz/husbando-sidescroller*

@@ -6,8 +6,8 @@ draft: false
 description: "A tool I built for work in my spare time, using Flask (Python). This tool can process payroll manual journals and create invoices through Xero's API."
 
 status: completed
-project_type: [hobby, work]
-tags: [Hobby, Work, Python, Flask, Solo]
+project_type: [personal, work]
+tags: [Personal, Work, Python, Flask, Solo]
 ---
 
 *This project has been privatised due to sensitivity of DG's accounts*

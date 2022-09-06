@@ -6,8 +6,8 @@ draft: false
 description: A Chinese novel ripper tool that extracts novels from certain Chinese novel aggregators. Built with Python (sort of).
 
 status: completed
-project_type: [hobby]
-tags: [Python, Hobby, Completed]
+project_type: [personal]
+tags: [Python, Personal, Completed]
 ---
 
 *This project has been privatised due to somewhat questionable copyright. Well, it was good as a learning experience.*
