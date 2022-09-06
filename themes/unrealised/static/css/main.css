@@ -107,6 +107,18 @@ button:hover, [type="button"]:hover, [type="submit"]:hover {
     box-shadow: 0 0 0.5em #e9c46a;
 }
 
+button.non-button {
+    border: none;
+    padding: 0;
+    color: #264653;
+}
+
+button.non-button:hover {
+    border: none;
+    box-shadow: none;
+    color: #2A9D8F !important;
+}
+
 button.dark, [type="button"].dark, [type="submit"].dark,
 button.dark:hover, [type="button"].dark:hover, [type="submit"].dark:hover {
     background-color: #2A9D8F;

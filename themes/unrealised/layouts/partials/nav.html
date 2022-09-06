@@ -1,8 +1,8 @@
 {{ if .Site.Menus.unrealised }}
-<a href="javascript:void(0);" aria-label="hamburg-menu" 
-    class="hamburg-icon nav-item black-link" onclick="navigation()">
+<button aria-label="hamburg-menu" 
+    class="non-button hamburg-icon nav-item black-link" onclick="javascript:void(0); navigation()">
         {{ partial "svg/hamburg.svg" }}
-</a>
+</button>
 
 <div class="nav-wrapper" id="navbar">
     {{ range .Site.Menus.unrealised.Sort.ByWeight }}
