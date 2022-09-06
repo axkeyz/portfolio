@@ -1,0 +1,403 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h2, h3 {
+    font-size: 1.1rem;
+    color: #2A9D8F;
+}
+
+h1.special {
+    margin: 1.5rem 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+h2.special {
+    font-size: 1.5rem;
+}
+
+h3.special {
+    font-size: 1.25rem;
+}
+
+p, li, td {
+    line-height: 1.5rem;
+}
+
+a, a:visited {
+    color: #E76F51;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color:#F4A261;
+    transition: 0.5s;
+}
+
+a.black-link, a.black-link:visited {
+    color: #264653;
+}
+
+a.black-link:hover, a.black-link:active, [type="button"]:visited {
+    color: #2A9D8F;
+}
+
+hr {
+    border-width: 0px;
+    border-top: 0.15em dashed #E9C46A;
+}
+
+header {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    border-bottom: 0.15em dashed #E9C46A;
+    background-color: #fff;
+    z-index: 50;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 0.15em dashed #E9C46A;
+    background-color: #fdfaf3;
+    padding: 1rem;
+}
+
+footer svg {
+    height: 1.5rem;
+}
+
+input, textarea, select {
+    border-radius: 0.5rem;
+    border: 0.15rem solid #2A9D8F;
+    padding: 1rem;
+}
+
+.green-border {
+    border-radius: 0.5rem;
+    border: 0.15rem solid #2A9D8F;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+button, [type="button"], [type="submit"] {
+    background-color: transparent;
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 0.15rem solid #2A9D8F;
+    cursor: pointer;
+    color: #2A9D8F;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 0.65rem; 
+}
+
+button:hover, [type="button"]:hover, [type="submit"]:hover {
+    border: 0.15rem solid #E9C46A;
+    transition: 0.5s;
+    color: #2A9D8F;
+    box-shadow: 0 0 0.5em #e9c46a;
+}
+
+button.non-button {
+    border: none;
+    padding: 0;
+    color: #264653;
+}
+
+button.non-button:hover {
+    border: none;
+    box-shadow: none;
+    color: #2A9D8F !important;
+}
+
+button.dark, [type="button"].dark, [type="submit"].dark,
+button.dark:hover, [type="button"].dark:hover, [type="submit"].dark:hover {
+    background-color: #2A9D8F;
+    color: #fff;
+}
+
+label span {
+    color: #E76F51;
+}
+
+label {
+    line-height: 1.5rem;
+}
+
+.header-wrapper, .footer-wrapper {
+    max-width: 80rem;
+    margin: auto;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    max-width: 64rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.new-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.max-75-width-wrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.max-40-width-wrapper {
+    max-width: 40rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.max-17-width-wrapper {
+    max-width: 17rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.screen-height-block {
+    min-height: 100vh;
+}
+
+.vertical-align {
+    display: block;
+}
+
+.margin-h1-p-button {
+    margin-top: 1.9rem;
+}
+
+.new-grid-reverse .title-block, .new-grid-reverse svg {
+    max-height: 42.5vh;
+}
+
+.new-grid svg {
+    max-height: 52.5vh;
+}
+
+.mobile-center svg, .new-grid-reverse svg {
+    display: block;
+    margin: auto;
+}
+
+.new-grid-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+form div.margin-bottom {
+    margin-bottom: 0.5rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1.25rem;
+}
+
+.margin-bottom-large {
+    margin-bottom: 1.75rem;
+}
+
+footer div {
+    text-align: center;
+}
+
+.footer-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer svg {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.questions-image {
+    position: absolute;
+    left: -4.5rem;
+    bottom: -1rem;
+    z-index: 5;
+    display: none;
+    pointer-events:none;
+}
+
+textarea#message {
+    z-index:10;
+    position: relative;
+}
+
+.zindex-m5 {
+    z-index: -5;
+    position: relative;
+}
+
+.relative-wrapper {
+    position: relative;
+}
+
+.questions-image svg {
+    max-height: 12.5rem;
+    pointer-events:none;
+}
+
+input:focus, textarea:focus { 
+    outline: none !important;
+    border-color: #e9c46a;
+    box-shadow: 0 0 0.5em #e9c46a;
+    transition: 0.5s;
+}
+
+.main-bg-color {
+    fill: #fff;
+}
+
+.bg-yellow {
+    background-color: #fdfaf3; /*#fdfaf3*/
+}
+
+button.pseudo {
+    cursor: default;
+    font-size: 0.9rem;
+    border: 0.15rem solid #e9c46a;
+    background-color: #fdfaf3;
+    padding: 0.25rem 1.5rem;
+}
+
+.mobile-m-n1rem {
+    margin-top: -.67rem;
+}
+
+.no-print, .no-print *
+{
+    display: block;
+}
+
+p.bubble {
+	position: relative;
+	width: 20rem;
+    max-width: 80%;
+	text-align: center;
+	border: 0.15rem solid #2A9D8F;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+p.bubble:before,
+p.bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+p.speech:before {
+	left: 0.8rem;
+	bottom: -1.6rem;
+	border: 0.75rem solid;
+	border-color: #2A9D8F transparent transparent #2A9D8F;
+}
+
+p.speech:after {
+	left: 0.95rem;
+	bottom: -1.25rem;
+	border: 1rem solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+.speech-bubble-svg {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1rem;
+}
+
+.speech-bubble-wrapper {
+    margin-bottom: 5rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+th {
+    border-bottom: 0.15em dashed #E9C46A;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: #2A9D8F;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+table > tbody > tr:last-child > td {
+    border-bottom: 0.15em dashed #E9C46A;
+}
+
+.pt-100 {
+    padding-top: 1rem;
+}
+
+.left {
+    text-align: left;
+}
+
+.p-mobile-100 {
+    margin-bottom: 3.5rem;
+}
+
+.hamburg-icon {
+    display: block;
+    width: 1.1rem;
+    float: right;
+}
+
+.nav-wrapper {
+    display: block;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-wrapper .nav-item {
+    padding: 2rem 0.5rem;
+    text-align: center;
+    display: none;
+}
+
+.nav-wrapper.responsive .nav-item {
+    display: block;
+}

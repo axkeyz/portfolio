@@ -1,0 +1,11 @@
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .print-collapsable .grid-onethird {
+        grid-column: span 12 / span 12 !important;
+    }
+}
