@@ -66,4 +66,8 @@
         margin-left: 19rem;
         margin-top: 2rem;
     }
+
+    .p-mobile-100 {
+        margin-bottom: 0;
+    }
 }

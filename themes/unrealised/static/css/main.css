@@ -363,10 +363,18 @@ td {
     padding: 0.5rem;
 }
 
+table > tbody > tr:last-child > td {
+    border-bottom: 0.15em dashed #E9C46A;
+}
+
 .pt-100 {
     padding-top: 1rem;
 }
 
 .left {
     text-align: left;
+}
+
+.p-mobile-100 {
+    margin-bottom: 3.5rem;
 }
