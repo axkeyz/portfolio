@@ -27,19 +27,23 @@ defaultContentLanguage = "en-nz"
 
 [menu]
     [[menu.unrealised]]
+        url="/"
+        name="Home"
+        weight=1
+    [[menu.unrealised]]
         url="/about"
         name="About Me"
         identifier="about"
-        weight=1
+        weight=2
     [[menu.unrealised]]
         parent="about"
         url="/cv"
         name="Resume"
-        weight=2
+        weight=3
     [[menu.unrealised]]
         url="/projects"
         name="Projects"
-        weight=3
+        weight=4
     [[menu.unrealised]]
         url="/blog"
         name="Blog"
