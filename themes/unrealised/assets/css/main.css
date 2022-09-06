@@ -111,6 +111,7 @@ button.non-button {
     border: none;
     padding: 0;
     color: #264653;
+    margin: 0;
 }
 
 button.non-button:hover {
@@ -396,6 +397,10 @@ table > tbody > tr:last-child > td {
     padding: 2rem 0.5rem;
     text-align: right;
     display: none;
+}
+
+.nav-wrapper .nav-item:first-child {
+    padding-top: 4rem;
 }
 
 .nav-wrapper.responsive .nav-item {
