@@ -28,6 +28,7 @@ This tool had to:
 ## LEARNING
 
 - SQLite is really barebones. Go doesn't seem to support some of the functions either. However, it's lightweight and definitely useable for a small project like this one.
+- Not having a recommended structure (MVC) or object-orientated programming principles can be both a plus (more flexibiity and easier to make small apps) and a minus (structure is difficult to maintain).
 
 ## TODOS
 
