@@ -15,7 +15,7 @@
                         <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                     </td>
                     <td>
-                        {{ .Params.project_type | title }}
+                        {{ delimit .Params.project_type " / " | title }}
                     </td>
                     <td>
                         {{ .Params.description }}
@@ -31,19 +31,19 @@
                 <table>
                     <tr><th>Project</th><th>Type</th><th>Description</th></tr>
                     {{ range sort .Pages "Title" "asc" }}
-                    <tr>
                         {{ if eq .Params.status "planned" }}
-                        <td>
-                            <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                        </td>
-                        <td>
-                            {{ .Params.project_type | title }}
-                        </td>
-                        <td>
-                            {{ .Params.description }}
-                        </td>
-                        {{ end }}
-                    </tr>   
+                        <tr>
+                            <td>
+                                <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                            </td>
+                            <td>
+                                {{ delimit .Params.project_type " / " | title }}
+                            </td>
+                            <td>
+                                {{ .Params.description }}
+                            </td>
+                        </tr>  
+                        {{ end }} 
                     {{ end }}
                     </table>
             </div>

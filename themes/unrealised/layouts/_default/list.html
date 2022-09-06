@@ -7,9 +7,6 @@
                 {{ range .Pages }}
                     <li>
                         <h2 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                        <p>
-                            {{ .Params.description }}
-                        </p>
                     </li>
                 {{ end }}
             </ul>
