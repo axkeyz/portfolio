@@ -5,8 +5,14 @@ draft: false
 
 description: A planned project that wraps LINZ APIs into a node package for easier integration with other node-based apps.
 
-tags: ["planned", "node"]
+tags: ["Planned", "Node", "Hobby"]
 
 status: planned
-project_type: project
+project_type: [hobby]
 ---
+
+*Project has not been started. Future GitHub Project Link - https://github.com/axkeyz/linz-node*
+
+## PURPOSE
+
+A planned project that wraps LINZ APIs into a node package for easier integration with other node-based apps. I haven't started on it yet.

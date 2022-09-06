@@ -3,10 +3,11 @@ title: "API Generator"
 date: 2022-09-05T23:07:21+12:00
 draft: false
 
-description: A planned project that can generate randomised API data for testing based off a given JSON template and fake data using faker.js.
+description: A planned Laravel project that can generate randomised API data for testing based off a given JSON template and fake data using faker.js.
 
 status: planned
-project_type: project
+project_type: [hobby]
+tags: [Laravel, Hobby, Solo, Planned]
 ---
 
 *GitHub Project Link - https://github.com/axkeyz/api-generator*
@@ -23,7 +24,7 @@ So this will be more or less a clone project, with the following tasks:
 
 ## TECH
 
-I picked Laravel because I'm pretty familiar with it but don't have anything that I can show (all private code).
+I picked __Laravel (PHP)__ because I'm pretty familiar with it but don't have anything that I can show (all private code).
 
 I'm thinking of using React or Vue with the project. Probably Vue as that is more commonly used with Laravel, but I'd learn more with React I guess. Anyway, the project is WIP.
 

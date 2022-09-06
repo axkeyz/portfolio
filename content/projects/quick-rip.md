@@ -6,7 +6,8 @@ draft: false
 description: A Chinese novel ripper tool that extracts novels from certain Chinese novel aggregators. Built with Python (sort of).
 
 status: completed
-project_type: project
+project_type: [hobby]
+tags: [Python, Hobby, Completed]
 ---
 
 *This project has been privatised due to somewhat questionable copyright. Well, it was good as a learning experience.*
@@ -21,7 +22,7 @@ In other words, I needed to:
 
 ## TECH
 
-I picked Python for the web scraping. I actually played around with Go too, but the scraped result had really awkward Chinese language encoding. I believe this was actually the fault of the website itself, which used a modified font.
+I picked __Python__ for the web scraping. I actually played around with Go too, but the scraped result had really awkward Chinese language encoding. I believe this was actually the fault of the website itself, which used a modified font.
 
 The website was built with Hugo. The actual theme is pretty similar to the one I customised for [another project](https://github.com/axkeyz/pvctl-files).
 
