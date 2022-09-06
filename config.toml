@@ -15,7 +15,7 @@ defaultContentLanguage = "en-nz"
 
 [permalinks]
     page = "/:filename"
-    blog = "/blog/:year/:month/:filename"
+    blog = "/blog/:year-:month-:filename"
 
 [params]
     logo = "HUANG"
