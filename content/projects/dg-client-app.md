@@ -13,6 +13,8 @@ project_type: [Work]
 
 *This project has been privatised due to sensitivity of DG's accounts*
 
+{{< imagecarousel gallery_dir="projects/dgclientapp" >}}
+
 ## PURPOSE
 
 Divers wanted to modernize the existing client portal in terms of appearance, ease of use and function.
