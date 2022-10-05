@@ -43,6 +43,7 @@
 
     .new-grid-reverse svg, .new-grid svg {
         max-height: none;
+        max-width: 90%;
     }
 
     .vertical-align {

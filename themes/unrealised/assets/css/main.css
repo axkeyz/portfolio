@@ -192,6 +192,7 @@ label {
 
 .new-grid svg {
     max-height: 52.5vh;
+    width: 100%;
 }
 
 .mobile-center svg, .new-grid-reverse svg {
