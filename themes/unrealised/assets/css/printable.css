@@ -8,4 +8,9 @@
     .print-collapsable .grid-onethird {
         grid-column: span 12 / span 12 !important;
     }
+
+    .printbreak {
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
 }

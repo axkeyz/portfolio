@@ -1,6 +1,6 @@
 {{ define "main" }}
   <!-- Title block -->
-  <div class="new-grid-reverse content-wrapper margin-bottom">
+  <div class="new-grid-reverse content-wrapper margin-bottom printbreak">
     <div class="grid-onehalf vertical-align title-block">
       <div>
         <h1 class="special">{{ .Title }}<br/>{{ .Params.tagline }}</h1>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <!-- Services -->
-  <div class="new-grid content-wrapper screen-height-block">
+  <div class="new-grid content-wrapper screen-height-block printbreak">
     <div class="grid-onethird vertical-align">
       <div class="max-40-width-wrapper mobile-center">{{ partial .Params.services_image }}</div>
     </div>
@@ -27,7 +27,7 @@
   </div>
 
   <!-- Projects -->
-  <div class="projects screen-height-block vertical-align block p-mobile-100">
+  <div class="projects screen-height-block vertical-align block p-mobile-100 printbreak">
     <div class="content-wrapper">
         <div>
           <h1 class="special">{{ .Params.projects_heading }}</h1>
@@ -46,7 +46,7 @@
       <div class="float-right"><a href="/projects" class="dark" type="button">{{ .Params.projects_button }}</a></div>
     </div>
   </div>
-  <div class="screen-height-block vertical-align">
+  <div class="screen-height-block vertical-align printbreak">
     <div class="max-40-width-wrapper text-center relative-wrapper">
       <h1 class="special">{{ .Params.stack_heading }}</h1>
       <p>{{ .Params.stack_descrip | markdownify }}</p>
@@ -68,7 +68,7 @@
   </div>
   <hr class="no-print">
   <!-- Contact form -->
-  <div class="screen-height-block vertical-align">
+  <div class="screen-height-block vertical-align printbreak">
     <div class="max-40-width-wrapper">
       <h1 class="text-center">{{ .Params.contact_form_heading }}</h1>
       {{ partial "cards/contact_form.html" }}
