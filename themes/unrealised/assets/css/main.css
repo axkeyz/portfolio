@@ -58,7 +58,7 @@ header {
     padding: 1rem;
     position: sticky;
     top: 0;
-    width: 100vw;
+    max-width: 100vw;
     border-bottom: 0.15em dashed #E9C46A;
     background-color: #fff;
     z-index: 50;
