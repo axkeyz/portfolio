@@ -188,6 +188,7 @@ label {
 
 .new-grid-reverse .title-block, .new-grid-reverse svg {
     max-height: 42.5vh;
+    max-width: 100vw;
 }
 
 .new-grid svg {
