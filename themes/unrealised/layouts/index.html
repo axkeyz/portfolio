@@ -20,7 +20,7 @@
     </div>
     <div class="grid-twothird vertical-align block">
       <div>
-        <h1 class="mobile-m-n1rem">{{ .Params.services_heading }}</h1>
+        <h2 class="mobile-m-n1rem lazy-title">{{ .Params.services_heading }}</h1>
         {{ range .Params.services_descrip }}<p>{{ . }}</p>{{ end }}
       </div>
     </div>
@@ -30,13 +30,13 @@
   <div class="projects screen-height-block vertical-align block p-mobile-100 printbreak">
     <div class="content-wrapper">
         <div>
-          <h1 class="special">{{ .Params.projects_heading }}</h1>
+          <h2 class="special lazy-title">{{ .Params.projects_heading }}</h1>
         </div>
         <div class="new-grid print-collapsable">
           {{ range $i := .Params.projects }}
             {{ range $j, $k := $i }}
               <div class="grid-onethird green-border">
-                <h2>{{ $k.name }}</h2>
+                <h3>{{ $k.name }}</h3>
                 <p>{{ $k.description | markdownify }}</p>
                 <p><a href="/projects/{{ $j }}">See more...</a></p>
               </div>
@@ -48,12 +48,12 @@
   </div>
   <div class="screen-height-block vertical-align printbreak">
     <div class="max-40-width-wrapper text-center relative-wrapper">
-      <h1 class="special">{{ .Params.stack_heading }}</h1>
+      <h2 class="special lazy-title">{{ .Params.stack_heading }}</h1>
       <p>{{ .Params.stack_descrip | markdownify }}</p>
       {{ range $i := .Params.stacks }}
         {{ range $j, $k := $i }}
           <div class="margin-bottom-large">
-            <h2>{{ $j | upper }}</h2>
+            <h3>{{ $j | upper }}</h3>
             {{ range $u := $k }}
                 <button class="pseudo" aria-label="{{ $u }}">{{ $u | upper }}</button>
             {{ end }}
@@ -70,7 +70,7 @@
   <!-- Contact form -->
   <div class="screen-height-block vertical-align printbreak">
     <div class="max-40-width-wrapper">
-      <h1 class="text-center">{{ .Params.contact_form_heading }}</h1>
+      <h2 class="lazy-title text-center">{{ .Params.contact_form_heading }}</h1>
       {{ partial "cards/contact_form.html" }}
     </div>
   </div>

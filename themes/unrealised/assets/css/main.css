@@ -23,6 +23,12 @@ h2.special {
     font-size: 1.5rem;
 }
 
+h2.lazy-title {
+    font-size: 2rem;
+    color: #264653;
+    text-align: left;
+}
+
 h3.special {
     font-size: 1.25rem;
 }
@@ -207,7 +213,7 @@ label {
 }
 
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .float-right {
