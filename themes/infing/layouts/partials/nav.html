@@ -1,0 +1,31 @@
+<nav class="max-w-screen-2xl px-12 py-6 flex gap-12 m-auto">
+    <div class="items-center flex gap-3">
+        <a href="/" class="h-12 w-12">
+            {{ .Site.Params.Logo }}
+        </a>
+    </div>
+    <div class="hidden items-center justify-end gap-12 md:flex md:flex-1">
+        {{ range .Site.Menus.unrealised }}
+        <a href="#" class="text-base flex-initial font-medium text-gray-300 hover:text-purple-400">{{ .Name }}</a>
+        {{ end }}
+    </div>
+
+    
+    <div x-data="{showMenu : false}" class="items-center justify-end gap-12 flex flex-1 md:hidden">
+        <button class="w-6 h-6 focus:outline-none" @click="showMenu = !showMenu">
+            {{ partial "svg/hamburg.svg" }}
+        </button>
+        <div x-show="showMenu" class="absolute top-0 right-0 min-h-screen px-6 py-12 w-96 max-w-full" @click.away="showMenu = false">
+            <nav class="flex flex-col">
+                {{ range .Site.Menus.unrealised }}
+                    <a href="#" class="px-2 py-4 text-purple-400 flex justify-between w-full hover:text-purple-200">
+                        {{ .Name }}
+                    </a>
+                {{ end }}
+            </nav>
+            <button class="w-6 h-6 absolute top-6 right-6 focus:outline-none" @click="showMenu = !showMenu">
+                {{ partial "svg/xmark.svg" }}
+            </button>
+        </div>
+    </div>
+</nav>

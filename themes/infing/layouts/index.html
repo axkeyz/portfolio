@@ -1,6 +1,25 @@
 {{ define "main" }}
-
-    <h1 class="text-3xl text-blue-700 font-bold underline">thisSiteIsNew</h1>
-    <p class="bg-sky-600 text-slate-100">The thisSiteIsNew uses a theme called thisThemeIsNew</p>
-    
+<section class="min-h-screen flex items-center overflow-hidden relative w-full">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div>
+                <h1 id="title" class="pt-12 tracking-wider text-4xl leading-[3.5rem] max-w-xs md:leading-[4rem] md:text-5xl">
+                    {{ .Title }} <span class="text-green-600 font-medium">{{ .Params.tagline }}</span>
+                </h1>
+                <p class="text-xl my-6 leading-9 max-w-xs">{{ .Params.title_descrip }}</p>
+                <div class="flex gap-6 w-80 max-w-full mt-8 flex-col md:flex-row">
+                    <a href="{{ .Params.title_button_url }}" class="px-4 py-2 border-2 border-green-600 bg-green-600 text-white rounded-xl">
+                        {{ .Params.title_button }}
+                    </a>
+                    <a href="{{ .Params.cv_button_url }}" class="px-4 py-2 border-2 border-green-600 text-green-600 rounded-xl">
+                        {{ .Params.cv_button }}
+                    </a>
+                </div>
+            </div>
+            <div class="cols-span-2">
+                {{ partial .Params.cover_image }}
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}

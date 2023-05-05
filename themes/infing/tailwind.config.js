@@ -1,7 +1,11 @@
 module.exports = {
     content: ["content/**/*.md", "layouts/**/*.html"],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          quicksand: ['Quicksand', 'sans-serif'],
+        }
+      },
     },
     plugins: [],
   };
