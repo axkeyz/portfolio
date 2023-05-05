@@ -1,0 +1,16 @@
+<footer>
+	<div class="footer-wrapper">
+		{{ if isset .Site.Params "github" }}
+			<a href="https://github.com/{{ .Site.Params.Github }}" aria-label="github">{{ partial "svg/github.svg" }}</a>
+		{{ end }}
+		{{ if isset .Site.Params "email" }}
+			<a href="{{ .Site.Params.email }}" aria-label="email">{{ partial "svg/mail.svg" }}</a>
+		{{ end }}
+		{{ if isset .Site.Params "linkedin" }}
+			<a href="https://linkedin.com/in/{{ .Site.Params.Linkedin }}" aria-label="linkedin">{{ partial "svg/linkedin.svg" }}</a>
+		{{ end }}
+	</div>
+    <div class="footer-wrapper">
+		{{ replace .Site.Copyright "{year}" now.Year }}
+	</div>
+</footer>

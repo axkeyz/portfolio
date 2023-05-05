@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Infing"
+license = "MIT"
+licenselink = "https://github.com/axkeyz/portfolio/themes/infing"
+description = "Another average theme"
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Aileen Huang (axkeyz)"
+  homepage = "https://aileenhuang.dev"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
