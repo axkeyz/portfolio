@@ -3,7 +3,7 @@
     {{- partial "head.html" . -}}
     <body class="text-zinc-700 bg-gray-50 font-medium text-base font-quicksand">
         {{- partial "header.html" . -}}
-        <div id="content" class="{{ if not .IsHome }}pt-24 {{end}}pb-4">
+        <div id="content" class="{{ if not .IsHome }}pt-24 {{end}}">
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
