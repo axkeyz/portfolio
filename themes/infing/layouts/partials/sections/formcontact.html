@@ -1,0 +1,22 @@
+{{ $hash := delimit (shuffle (split (md5 "axis") "" )) "" }}
+<div>
+  <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
+    data-netlify="true"
+  >
+    <div class="mb-8 flex flex-col">
+      {{ partial "components/inputtext.html" (dict "id" "name" "label" "Name" "required" true) }}
+    </div>
+    <div class="mb-8 flex flex-col">
+      {{ partial "components/inputtext.html" (dict "id" "email" "label" "Email" "type" "email" "required" true) }}
+    </div>
+    <div class="hidden">
+      <label>Don’t fill this out if you’re human:</label> <input name="a_{{ $hash }}" />
+    </div>
+    <div class="mb-8 flex flex-col">
+      {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
+    </div>
+    <div class="mb-8">
+      {{ partial "components/buttondark.html" (dict "type" "submit" "text" "Submit" )}}
+    </div>
+  </form>
+</div>

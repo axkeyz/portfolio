@@ -1,26 +1,75 @@
 {{ define "main" }}
-<section class="min-h-screen flex items-center overflow-hidden relative w-full">
-    <div class="select-none whitespace-nowrap absolute text-green-600/[0.2] text-[300px] md:text-[500px] w-full h-full bottom-0 flex justify-center items-center">
-        <div class="pr-20 md:pr-96">&lt;</div><div>/&gt;</div>
+<section class="min-h-[580px] flex items-center overflow-hidden relative w-full">
+    <div class="select-none whitespace-nowrap absolute text-green-600/[0.2] duration-300 ease-in  w-full h-full top-0 hidden text-[300px] md:text-[500px] 2xl:flex">
+        <div class="max-w-screen-2xl flex w-full justify-between mx-auto mt-[9%]">
+            <div class=" -translate-x-3/4">&#123;</div>
+            <div class="translate-x-3/4">&#125;&semi;</div>
+        </div>
     </div>
-    <div class="w-full max-w-screen-md px-12 py-12 m-auto z-10">
-        <div class="text-center">
-            <h1 id="title" class="pt-12 font-bold text-4xl leading-[3.5rem] md:leading-[4rem] md:text-5xl">
+    <div class="w-full max-w-screen-md px-12 py-12 m-auto relative flex">
+        <div class="w-full h-full absolute top-0 left-0 duration-300 ease-in hidden justify-between whitespace-nowrap -z-10 text-green-600/[0.2] text-[300px] md:text-[500px] md:flex">
+            <div class="select-none my-auto md:-translate-x-3/4">&lt;</div>
+            <div class="select-none my-auto md:translate-x-1/4 ml-[5%]">&sol;&gt;</div>
+        </div>
+        <div class="text-center z-10">
+            <h1 id="title" class="pt-12 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">
                 {{ .Title }} <span class="text-green-600 whitespace-normal min-[460px]:whitespace-nowrap">{{ .Params.tagline }}</span>
             </h1>
             <p class="text-xl my-6 leading-9">{{ .Params.title_descrip }}</p>
             <div class="flex justify-center max-w-full">
                 <div class="flex gap-6 max-w-md w-full mt-3 flex-col min-[460px]:flex-row">
-                    {{ partial "components/buttondark.html" (dict "url" .Params.title_button_url "text" .Params.title_button )}}
-                    {{ partial "components/buttonlight.html" (dict "url" .Params.cv_button_url "text" .Params.cv_button )}}
+                    {{ partial "components/linkdark.html" (dict "url" "#contact-form" "text" .Params.title_button )}}
+                    {{ partial "components/linklight.html" (dict "url" .Params.cv_button_url "text" .Params.cv_button )}}
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="min-h-screen flex items-center overflow-hidden relative w-full">
-    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+<section class="flex flex-col items-center overflow-hidden relative w-full">
+    <div class="w-full">
+        {{ partial "svg/wave.svg" }}
+    </div>
+    <div class="bg-green-600 w-full -mt-1 text-white">
+        <div class="gap-6
+            w-full max-w-screen-2xl px-12 py-12 m-auto 
+            grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
 
+            x-data="{
+                
+            }"
+        >
+            <div class="whitespace-pre-line">
+                <span class="text-2xl font-bold">4+ years</span>
+                <span>of experience</span>
+            </div>
+            <div class="whitespace-pre-line">
+                <span class="text-2xl font-bold">XX projects</span>
+                <span>worked on</span>
+            </div>
+            <div class="whitespace-pre-line">
+                <span class="text-2xl font-bold">XX contributions</span>
+                <span>in the past year</span>
+            </div>
+            <div class="whitespace-pre-line">
+                3 personal projects
+            </div>
+        </div>
+    </div>
+</section>
+<section class="flex items-center overflow-hidden relative w-full bg-green-600 text-white">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+        It's Aileen here
+    </div>
+</section>
+<section class="flex items-center overflow-hidden relative w-full">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+        <h2 class="text-3xl md:text-4xl">{{ .Params.services_heading }}</h2>
+    </div>
+</section>
+<section class="flex flex-col items-center overflow-hidden relative w-full" id="contact-form">
+    <div class="w-full max-w-screen-md p-12 m-auto md:py-24">
+        <h2 class="text-center text-3xl mb-8 md:text-4xl">{{ .Params.contact_form_heading }}</h2>
+        {{ partial "sections/formcontact.html" }}
     </div>
 </section>
 {{ end }}
