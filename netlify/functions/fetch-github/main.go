@@ -2,17 +2,31 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+type Contributions struct {
+	Contributions      string `json:"contributions"`
+	TotalContributions int    `json:"totalContributions"`
+}
+
+type Contribution struct {
+	Color string `json:"color"`
+	Count string `json:"contributionCount"`
+	Level string `json:"contributionLevel"`
+	Date  string `json:"date"`
+}
+
+func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	response, err := http.Get("https://github-contributions-api.deno.dev/axkeyz.json")
 
 	if err != nil {
@@ -25,16 +39,17 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(responseData))
+	var contributions Contributions
+	json.Unmarshal(responseData, &contributions)
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
 		Headers:         map[string]string{"Content-Type": "text/plain"},
-		Body:            string(responseData),
+		Body:            strconv.Itoa(contributions.TotalContributions),
 		IsBase64Encoded: false,
 	}, nil
 }
 
 func main() {
-	lambda.Start(handler)
+	lambda.Start(Handler)
 }
