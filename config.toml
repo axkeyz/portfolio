@@ -49,4 +49,9 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
         url="/contact"
         name="Contact"
         weight=6
-        
+
+[server]
+[[server.headers]]
+  for = '/**'
+  [server.headers.values]
+    Access-Control-Allow-Origin = "*"
