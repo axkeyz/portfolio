@@ -13,7 +13,7 @@ import (
 )
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	response, err := http.Get("http://pokeapi.co/api/v2/pokedex/kanto/")
+	response, err := http.Get("https://github-contributions-api.deno.dev/axkeyz.json")
 
 	if err != nil {
 		fmt.Print(err.Error())
