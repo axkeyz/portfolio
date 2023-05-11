@@ -41,7 +41,6 @@ status = 200
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'self' 'unsafe-inline'; connect-src 'self'; font-src cloudfront.net *.cloudfront.net fonts.gstatic.com fonts.googleapis.com *.cloudflare.com; img-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline' fonts.gstatic.com fonts.googleapis.com cloudfront.net *.cloudflare.com *.cloudfront.net fonts.gstatic.com fonts.googleapis.com aileenhuang.dev *.aileenhuang.dev; script-src 'self' 'unsafe-inline' *.cloudflare.com cloudfront.net *.cloudfront.net aileenhuang.dev *.aileenhuang.dev;"
-    # Content-Security-Policy-Report-Only = "default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://ahuang.report-uri.com/r/d/csp/wizard"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=2592000"
     Permissions-Policy = "vibrate=(), geolocation=(), midi=(), notifications=(), push=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=(), payment=()"
