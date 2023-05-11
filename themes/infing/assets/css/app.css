@@ -611,6 +611,14 @@ video {
   margin-top: 9%;
 }
 
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .block{
   display: block;
 }
@@ -645,6 +653,14 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.min-h-\[75vh\]{
+  min-height: 75vh;
+}
+
+.min-h-\[60vh\]{
+  min-height: 60vh;
 }
 
 .w-14{
@@ -1024,6 +1040,11 @@ video {
   .md\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .md\:py-48{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   .md\:text-4xl{

@@ -1,15 +1,15 @@
 {{ define "main" }}
-<section class="min-h-[580px] flex items-center overflow-hidden relative w-full">
+<section class="min-h-[60vh] flex items-center overflow-hidden relative w-full">
     <div class="select-none whitespace-nowrap absolute text-green-600/[0.2] duration-300 ease-in  w-full h-full top-0 hidden text-[300px] md:text-[500px] 2xl:flex">
-        <div class="max-w-screen-2xl flex w-full justify-between mx-auto mt-[9%]">
-            <div class=" -translate-x-3/4">&#123;</div>
-            <div class="translate-x-3/4">&#125;&semi;</div>
+        <div class="max-w-screen-2xl flex w-full justify-between m-auto">
+            <div class=" -translate-x-3/4 mb-16">&#123;</div>
+            <div class="translate-x-3/4 mb-16">&#125;</div>
         </div>
     </div>
     <div class="w-full max-w-screen-md px-12 py-12 m-auto relative flex">
         <div class="w-full h-full absolute top-0 left-0 duration-300 ease-in hidden justify-between whitespace-nowrap -z-10 text-green-600/[0.2] text-[300px] md:text-[500px] md:flex">
             <div class="select-none my-auto md:-translate-x-3/4">&lt;</div>
-            <div class="select-none my-auto md:translate-x-1/4 ml-[5%]">&sol;&gt;</div>
+            <div class="select-none my-auto md:translate-x-1/4">&sol;&gt;&semi;</div>
         </div>
         <div class="text-center z-10">
             <h1 id="title" class="pt-12 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">
@@ -57,12 +57,12 @@
     </div>
 </section>
 <section class="flex items-center overflow-hidden relative w-full bg-green-600 text-white">
-    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+    <div class="w-full max-w-screen-2xl px-12 m-auto py-12">
         It's Aileen here
     </div>
 </section>
 <section class="flex items-center overflow-hidden relative w-full">
-    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto md:py-24">
         <h2 class="text-3xl md:text-4xl">{{ .Params.services_heading }}</h2>
     </div>
 </section>
