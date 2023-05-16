@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="min-h-[60vh] flex items-center overflow-hidden relative w-full">
+<section class="min-h-[580px] h-[75vh] flex items-center relative w-full">
     <div class="select-none whitespace-nowrap absolute text-green-600/[0.2] duration-300 ease-in  w-full h-full top-0 hidden text-[300px] md:text-[500px] 2xl:flex">
         <div class="max-w-screen-2xl flex w-full justify-between m-auto">
             <div class=" -translate-x-3/4 mb-16">&#123;</div>
@@ -46,8 +46,9 @@
                 <span class="text-2xl font-bold">XX projects</span>
                 <span>worked on</span>
             </div>
+            {{ $staff := getJSON "https://aileenhuang.dev/.netlify/functions/fetch-github" }}
             <div class="whitespace-pre-line">
-                <span class="text-2xl font-bold">XX contributions</span>
+                <span class="text-2xl font-bold">{{ $staff }} contributions</span>
                 <span>in the past year</span>
             </div>
             <div class="whitespace-pre-line">

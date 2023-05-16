@@ -572,11 +572,6 @@ video {
   margin: auto;
 }
 
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-6{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -591,12 +586,12 @@ video {
   margin-top: -0.25rem;
 }
 
-.mb-8{
-  margin-bottom: 2rem;
+.mb-16{
+  margin-bottom: 4rem;
 }
 
-.ml-\[5\%\]{
-  margin-left: 5%;
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .mt-3{
@@ -605,18 +600,6 @@ video {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mt-\[9\%\]{
-  margin-top: 9%;
-}
-
-.ml-5{
-  margin-left: 1.25rem;
-}
-
-.mb-16{
-  margin-bottom: 4rem;
 }
 
 .block{
@@ -643,6 +626,10 @@ video {
   height: 1.5rem;
 }
 
+.h-\[75vh\]{
+  height: 75vh;
+}
+
 .h-full{
   height: 100%;
 }
@@ -653,14 +640,6 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
-}
-
-.min-h-\[75vh\]{
-  min-height: 75vh;
-}
-
-.min-h-\[60vh\]{
-  min-height: 60vh;
 }
 
 .w-14{
@@ -761,6 +740,10 @@ video {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .scroll-smooth{
@@ -1040,11 +1023,6 @@ video {
   .md\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .md\:py-48{
-    padding-top: 12rem;
-    padding-bottom: 12rem;
   }
 
   .md\:text-4xl{

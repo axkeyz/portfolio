@@ -43,23 +43,22 @@
 // .then(r => r.json())
 // .then(data => console.log("data returned:", data))
 
-const URL = 'https://api.github.com/users/octocat';
-const headers = {
-  Accept: 'application/vnd.github+json',
-  // 'X-GitHub-Api-Version': '2022-11-28',
-};
-fetch(URL, { headers })
-.then((response) => response.json())
-.then((data) => {
-    console.log(data)
-})
-.catch((error) => {
-    //
-})
+// const URL = 'https://api.github.com/users/octocat';
+// const headers = {
+//   Accept: 'application/vnd.github+json',
+//   // 'X-GitHub-Api-Version': '2022-11-28',
+// };
+// fetch(URL, { headers })
+// .then((response) => response.json())
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((error) => {
+//     //
+// })
 
-fetch('https://github-contributions-api.deno.dev/axkeyz.json', {
-    Accept: 'application/json',
-    Origin: 'github-contributions-api.deno.dev'
+fetch('/.netlify/functions/fetch-github', {
+    Accept: 'text/html',
 })
 .then((response) => response.json())
 .then((data) => {
