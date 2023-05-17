@@ -5,10 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
-	"os"
-	"strconv"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -26,26 +23,47 @@ type Contribution struct {
 	Date  string `json:"date"`
 }
 
-func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
-	response, err := http.Get("https://github-contributions-api.deno.dev/axkeyz.json")
+type GithubTotalData struct {
+	Contributions int `json:"contributions"`
+	Projects      int `json:"projects"`
+}
+
+func FetchAPI(api string, class interface{}) {
+	response, err := http.Get(api)
 
 	if err != nil {
-		fmt.Print(err.Error())
-		os.Exit(1)
+		fmt.Println(err.Error())
+		return
 	}
 
 	responseData, err := ioutil.ReadAll(response.Body)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err.Error())
+		return
 	}
 
+	json.Unmarshal(responseData, &class)
+}
+
+func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	var contributions Contributions
-	json.Unmarshal(responseData, &contributions)
+	FetchAPI("https://github-contributions-api.deno.dev/axkeyz.json", &contributions)
+
+	var total = GithubTotalData{
+		Contributions: contributions.TotalContributions,
+		Projects:      100,
+	}
+
+	outputData, err := json.Marshal(total)
+	if err != nil {
+		fmt.Println(err.Error())
+		return nil, err
+	}
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
-		Headers:         map[string]string{"Content-Type": "text/plain"},
-		Body:            strconv.Itoa(contributions.TotalContributions),
+		Headers:         map[string]string{"Content-Type": "application/json"},
+		Body:            string(outputData),
 		IsBase64Encoded: false,
 	}, nil
 }
