@@ -1,0 +1,21 @@
+<section class="min-h-[75vh] flex items-center relative w-full overflow-hidden md:min-h-screen">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto md:py-24">
+        <div class="w-full my-auto relative flex md:max-w-lg">
+            <div>
+                <h1 id="title" class="text-green-600 font-recursive text-4xl leading-[3.5rem] ease-out duration-300 pt-24 md:leading-[4rem] md:text-5xl md:pt-0">
+                    {{ .Params.Title }} <span class="whitespace-normal min-[460px]:whitespace-nowrap">{{ .Params.tagline }}</span>
+                </h1>
+                <p class="text-xl my-6 leading-9">{{ .Params.title_descrip }}</p>
+                <div class="flex max-w-full">
+                    <div class="flex gap-6 max-w-md w-full mt-3 flex-col min-[460px]:flex-row">
+                        {{ partial "components/buttonlinkdark.html" (dict "url" "#contact-form" "text" .Params.title_button )}}
+                        {{ partial "components/buttonlinklight.html" (dict "url" .Params.cv_button_url "text" .Params.cv_button )}}
+                    </div>
+                </div>
+            </div>
+            <div class="absolute max-h-fit w-full -bottom-24 -right-48 pointer-events-none text-green-600 opacity-60">
+                {{ partial "svg/card.svg" }}
+            </div>
+        </div>
+    </div>
+</section>

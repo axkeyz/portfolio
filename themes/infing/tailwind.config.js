@@ -3,7 +3,8 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          quicksand: ['Quicksand', 'sans-serif'],
+          recursive: ['Recursive', 'sans-serif'],
+          chivo: ['Chivo', 'sans-serif']
         }
       },
     },

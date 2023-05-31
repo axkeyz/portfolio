@@ -1,22 +1,63 @@
+<!-- <section class="flex flex-col items-center overflow-hidden relative w-full" id="contact-form">
+  <div class="w-full max-w-screen-md p-12 m-auto md:pt-24">
+    <h2 class="text-center text-3xl mb-8 md:text-4xl">{{ .Params.contact_form_heading }}</h2>
+    {{ $hash := delimit (shuffle (split (md5 "axis") "" )) "" }}
+    <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
+      data-netlify="true"
+    >
+      <div class="mb-8 flex flex-col">
+        {{ partial "components/inputtext.html" (dict "id" "name" "label" "Name" "required" true) }}
+      </div>
+      <div class="mb-8 flex flex-col">
+        {{ partial "components/inputtext.html" (dict "id" "email" "label" "Email" "type" "email" "required" true) }}
+      </div>
+      <div class="hidden">
+        <label>Don’t fill this out if you’re human:</label> <input name="a_{{ $hash }}" />
+      </div>
+      <div class="mb-8 flex flex-col">
+        {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
+      </div>
+      <div class="mb-8">
+        {{ partial "components/buttondark.html" (dict "type" "submit" "text" "Submit" )}}
+      </div>
+    </form>
+  </div>
+</section> -->
 {{ $hash := delimit (shuffle (split (md5 "axis") "" )) "" }}
-<div>
-  <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
-    data-netlify="true"
-  >
-    <div class="mb-8 flex flex-col">
-      {{ partial "components/inputtext.html" (dict "id" "name" "label" "Name" "required" true) }}
-    </div>
-    <div class="mb-8 flex flex-col">
-      {{ partial "components/inputtext.html" (dict "id" "email" "label" "Email" "type" "email" "required" true) }}
-    </div>
-    <div class="hidden">
-      <label>Don’t fill this out if you’re human:</label> <input name="a_{{ $hash }}" />
-    </div>
-    <div class="mb-8 flex flex-col">
-      {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
-    </div>
-    <div class="mb-8">
-      {{ partial "components/buttondark.html" (dict "type" "submit" "text" "Submit" )}}
-    </div>
-  </form>
-</div>
+
+<section class="flex items-center overflow-hidden relative w-full">
+  <div class="w-full max-w-screen-lg p-12 m-auto md:p-24">
+      <div class="grid gap-12 grid-cols-1 md:grid-cols-3">
+          <div class="flex flex-col items-center md:items-end col-span-full md:col-span-1">
+              <h2 class="text-3xl mb-4 font-recursive text-center md:text-right md:text-4xl">
+                {{ .Params.contact_form_heading }}
+              </h2>
+              <div class="w-12 h-fit">
+                  {{ partial "svg/slash-3.svg" }}
+              </div>
+          </div>
+          <div class="col-span-full md:col-span-2">
+            <p>{{ .Params.contact_form_description }}</p>
+            <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
+              data-netlify="true"
+            >
+              <div class="mb-8 flex flex-col">
+                {{ partial "components/inputtext.html" (dict "id" "name" "label" "Name" "required" true) }}
+              </div>
+              <div class="mb-8 flex flex-col">
+                {{ partial "components/inputtext.html" (dict "id" "email" "label" "Email" "type" "email" "required" true) }}
+              </div>
+              <div class="hidden">
+                <label>Don’t fill this out if you’re human:</label> <input name="a_{{ $hash }}" />
+              </div>
+              <div class="mb-8 flex flex-col">
+                {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
+              </div>
+              <div class="mb-8">
+                {{ partial "components/buttondark.html" (dict "type" "submit" "text" "Submit" )}}
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+</section>

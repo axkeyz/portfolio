@@ -1,3 +1,7 @@
-<header class="fixed w-full z-30">
+<header 
+    class="fixed w-full z-30 bg-gray-50 transition duration-300"
+    :class="{ 'shadow-lg bg-green-600 text-white': atTop }"
+    @scroll.window="atTop = (window.pageYOffset < 50) ? false: true"
+>
     {{- partial "nav.html" . -}}
 </header>

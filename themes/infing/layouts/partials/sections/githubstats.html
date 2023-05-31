@@ -1,0 +1,52 @@
+<section class="flex flex-col items-center overflow-hidden relative w-full">
+    <div class="bg-green-600 w-full text-white">
+        <div class="gap-6
+            w-full max-w-screen-2xl px-12 py-12 m-auto 
+            grid grid-cols-1 lg:grid-cols-3"
+            x-data="{
+                github: {
+                    contributions: 100,
+                    projects: 75,
+                },
+                getGithub() {
+                    fetch('/.netlify/functions/fetch-github')
+                        .then((response) => response.json())
+                        .then((data) => {
+                            const time = 300
+                            const interval = Math.max(time / (data.contributions - this.github.contributions), 5); 
+
+                            this.github.contributions = data.contributions - 100
+                            this.github.projects = data.projects - 25
+
+                            const handle = setInterval(() => {
+                                if(this.github.contributions < data.contributions) {
+                                    this.github.contributions++
+                                } 
+                                
+                                if(this.github.projects < data.projects) {
+                                    this.github.projects++
+                                }
+
+                                if(this.github.contributions == data.contributions &&
+                                this.github.projects == data.projects) {
+                                    clearInterval(handle);
+                                }   
+                            }, interval)
+                        });
+                },
+                today: new Date(),
+                starting_date: new Date('10/15/2020'),
+            }" x-init="getGithub()"
+        >
+            <div class="whitespace-pre-line"><span class="text-2xl font-bold"><span x-text="Math.floor((today.getTime() - starting_date.getTime()) / (1000 * 3600 * 24 * 365))">1</span>+ years</span>
+                <span>of experience</span>
+            </div>
+            <div class="whitespace-pre-line"><span class="text-2xl font-bold"><span x-text="github.projects"></span>+ projects</span>
+                <span>worked on</span>
+            </div>
+            <div class="whitespace-pre-line"><span class="text-2xl font-bold"><span x-text="github.contributions"></span> contributions</span>
+                <span>in the past year</span>
+            </div>
+        </div>
+    </div>
+</section>

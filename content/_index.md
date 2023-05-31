@@ -1,12 +1,19 @@
 ---
 title: Hey there,
 tagline: I'm Aileen Huang.
-title_descrip: I'm a full-stack developer in Auckland, New Zealand. If you need a digital solution, then maybe I can help.
+title_descrip: I'm a full-stack developer based in New Zealand. If you need a digital solution, then maybe I can help.
 title_button: Hire Me
 title_button_url: /contact 
 cv_button: My Resume
 cv_button_url: /pdf/Aileen%20Huang.pdf
 cover_image: svg/cover_image.svg
+
+about_me_heading: About Me
+about_me:
+    - I'm Aileen Huang, a full-stack developer based in New Zealand.
+    - I've on-off coded since 2011, but unfortunately my fragmented family refused to let me study anything related to computer science or engineering. On the fortunate side, I had a manager who noticed my interest in coding after seeing me automate for an unrelated job, leading to my journey in web development.
+    - Nowadays, I build APIs, apps and websites with various languages and tools. I'm keen to use the right stack for the job, even if it means learning something completely new.
+    - My blog contains my studies into computer science and software engineering. It may also contain some side project stuff.
 
 services_heading: What can I do for you?
 services_descrip: 
@@ -57,5 +64,6 @@ stacks:
 
 speech_bubble_text: I prioritised website printability [amongst other things](/blog/2022/07/portfolio-design/), so not too many frameworks used here.
 
-contact_form_heading: Feel free to contact me.
+contact_form_heading: Contact Me
+contact_form_description: If you're interested in hiring me, working together for your next project or something else entirely, feel free to get in touch.
 ---

@@ -1,0 +1,17 @@
+<section class="flex items-center overflow-hidden relative w-full">
+    <div class="w-full max-w-screen-2xl p-12 m-auto md:p-24">
+        <div class="grid gap-12 grid-cols-1 md:grid-cols-4">
+            <div class="flex flex-col items-center md:items-end col-span-full md:col-span-1">
+                <h2 class="text-3xl mb-4 font-recursive text-center md:text-right md:text-4xl">
+                    {{ .Params.about_me_heading }}
+                </h2>
+                <div class="w-12 h-fit">
+                    {{ partial "svg/slash-3.svg" }}
+                </div>
+            </div>
+            <div class="col-span-full md:col-span-3">
+                {{ range .Params.about_me }}<p class="mb-4">{{ . }}</p>{{ end }}
+            </div>
+        </div>
+    </div>
+</section>

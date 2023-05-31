@@ -1,0 +1,40 @@
+<section class="flex items-center overflow-hidden relative w-full">
+    <div class="w-full max-w-screen-2xl px-12 py-12 m-auto md:py-24">
+        <div class="text-center">
+            <h2 class="text-3xl mb-4 font-recursive md:text-4xl">Project Showcase</h2>
+            {{ partial "components/link.html" (dict "url" "projects" "text" "View All Projects" "class" "font-bold" )}}
+        </div>
+        <div class="grid grid-cols-3 gap-8 w-full mt-6 md:mt-12">
+            <div class="shadow-lg">
+                <div class="h-64 overflow-hidden object-cover object-top">
+                    <img src="placeholder/hikurangi.png" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-4">Project Title 1</h3>
+                    <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    {{ partial "components/link.html" (dict "url" "projects" "text" "Read more" "class" "font-bold" )}}
+                </div>
+            </div>
+            <div class="shadow-lg">
+                <div class="h-64 overflow-hidden object-cover object-top">
+                    <img src="placeholder/hikurangi.png" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-4">Project Title 2</h3>
+                    <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    {{ partial "components/link.html" (dict "url" "projects" "text" "Read more" "class" "font-bold" )}}
+                </div>
+            </div>
+            <div class="shadow-lg">
+                <div class="h-64 overflow-hidden object-cover object-top">
+                    <img src="placeholder/hikurangi.png" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-4">Project Title 3</h3>
+                    <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    {{ partial "components/link.html" (dict "url" "projects" "text" "Read more" "class" "font-bold" )}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

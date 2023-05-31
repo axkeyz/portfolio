@@ -1,19 +1,21 @@
-<footer class="flex items-center overflow-hidden relative w-full bg-green-600 text-white">
-	<div class="w-full pt-8 pb-12 py-12 m-auto">
-		<div class="flex justify-center gap-4">
-			{{ if isset .Site.Params "github" }}
-				<a href="https://github.com/{{ .Site.Params.Github }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="github">{{ partial "svg/github.svg" }}</a>
-			{{ end }}
-			{{ if isset .Site.Params "email" }}
-				<a href="{{ if .IsHome }}#contact-form{{ else }}#{{ end }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="email">{{ partial "svg/mail.svg" }}</a>
-			{{ end }}
-			{{ if isset .Site.Params "linkedin" }}
-				<a href="https://linkedin.com/in/{{ .Site.Params.Linkedin }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="linkedin">{{ partial "svg/linkedin.svg" }}</a>
-			{{ end }}
-		</div>
+<footer>
+	<div class="flex items-center overflow-hidden relative w-full bg-green-600 text-white">
+		<div class="w-full pt-8 pb-12 py-12 m-auto">
+			<div class="flex justify-center gap-4">
+				{{ if isset .Site.Params "github" }}
+					<a href="https://github.com/{{ .Site.Params.Github }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="github">{{ partial "svg/github.svg" }}</a>
+				{{ end }}
+				{{ if isset .Site.Params "email" }}
+					<a href="{{ if .IsHome }}#contact-form{{ else }}#{{ end }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="email">{{ partial "svg/mail.svg" }}</a>
+				{{ end }}
+				{{ if isset .Site.Params "linkedin" }}
+					<a href="https://linkedin.com/in/{{ .Site.Params.Linkedin }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="linkedin">{{ partial "svg/linkedin.svg" }}</a>
+				{{ end }}
+			</div>
 
-		<div class="text-center mt-8">
-			{{ replace .Site.Copyright "{year}" now.Year }}
+			<div class="text-center mt-8">
+				{{ replace .Site.Copyright "{year}" now.Year }}
+			</div>
 		</div>
 	</div>
 </footer>

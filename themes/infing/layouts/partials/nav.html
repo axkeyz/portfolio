@@ -1,12 +1,17 @@
 <nav class="max-w-screen-2xl px-12 py-6 flex gap-12 m-auto">
     <div class="items-center flex gap-3">
-        <a href="/"  class="hover:font-bold">
+        <a href="/">
             {{ .Site.Params.Logo }}
         </a>
     </div>
     <div class="hidden items-center justify-end gap-12 md:flex md:flex-1">
         {{ range .Site.Menus.unrealised }}
-        <a href="#" class="text-base flex-initial font-medium hover:text-green-600">{{ .Name }}</a>
+        <a
+            href="{{ .URL }}" 
+            class="text-base flex-initial font-medium hover:text-green-600"
+            :class="{ 'hover:text-white': atTop }"
+            @scroll.window="atTop = (window.pageYOffset < 50) ? false: true"
+        >{{ .Name }}</a>
         {{ end }}
     </div>
 
@@ -18,7 +23,7 @@
         <div x-show="showMenu" class="absolute top-0 right-0 min-h-screen px-6 py-12 w-96 max-w-full" @click.away="showMenu = false">
             <nav class="flex flex-col">
                 {{ range .Site.Menus.unrealised }}
-                    <a href="#" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
+                    <a href="{{ .URL }}" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
                         {{ .Name }}
                     </a>
                 {{ end }}
