@@ -3,3 +3,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .mode-h-tb {
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+    }
+
+    .mode-v-lr {
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    }
+
+    .mode-v-rl {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    }
+
+    .mode-s-lr {
+    writing-mode: sideways-lr;
+    -webkit-writing-mode: sideways-lr;
+    -ms-writing-mode: sideways-lr;
+    }
+
+    .mode-s-rl {
+    writing-mode: sideways-rl;
+    -webkit-writing-mode: sideways-rl;
+    -ms-writing-mode: sideways-rl;
+    }
+}
