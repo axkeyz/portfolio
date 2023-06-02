@@ -1,7 +1,9 @@
-<footer>
-	<div class="flex items-center overflow-hidden relative w-full bg-green-600 text-white">
-		<div class="w-full pt-8 pb-12 py-12 m-auto">
-			<div class="flex justify-center gap-4">
+<footer 
+	@scroll.window="atFooter = (window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 100 ? false: false"
+>
+	<div class="flex items-center relative w-full overflow-hidden">
+		<div class="w-full p-12 m-auto">
+			<!-- <div class="flex justify-center gap-4">
 				{{ if isset .Site.Params "github" }}
 					<a href="https://github.com/{{ .Site.Params.Github }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="github">{{ partial "svg/github.svg" }}</a>
 				{{ end }}
@@ -11,11 +13,22 @@
 				{{ if isset .Site.Params "linkedin" }}
 					<a href="https://linkedin.com/in/{{ .Site.Params.Linkedin }}" class="w-14 h-14 p-4 rounded-full hover:bg-green-700" aria-label="linkedin">{{ partial "svg/linkedin.svg" }}</a>
 				{{ end }}
-			</div>
+			</div> -->
 
-			<div class="text-center mt-8">
+			<div class="text-center">
 				{{ replace .Site.Copyright "{year}" now.Year }}
 			</div>
+		</div>
+	</div>
+	<div class="w-full flex">
+		<div class="">
+			{{ partial "svg/footer-side-left.svg" }}
+		</div>
+		<div class="w-full">
+			{{ partial "svg/footer-main.svg" }}
+		</div>
+		<div class="transform -scale-x-100">
+			{{ partial "svg/footer-side-left.svg" }}
 		</div>
 	</div>
 </footer>

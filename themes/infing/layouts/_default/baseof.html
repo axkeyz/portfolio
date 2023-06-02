@@ -3,7 +3,7 @@
     {{- partial "head.html" . -}}
     <body 
         class="text-zinc-700 bg-gray-50 font-medium text-base font-chivo relative"
-        x-data="{ atTop: false }"
+        x-data="{ atTop: false, atFooter: false }"
     >
         {{- partial "header.html" . -}}
         <div id="content" class="{{ if not .IsHome }}pt-24 {{end}}">
@@ -11,7 +11,10 @@
         </div>
         {{- partial "footer.html" . -}}
 
-        <div class="fixed w-48 bottom-0 right-0 z-30 pointer-events-none text-green-600 opacity-60">
+        <div 
+            class="fixed w-48 bottom-0 right-0 z-30 pointer-events-none text-green-600 opacity-60 transition-all ease-in duration-300"
+            :class="{'opacity-0' : atFooter}"
+        >
             {{ partial "svg/slash-3.svg" }}
         </div>
     </body>

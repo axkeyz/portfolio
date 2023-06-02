@@ -7,7 +7,7 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
     [Languages.en-nz]
         languageCode = "en-nz"
         title = "Aileen Huang - Web Developer"
-        copyright = "© {year} Aileen Huang"
+        copyright = "© Aileen Huang {year}"
         languageName = "English - New Zealand"
     [Languages.en-nz.params]
         author = "Aileen Huang"
