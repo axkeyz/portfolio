@@ -1,16 +1,28 @@
 {{ define "main" }}
-    <section class="flex items-center overflow-hidden relative w-full">
+    <section class="flex items-center overflow-hidden w-full">
         <div class="w-full max-w-screen-2xl m-auto p-12">
-            <h1>Blog</h1>
-            <p>{{ .Params.comments | markdownify }}</p>
-            <ul>
-                {{ range .Pages }}
-                    <li>
-                        <h2 class="left"><a href="{{ .Permalink }}">{{ .Date.Format "01/02/2006" }} - {{ .Title }}</a></h2>
-                        {{ .Summary }} <a href="{{ .Permalink }}">Read more...</a>
-                    </li>
+            <div class="w-full max-w-screen-lg m-auto text-center">
+                <div class="text-green-600 m-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 m-auto">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                      </svg>                                        
+                </div>
+                <h1 class="pt-8 text-green-600 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">{{ .Title }}</h1>
+                {{ if .Params.comments }}<p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>{{ end }}
+            </div>
+            <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
+                {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc") "Type" "blog") }}
+                {{ range $paginator.Pages }}
+                    <a href="{{ .Permalink }}">
+                    {{ partial "components/cardyellowborder.html" (dict "class" "h-full") }}
+                        <h3 class="left mb-4 text-green-600 font-semibold">
+                            {{ .Title }}
+                        </h3>
+                        {{ .Summary }} 
+                    {{ partial "components/cardyellowborder-end.html" }}
+                    </a>
                 {{ end }}
-            </ul>
+            </div>
         </div>
-    </article>
+    </section>
 {{ end }}

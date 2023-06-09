@@ -8,6 +8,7 @@
         {{- partial "header.html" . -}}
         <div id="content" class="{{ if not .IsHome }}pt-12 {{end}}">
         {{- block "main" . }}{{- end }}
+        {{ partial "sections/formcontact.html" (dict "Params" .Params "Site" .Site.Params ) }}
         </div>
         {{- partial "footer.html" . -}}
     </body>

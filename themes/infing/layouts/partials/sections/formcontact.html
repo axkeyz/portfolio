@@ -3,9 +3,9 @@
 <section class="flex items-center relative w-full" id="contact-form">
   <div class="w-full max-w-screen-lg p-12 m-auto md:p-24 md:pr-16">
       <div class="pb-4 overflow-x-hidden">
-        {{ partial "components/h2.html" (dict "text" .Params.contact_form_heading "class" "text-center mb-4 md:mb-8" ) }}
+        {{ partial "components/h2.html" (dict "text" .Site.contact_form_heading "class" "text-center mb-4 md:mb-8" ) }}
           <div class="col-span-full m-auto md:col-span-2 md:pr-8">
-            <p class="text-center md:text-left">{{ .Params.contact_form_description }}</p>
+            <p class="text-center md:text-left">{{ .Site.contact_form_description }}</p>
             <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
               data-netlify="true"
             >
@@ -19,13 +19,15 @@
               <div class="mt-4">
                 {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
               </div>
-              <div class="my-2 relative">
-                <button type="submit" class="w-full text-left hover:text-green-600">
-                  Submit
+              <div class="mt-4 flex justify-end">
+                {{ partial "components/buttonlight.html" (dict "open_only" true "class" "max-w-[200px] justify-center flex gap-4" "custom_attr" "type='submit'")}}
+                  <div class="my-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                  <span>Submit</span>
                 </button>
-                <div class="absolute w-full pointer-events-none text-green-600 -top-11">
-                  {{ partial "svg/form-line.svg" }}
-                </div>
               </div>
             </form>
           </div>

@@ -13,6 +13,8 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
         author = "Aileen Huang"
         keywords = "aileen huang, portfolio, web design, web developer, games, software"
         description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zealand. If you need a digital solution, then maybe I can help."
+        contact_form_heading = "Contact Me"
+        contact_form_description = "If you're interested in hiring me, working together for your next project or something else entirely, feel free to get in touch."
 
 [permalinks]
     page = "/:filename"
@@ -36,6 +38,6 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
         name="Blog"
         weight=5
     [[menu.unrealised]]
-        url="/#contact-form"
+        url="#contact-form"
         name="Contact"
         weight=6
