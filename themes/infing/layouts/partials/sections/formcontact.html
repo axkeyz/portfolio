@@ -2,8 +2,8 @@
 
 <section class="flex items-center relative w-full" id="contact-form">
   <div class="w-full max-w-screen-lg p-12 m-auto md:p-24 md:pr-16">
-      <div class="flex pb-4 overflow-x-hidden gap-4 md:gap-12 flex-col md:flex-row">
-        {{ partial "components/h2sideways.html" (dict "heading" .Params.contact_form_heading) }}
+      <div class="pb-4 overflow-x-hidden">
+        {{ partial "components/h2.html" (dict "text" .Params.contact_form_heading "class" "text-center mb-4 md:mb-8" ) }}
           <div class="col-span-full m-auto md:col-span-2 md:pr-8">
             <p class="text-center md:text-left">{{ .Params.contact_form_description }}</p>
             <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
@@ -20,10 +20,10 @@
                 {{ partial "components/inputtextarea.html" (dict "id" "message" "label" "Message" "required" true) }}
               </div>
               <div class="my-2 relative">
-                <button type="submit" class="w-full text-left">
+                <button type="submit" class="w-full text-left hover:text-green-600">
                   Submit
                 </button>
-                <div class="absolute w-full pointer-events-none text-green-600 -top-10 -ml-8">
+                <div class="absolute w-full pointer-events-none text-green-600 -top-11">
                   {{ partial "svg/form-line.svg" }}
                 </div>
               </div>
