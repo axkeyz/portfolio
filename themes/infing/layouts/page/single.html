@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <article class="dspecial {{ .Params.partial_classes }}">
+        <div class="max-40-width-wrapper m-auto">
+            <h1>{{ .Title }}</h1>
+
+            {{ if isset .Params "partial" }}
+            <div>
+                
+            </div>
+            {{ else }}
+            <div>
+            {{ .Content | safeHTML }}
+            </div>
+
+            <div class="pt-100">
+                <p>Author: {{ .Site.Params.Author }} | Date: {{ .Date.Format "January 2, 2006" }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </article>
+{{ end }}

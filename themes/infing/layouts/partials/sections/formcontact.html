@@ -1,6 +1,6 @@
 {{ $hash := delimit (shuffle (split (md5 "axis") "" )) "" }}
 
-<section class="flex items-center relative w-full">
+<section class="flex items-center relative w-full" id="contact-form">
   <div class="w-full max-w-screen-lg p-12 m-auto md:p-24 md:pr-16">
       <div class="flex pb-4 overflow-x-hidden gap-4 md:gap-12 flex-col md:flex-row">
         {{ partial "components/h2sideways.html" (dict "heading" .Params.contact_form_heading) }}
@@ -9,7 +9,7 @@
             <form name="contact-form" method="POST" netlify-honeypot="a_{{ $hash }}" 
               data-netlify="true"
             >
-              <div class="my-4 gap-4 flex flex-col md:flex-row">
+              <div class="my-4 gap-8 flex flex-col md:flex-row">
                 {{ partial "components/inputtext.html" (dict "id" "name" "label" "Name" "required" true) }}
                 {{ partial "components/inputtext.html" (dict "id" "email" "label" "Email" "type" "email" "required" true) }}
               </div>

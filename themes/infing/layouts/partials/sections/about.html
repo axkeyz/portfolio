@@ -1,14 +1,59 @@
 <section class="flex items-center overflow-hidden relative w-full">
-    <div class="w-full max-w-screen-lg p-12 m-auto md:p-24">
-        <div class="flex gap-4 md:gap-12 flex-col md:flex-row">
-            {{ partial "components/h2sideways.html" (dict "heading" .Params.about_me_heading) }}
-            <div class="col-span- m-auto md:col-span-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-screen-2xl m-auto p-12">
+        <div class="w-full col-span-1 bg-yellow-500/[0.2] border-2 border-dashed 
+            border-yellow-500 p-6 lg:p-12 order-2 md:order-1 relative"
+        >
+            <h2 class="absolute 
+                top-0 md:top-auto 
+                md:bottom-0 bottom-auto 
+                left-auto md:left-0
+                right-0 md:right-auto
+                text-sm m-2 md:mode-s-lr"
+            >
+                Profile
+            </h2>
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">Name</span><br />
+                <span>Aileen Huang</span>
+            </p>
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">Role</span><br />
+                <span>Web Developer</span>
+            </p>
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">Location</span><br />
+                <span>New Zealand</span>
+            </p>
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">Website</span><br />
+                <a href="https://aileenhuang.dev">aileenhuang.dev</a>
+            </p>
+
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">Github</span><br />
+                <a href="https://github.com/{{ .Site.Params.Github }}">github.com/{{ .Site.Params.Github }}</a>
+            </p>
+
+            <p class="mb-4">
+                <span class="uppercase text-xs tracking-widest">LinkedIn</span><br />
+                <a href="https://linkedin.com/in/{{ .Site.Params.LinkedIn }}">in/{{ .Site.Params.LinkedIn }}</a>
+            </p>
+
+        </div>
+        <div class="col-span-1 lg:col-span-3 flex gap-4 md:gap-12 flex-col md:flex-row
+            order-1 md:order-2 md:py-12"
+        >
+            <div class="h-fit m-auto">
+                <h2 class="text-3xl mb-4 md:text-4xl">{{ .Params.about_me_heading }}</h2>
                 {{ $length := .Params.about_me | len }}
                 {{ $counter := 0 }}
                 {{ range .Params.about_me }}
                     {{ $counter = add $counter 1 }}
                     <p{{ if ne $counter $length }} class="mb-4"{{ end }}>{{ . }}</p>
                 {{ end }}
+                <div class="mt-6">
+                    {{ partial "components/buttonlinklight.html" (dict "url" "blog" "text" "View my experience" "class" "max-w-[200px] block")}}
+                </div>
             </div>
         </div>
     </div>

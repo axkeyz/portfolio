@@ -1,0 +1,56 @@
+{{ define "main" }}
+    <section class="flex items-center overflow-hidden relative w-full">
+        <div class="w-full max-w-screen-2xl m-auto p-12">
+            <div class="w-full max-w-screen-lg m-auto text-center">
+                <h1 class="text-green-600 font-bold text-4xl leading-[3.5rem] ease-out duration-300 pt-24 md:leading-[4rem] md:text-5xl md:pt-0">{{ .Title }}</h1>
+                <p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>
+            </div>
+
+            <div class="py-12">
+            {{ partial "components/h2.html" (dict "text" "COMPLETED (?)") }}
+            <p>{{ .Params.completed }}</p>
+                <table>
+                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
+                {{ range sort .Pages "Title" "asc" }}
+                <tr>
+                    {{ if eq .Params.status "completed" }}
+                    <td>
+                        <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    </td>
+                    <td>
+                        {{ delimit .Params.project_type " / " | title }}
+                    </td>
+                    <td>
+                        {{ .Params.description }}
+                    </td>
+                    {{ end }}
+                </tr>   
+                {{ end }}
+                </table>
+            </div>
+
+            <h2>IN PROGRESS/PLANNED</h2>
+            <p>{{ .Params.planned }}</p>
+            <div>
+                <table>
+                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
+                    {{ range sort .Pages "Title" "asc" }}
+                        {{ if eq .Params.status "planned" }}
+                        <tr>
+                            <td>
+                                <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                            </td>
+                            <td>
+                                {{ delimit .Params.project_type " / " | title }}
+                            </td>
+                            <td>
+                                {{ .Params.description }}
+                            </td>
+                        </tr>  
+                        {{ end }} 
+                    {{ end }}
+                    </table>
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -9,8 +9,6 @@
         <a
             href="{{ .URL }}" 
             class="text-base flex-initial font-medium hover:text-green-600"
-            :class="{ 'hover:text-white': atTop }"
-            @scroll.window="atTop = (window.pageYOffset < 50) ? false: true"
         >{{ .Name }}</a>
         {{ end }}
     </div>
@@ -20,17 +18,22 @@
         <button class="w-6 h-6 focus:outline-none" @click="showMenu = !showMenu">
             {{ partial "svg/hamburg.svg" }}
         </button>
-        <div x-show="showMenu" class="absolute top-0 right-0 min-h-screen px-6 py-12 w-96 max-w-full" @click.away="showMenu = false">
-            <nav class="flex flex-col">
-                {{ range .Site.Menus.unrealised }}
-                    <a href="{{ .URL }}" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
-                        {{ .Name }}
-                    </a>
-                {{ end }}
-            </nav>
-            <button class="w-6 h-6 absolute top-6 right-6 focus:outline-none" @click="showMenu = !showMenu">
-                {{ partial "svg/xmark.svg" }}
-            </button>
+        <div x-show="showMenu" 
+            class="absolute top-0 right-0 min-h-screen min-w-screen w-full bg-black/[0.2] flex justify-end" 
+            @click.away="showMenu = false"
+        >
+            <div class="px-6 py-12  bg-white border-l-2 border-dashed border-yellow-500 max-w-full w-96 min-h-screen" @click.away="showMenu = false">
+                <nav class="flex flex-col">
+                    {{ range .Site.Menus.unrealised }}
+                        <a href="{{ .URL }}" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
+                            {{ .Name }}
+                        </a>
+                    {{ end }}
+                </nav>
+                <button class="w-6 h-6 absolute top-6 right-6 focus:outline-none" @click="showMenu = !showMenu">
+                    {{ partial "svg/xmark.svg" }}
+                </button>
+            </div>
         </div>
     </div>
 </nav>

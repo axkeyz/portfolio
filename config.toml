@@ -28,11 +28,6 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
 
 [menu]
     [[menu.unrealised]]
-        url="/about"
-        name="About Me"
-        identifier="about"
-        weight=2
-    [[menu.unrealised]]
         url="/projects"
         name="Projects"
         weight=4

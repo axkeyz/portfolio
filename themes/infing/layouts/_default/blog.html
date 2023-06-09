@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <section class="flex items-center overflow-hidden relative w-full">
+        <div class="w-full max-w-screen-2xl m-auto p-12">
+            <h1>Blog</h1>
+            <p>{{ .Params.comments | markdownify }}</p>
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <h2 class="left"><a href="{{ .Permalink }}">{{ .Date.Format "01/02/2006" }} - {{ .Title }}</a></h2>
+                        {{ .Summary }} <a href="{{ .Permalink }}">Read more...</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </article>
+{{ end }}

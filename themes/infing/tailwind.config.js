@@ -4,9 +4,10 @@ module.exports = {
       extend: {
         fontFamily: {
           recursive: ['Recursive', 'sans-serif'],
-          chivo: ['Chivo', 'sans-serif']
-        }
-      },
+          chivo: ['Chivo', 'sans-serif'],
+          quicksand: ['Quicksand', 'sans-serif']
+        },
+      }
     },
     plugins: [],
   };

@@ -13,7 +13,7 @@ about_me:
     - I'm Aileen Huang, a full-stack developer based in New Zealand.
     - I've on-off coded since 2011, but unfortunately my fragmented family refused to let me study anything related to computer science or engineering. On the fortunate side, I had a manager who noticed my interest in coding after seeing me automate for an unrelated job, leading to my journey in web development.
     - Nowadays, I build APIs, apps and websites with various languages and tools. I'm keen to use the right stack for the job, even if it means learning something completely new.
-    - My blog contains my studies into computer science and software engineering. It may also contain some side project stuff.
+    - My blog contains my studies into computer science and software engineering, so that I can continuously improve my software skills. It may also contain some side project stuff. I'm a bit interested in game development and UX.
 
 services_heading: What can I do for you?
 services_descrip: 
