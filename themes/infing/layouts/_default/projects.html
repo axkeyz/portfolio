@@ -1,55 +1,40 @@
 {{ define "main" }}
-    <section class="flex items-center overflow-hidden relative w-full">
+    <section class="flex items-center overflow-hidden w-full">
         <div class="w-full max-w-screen-2xl m-auto p-12">
             <div class="w-full max-w-screen-lg m-auto text-center">
-                <h1 class="text-green-600 font-bold text-4xl leading-[3.5rem] ease-out duration-300 pt-24 md:leading-[4rem] md:text-5xl md:pt-0">{{ .Title }}</h1>
+                <div class="text-green-600 m-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 m-auto">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
+                    </svg>                      
+                </div>
+                <h1 class="pt-8 text-green-600 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">{{ .Title }}</h1>
                 <p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>
             </div>
-
-            <div class="py-12">
-            {{ partial "components/h2.html" (dict "text" "COMPLETED (?)") }}
-            <p>{{ .Params.completed }}</p>
-                <table>
-                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
+        </div>
+    </section>
+    <section class="flex items-center overflow-hidden w-full">
+        <div class="w-full max-w-screen-2xl m-auto p-12">
+            {{ partial "components/h2.html" (dict "text" "completed (?)" "class" "uppercase") }}
+            <p class="mb-8">{{ .Params.completed }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {{ range sort .Pages "Title" "asc" }}
-                <tr>
                     {{ if eq .Params.status "completed" }}
-                    <td>
-                        <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    </td>
-                    <td>
-                        {{ delimit .Params.project_type " / " | title }}
-                    </td>
-                    <td>
-                        {{ .Params.description }}
-                    </td>
+                        {{ partial "components/cardyellowborder.html" (dict "class" "relative") }}
+                            <a href="{{ .Permalink }}">
+                                <h3 class="left mb-4 text-green-600 font-semibold">
+                                    {{ .Title }}
+                                </h3>
+                            </a>
+                            <p class="pb-4 mb-4 md:mb-8">{{ .Params.description }}</p>
+                            <div class="md:absolute bottom-0 left-0 md:p-8 flex flex-wrap gap-4">
+                                {{ range $i := .Params.project_type }}
+                                    {{ $partial := (cond (eq $i "work") "svg/briefcase.svg" "svg/personal.svg" )}}
+                                    {{ partial "components/tag.html" (dict "text" ($i | title) "partial" $partial)}}
+                                {{ end }}
+                            </div>
+                        {{ partial "components/cardyellowborder-end.html" }}
                     {{ end }}
-                </tr>   
                 {{ end }}
-                </table>
-            </div>
-
-            <h2>IN PROGRESS/PLANNED</h2>
-            <p>{{ .Params.planned }}</p>
-            <div>
-                <table>
-                    <tr><th>Project</th><th>Type</th><th>Description</th></tr>
-                    {{ range sort .Pages "Title" "asc" }}
-                        {{ if eq .Params.status "planned" }}
-                        <tr>
-                            <td>
-                                <h3 class="left"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                            </td>
-                            <td>
-                                {{ delimit .Params.project_type " / " | title }}
-                            </td>
-                            <td>
-                                {{ .Params.description }}
-                            </td>
-                        </tr>  
-                        {{ end }} 
-                    {{ end }}
-                    </table>
             </div>
         </div>
     </section>
