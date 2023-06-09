@@ -10,21 +10,17 @@
                 <h1 class="pt-8 text-green-600 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">{{ .Title }}</h1>
                 <p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>
             </div>
-        </div>
-    </section>
-    <section class="flex items-center overflow-hidden w-full">
-        <div class="w-full max-w-screen-2xl m-auto p-12">
-            {{ partial "components/h2.html" (dict "text" "completed (?)" "class" "uppercase") }}
-            <p class="mb-8">{{ .Params.completed }}</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {{ range sort .Pages "Title" "asc" }}
-                    {{ if eq .Params.status "completed" }}
-                        {{ partial "components/cardyellowborder.html" (dict "class" "relative") }}
-                            <a href="{{ .Permalink }}">
-                                <h3 class="left mb-4 text-green-600 font-semibold">
-                                    {{ .Title }}
-                                </h3>
-                            </a>
+
+            {{ if .Params.completed_heading }}{{ partial "components/h2.html" (dict "text" .Params.completed_heading "class" "uppercase") }}{{ end }}
+            {{ if .Params.completed }}<p>{{ .Params.completed }}</p>{{ end }}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+                {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "projects") }}
+                {{ range $paginator.Pages }}
+                    <a href="{{ .Permalink }}" class="relative">
+                        {{ partial "components/cardyellowborder.html" (dict "class" "h-full") }}
+                            <h3 class="left mb-4 text-green-600 font-semibold">
+                                {{ .Title }}
+                            </h3>
                             <p class="pb-4 mb-4 md:mb-8">{{ .Params.description }}</p>
                             <div class="md:absolute bottom-0 left-0 md:p-8 flex flex-wrap gap-4">
                                 {{ range $i := .Params.project_type }}
@@ -33,7 +29,7 @@
                                 {{ end }}
                             </div>
                         {{ partial "components/cardyellowborder-end.html" }}
-                    {{ end }}
+                    </a>
                 {{ end }}
             </div>
         </div>
