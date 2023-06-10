@@ -14,17 +14,18 @@
     }
 
     h2 {
-        @apply text-3xl md:text-4xl font-semibold mb-4
-    }
-
-    h3 {
-        @apply text-lg font-semibold mb-4 text-green-700
+        @apply text-3xl md:text-4xl font-semibold mb-4 mt-6
     }
 
     #blog-content h2 {
         @apply mt-8
     }
 
+
+    h3 {
+        @apply text-lg font-semibold mb-4 text-green-700
+    }
+    
     a {
         @apply text-black hover:text-green-700 transition duration-300
     }
@@ -49,6 +50,14 @@
 
     input[type="text"], input[type="email"], textarea {
         @apply w-full py-2 border-b-2 border-green-700 bg-transparent focus:outline-none focus:border-green-900
+    }
+
+    ul {
+        @apply list-disc -mt-2 ml-8
+    }
+
+    li {
+        @apply mb-1
     }
 }
 
