@@ -13,7 +13,7 @@
                 <a href="{{ .Permalink }}" class="group">
                     <div class="card group-hover:bg-yellow-500/[0.2]">
                         <h3>{{ .Title }}</h3>
-                        <p class="text-green-700/[0.5] mb-2">{{ .Date.Format "January 2006" }}</p>
+                        <p class="text-green-700/[0.9] mb-2">{{ .Date.Format "January 2006" }}</p>
                         {{ .Summary }} 
                         <div class="flex flex-wrap gap-4 mt-8">
                             {{ range $i := .Params.tags }}
