@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="scroll-smooth">
+<html class="scroll-smooth" lang="{{ .Site.LanguageCode | default "en" }}">
     {{- partial "head.html" . -}}
     <body 
-        class="text-zinc-700 bg-gray-50 font-medium text-base font-quicksand relative"
+        class="text-black bg-gray-50 font-medium text-base font-quicksand relative"
         x-data="{ atTop: false }"
     >
         {{- partial "header.html" . -}}

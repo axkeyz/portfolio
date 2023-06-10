@@ -15,7 +15,7 @@
 
     
     <div x-data="{showMenu : false}" class="items-center justify-end gap-12 flex flex-1 md:hidden">
-        <button class="w-6 h-6 focus:outline-none" @click="showMenu = !showMenu">
+        <button class="w-6 h-6 focus:outline-none" aria-label="open menu button" @click="showMenu = !showMenu">
             {{ partial "svg/hamburg.svg" }}
         </button>
         <div x-show="showMenu" 
