@@ -5,6 +5,8 @@ draft: false
 
 description: "A tool I built for work in my spare time, to parse the 8-10 PBT spreadsheets I have to process every month end. In Go."
 
+showcase: true
+
 project_stats:
     - github: "[axkeyz/dg-pbt-parser](https://github.com/axkeyz/dg-pbt-parser)"
     - stack: Go, SQLite

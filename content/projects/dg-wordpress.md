@@ -30,7 +30,7 @@ I was not involved in the design, mostly in the functionalities.
 
 Wordpress, with Gutenberg editor and Woocommerce.
 
-## My Contributions
+## My contributions
 
 - Converted Elementor pages to Gutenberg
 - Investigated suitable plugins and conflicts. Ideally plugins were free

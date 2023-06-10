@@ -34,7 +34,7 @@ I picked __Laravel (PHP)__. At first, my manager asked me to investigate whether
 
 We went with the __TALL__ (Tailwind, Alpine, Livewire, Laravel) stack, because it was easier to get started out of the box. We're thinking of switching to a fully reactive app, most likely with React.
 
-## My Contributions
+## My contributions
 
 - Investigated Wordpress and PHP frameworks
 - Cloned the functionality (reports) of the existing client portal. 

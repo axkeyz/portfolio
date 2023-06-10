@@ -6,6 +6,8 @@ draft: false
 description: "A silly hobby project to prove that my region gets more outages than other regions of Auckland."
 comments: The API was more or less completed, but this project has been discontinued due to moving away from the suburb and (free) server crashing issues.
 
+showcase: true
+
 tags: ["Postgres", "Go", "Vue", "Hugo", "Completed", "Personal", "Solo"]
 project_stats:
     - github: "[axkeyz/water-api](https://github.com/axkeyz/water-api)"
