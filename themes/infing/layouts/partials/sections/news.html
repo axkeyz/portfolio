@@ -5,66 +5,24 @@
                 <h2 class="text-3xl md:text-4xl">Latest Articles</h2>
             </div>
             <div>
-                {{ partial "components/buttonlinklight.html" (dict "url" "blog" "text" "View all articles" "class" "min-w-[200px] m-auto block")}}
+                <a href="/blog" class="button button-secondary min-w-[200px] m-auto block">View all articles</a>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <div class="border-2 border-yellow-500 border-dashed p-8">
-                <h3 class="text-lg mb-4">News Article 1</h3>
-                <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <div class="flex flex-wrap gap-4">
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/db.svg" }}</span>
-                        <span class="m-auto">Database</span>
-                    </span>
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/book.svg" }}</span>
-                        <span class="m-auto">Learning</span>
-                    </span>
-                </div>
-            </div>
-            <div class="border-2 border-yellow-500 border-dashed p-8">
-                <h3 class="text-lg mb-4">News Article 1</h3>
-                <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <div class="flex flex-wrap gap-4">
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/db.svg" }}</span>
-                        <span class="m-auto">Database</span>
-                    </span>
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/book.svg" }}</span>
-                        <span class="m-auto">Learning</span>
-                    </span>
-                </div>
-            </div>
-            <div class="border-2 border-yellow-500 border-dashed p-8">
-                <h3 class="text-lg mb-4">News Article 1</h3>
-                <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <div class="flex flex-wrap gap-4">
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/db.svg" }}</span>
-                        <span class="m-auto">Database</span>
-                    </span>
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/book.svg" }}</span>
-                        <span class="m-auto">Learning</span>
-                    </span>
-                </div>
-            </div>
-            <div class="border-2 border-yellow-500 border-dashed p-8">
-                <h3 class="text-lg mb-4">News Article 1</h3>
-                <p class="mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <div class="flex flex-wrap gap-4">
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/db.svg" }}</span>
-                        <span class="m-auto">Database</span>
-                    </span>
-                    <span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
-                        <span class="w-4 h-4">{{ partial "svg/book.svg" }}</span>
-                        <span class="m-auto">Learning</span>
-                    </span>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {{ range first 2 (where (sort site.RegularPages "Date" "desc") "Type" "in" "blog") }}
+                <a href="{{ .Permalink }}" class="group">
+                    <div class="card group-hover:bg-yellow-500/[0.2]">
+                        <h3>{{ .Title }}</h3>
+                        <p class="text-green-700/[0.5] mb-2">{{ .Date.Format "January 2006" }}</p>
+                        {{ .Summary }} 
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            {{ range $i := .Params.tags }}
+                                {{ partial "components/tag.html" (dict "text" ($i | title))}}
+                            {{ end }}
+                        </div>
+                    </div>
+                </a>
+            {{ end }}
         </div>
     </div>
 </section>

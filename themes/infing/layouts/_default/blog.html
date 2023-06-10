@@ -13,18 +13,17 @@
             <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
                 {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc") "Type" "blog") }}
                 {{ range $paginator.Pages }}
-                    <a href="{{ .Permalink }}">
-                    {{ partial "components/cardyellowborder.html" (dict "class" "h-full") }}
-                        {{ partial "components/h3.html" (dict "class" "mb-4" "text" .Title )}}
+                    <a href="{{ .Permalink }}" class="group">
+                    <div class="card group-hover:bg-yellow-500/[0.2]">
+                        <h3>{{ .Title }}</h3>
                         <p class="text-green-700/[0.5] mb-2">{{ .Date.Format "January 2006" }}</p>
                         {{ .Summary }} 
                         <div class="flex flex-wrap gap-4 mt-8">
                             {{ range $i := .Params.tags }}
-                                {{ $partial := print "svg/" ($i | lower) ".svg" }}
-                                {{ partial "components/tag.html" (dict "text" ($i | title) "partial" $partial)}}
+                                {{ partial "components/tag.html" (dict "text" ($i | title))}}
                             {{ end }}
                         </div>
-                    {{ partial "components/cardyellowborder-end.html" }}
+                    </div>
                     </a>
                 {{ end }}
             </div>

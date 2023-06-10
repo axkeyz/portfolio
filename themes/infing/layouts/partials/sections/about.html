@@ -1,31 +1,29 @@
 <section class="flex items-center overflow-hidden relative w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-screen-2xl m-auto p-12">
-        <div class="w-full col-span-1 bg-yellow-500/[0.2] border-2 border-dashed 
-            border-yellow-500 p-6 lg:p-12 order-2 md:order-1 relative"
-        >
-            <p class="mb-4">
+        <div class="w-full col-span-1 card p-6 lg:p-12 order-2 md:order-1 bg-yellow-500/[0.2]">
+            <p>
                 <span class="uppercase text-xs tracking-widest">Name</span><br />
                 <span>Aileen Huang</span>
             </p>
-            <p class="mb-4">
+            <p>
                 <span class="uppercase text-xs tracking-widest">Role</span><br />
                 <span>Web Developer</span>
             </p>
-            <p class="mb-4">
+            <p>
                 <span class="uppercase text-xs tracking-widest">Location</span><br />
                 <span>New Zealand</span>
             </p>
-            <p class="mb-4">
+            <p>
                 <span class="uppercase text-xs tracking-widest">Website</span><br />
                 <a href="https://aileenhuang.dev">aileenhuang.dev</a>
             </p>
 
-            <p class="mb-4">
+            <p>
                 <span class="uppercase text-xs tracking-widest">Github</span><br />
                 <a href="https://github.com/{{ .Site.Params.Github }}">github.com/{{ .Site.Params.Github }}</a>
             </p>
 
-            <p class="mb-4">
+            <p>
                 <span class="uppercase text-xs tracking-widest">LinkedIn</span><br />
                 <a href="https://linkedin.com/in/{{ .Site.Params.LinkedIn }}">in/{{ .Site.Params.LinkedIn }}</a>
             </p>
@@ -43,7 +41,7 @@
                     <p{{ if ne $counter $length }} class="mb-4"{{ end }}>{{ . }}</p>
                 {{ end }}
                 <div class="mt-6">
-                    {{ partial "components/buttonlinklight.html" (dict "url" "blog" "text" "View my experience" "class" "max-w-[200px] block")}}
+                    <a href="{{ .Params.cv_button_url }}" class="button secondary-button max-w-[200px]">{{ .Params.cv_button }}</a>
                 </div>
             </div>
         </div>

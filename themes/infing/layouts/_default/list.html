@@ -13,12 +13,11 @@
             <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
                 {{ range .Pages }}
                     <a href="{{ .Permalink }}">
-                    {{ partial "components/cardyellowborder.html" (dict "class" "h-full") }}
-                        {{ partial "components/h3.html" (dict "class" "mb-4" "text" .Title )}}
+                    <div class="card group-hover:bg-yellow-500/[0.2]">
+                        <h3>{{ .Title }}</h3>
                         <p class="text-green-700/[0.5] mb-2">{{ .Date.Format "January 2006" }}</p>
                         {{ .Summary }} 
-                    {{ partial "components/cardyellowborder-end.html" }}
-                    </a>
+                    </div>
                 {{ end }}
             </div>
         </div>

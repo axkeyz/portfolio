@@ -4,6 +4,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    p {
+        @apply mb-4
+    }
+
+    h1 {
+        @apply text-green-700 font-bold text-4xl leading-[3.5rem] ease-out duration-300 pt-24 md:leading-[4rem] md:text-5xl md:pt-0
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl font-semibold mb-4
+    }
+
+    h3 {
+        @apply text-lg font-semibold mb-4 text-green-700
+    }
+
+    #blog-content h2 {
+        @apply mt-8
+    }
+
+    a {
+        @apply text-black hover:text-green-700 transition duration-300
+    }
+
+    .button {
+        @apply text-center px-4 py-2 border-2 border-green-700 inline-block
+    }
+
+    .primary-button {
+        @apply w-full bg-green-700 text-white 
+        hover:bg-green-600 hover:text-white
+    }
+
+    .secondary-button {
+        @apply w-full bg-white text-green-700 
+        hover:border-green-600
+    }
+
+    .card {
+        @apply border-2 border-yellow-500 border-dashed p-8 h-full
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        @apply w-full py-2 border-b-2 border-green-700 bg-transparent focus:outline-none focus:border-green-900
+    }
+}
+
 @layer utilities {
     .mode-h-tb {
     writing-mode: horizontal-tb;

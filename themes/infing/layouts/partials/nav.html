@@ -8,7 +8,7 @@
         {{ range .Site.Menus.unrealised }}
         <a
             href="{{ .URL }}" 
-            class="text-base flex-initial font-medium hover:text-green-600"
+            class="text-base flex-initial font-medium"
         >{{ .Name }}</a>
         {{ end }}
     </div>
@@ -24,6 +24,9 @@
         >
             <div class="px-6 py-12  bg-white border-l-2 border-dashed border-yellow-500 max-w-full w-96 min-h-screen" @click.away="showMenu = false">
                 <nav class="flex flex-col">
+                    <a href="{{ .Site.BaseURL }}" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
+                        Home
+                    </a>
                     {{ range .Site.Menus.unrealised }}
                         <a href="{{ .URL }}" class="px-2 py-4 flex justify-between w-full hover:text-green-600">
                             {{ .Name }}

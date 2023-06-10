@@ -1,16 +1,23 @@
 <section class="min-h-screen flex items-center w-full overflow-hidden md:min-h-screen">
     <div class="w-full max-w-screen-2xl p-12 m-auto">
-        <div class="w-full my-auto flex md:max-w-lg">
-            <div>
-                <h1 id="title" class="text-green-700 font-bold text-4xl leading-[3.5rem] ease-out duration-300 pt-24 md:leading-[4rem] md:text-5xl md:pt-0">
-                    {{ .Params.Title }} <span class="whitespace-normal min-[460px]:whitespace-nowrap">{{ .Params.tagline }}</span>
-                </h1>
-                <p class="text-xl my-6 leading-9">{{ .Params.title_descrip }}</p>
-                <div class="flex max-w-full">
-                    <div class="flex gap-8 max-w-md w-full mt-3 flex-col min-[460px]:flex-row">
-                        {{ partial "components/buttonlinkdark.html" (dict "url" "#contact-form" "text" .Params.title_button )}}
-                        {{ partial "components/buttonlinklight.html" (dict "url" .Params.cv_button_url "text" .Params.cv_button )}}
+        <div class="my-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-center order-2 md:order-1">
+                <div class="w-full md:max-w-lg h-fit text-center md:text-left">
+                    <h1 id="title" class="pt-8">
+                        {{ .Params.Title }} <span class="whitespace-normal min-[460px]:whitespace-nowrap">{{ .Params.tagline }}</span>
+                    </h1>
+                    <p class="text-xl my-6 leading-9">{{ .Params.title_descrip }}</p>
+                    <div class="flex max-w-full justify-center md:justify-start">
+                        <div class="flex gap-8 max-w-md w-full mt-3 flex-col min-[460px]:flex-row">
+                            <a href="#contact-form" class="button primary-button">{{ .Params.title_button }}</a>
+                            <a href="{{ .Params.cv_button_url }}" class="button secondary-button">{{ .Params.cv_button }}</a>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center order-1 md:order-2 pt-24 md:pt-0">
+                <div class="card relative w-52 h-52">
+                    <div class="border-2 border-green-700 absolute w-52 h-52 top-8 left-8"></div>
                 </div>
             </div>
         </div>

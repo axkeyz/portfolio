@@ -1,7 +1,0 @@
-{{ if or (.open_only) (ne .open_only "") }}
-<a href="{{ .url }}" class="transition duration-300 w-full text-center px-4 py-2 bg-white/[0.5] border-2 border-green-700 text-green-700 hover:border-green-600 hover:bg-white/[0.75] {{ if ne .class ""}}{{ .class }}{{ end }}">
-{{ end }}
-{{ if not .open_only }}
-    {{ .text }}
-</a>
-{{ end }}

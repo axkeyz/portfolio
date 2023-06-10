@@ -3,25 +3,25 @@
         <div class="text-center">
             <h2 class="text-3xl mb-4 md:text-4xl">Project Showcase</h2>
         </div>
-        <div class="grid grid-cols-3 gap-8 w-full mt-6 md:mt-12">
-            <div class="border-2 border-green-700">
-                <div class="h-64 overflow-hidden object-cover object-top hover:brightness-50">
-                    <img src="placeholder/hikurangi.png" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-6 md:mt-12">
+            {{ range first 3 (where (sort site.RegularPages "Date" "desc") "Type" "in" "projects") }}
+            <a href="{{ .Permalink }}" class="relative group">
+                <div class="card group-hover:bg-yellow-500/[0.2]">
+                    <h3 class="left mb-4 text-green-700 font-semibold">
+                        {{ .Title }}
+                    </h3>
+                    <p class="pb-4 mb-4 md:mb-8">{{ .Params.description }}</p>
+                    <div class="md:absolute bottom-0 left-0 md:p-8 flex flex-wrap gap-4">
+                        {{ range $i := .Params.project_type }}
+                            {{ partial "components/tag.html" (dict "text" ($i | title))}}
+                        {{ end }}
+                    </div>
                 </div>
-            </div>
-            <div class="border-2 border-green-700">
-                <div class="h-64 overflow-hidden object-cover object-top hover:brightness-50">
-                    <img src="placeholder/hikurangi.png" />
-                </div>
-            </div>
-            <div class="border-2 border-green-700">
-                <div class="h-64 overflow-hidden object-cover object-top hover:brightness-50">
-                    <img src="placeholder/hikurangi.png" />
-                </div>
-            </div>
+            </a>
+            {{ end }}
         </div>
         <div class="mt-6 md:mt-12">
-            {{ partial "components/buttonlinkdark.html" (dict "url" "projects" "text" "View all projects" "class" "max-w-[200px] m-auto block")}}
+            <a href="/projects" class="button primary-button max-w-[200px] m-auto block">View all projects</a>
         </div>
     </div>
 </section>

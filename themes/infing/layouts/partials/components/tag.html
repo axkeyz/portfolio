@@ -1,6 +1,10 @@
-<span class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800">
+<span 
+    class="whitespace-nowrap text-xs flex gap-2 px-2 py-1 bg-green-500/[0.2] text-green-800
+    {{ if .class }}{{ .class }}{{ end }}"
+>
     <span class="w-4 h-4">
-        {{ if .partial }}{{ partial .partial }}{{ else }}{{ partial "svg/book.svg" }}{{ end }}
+        {{ $partial := print "svg/" (.text | lower) ".svg" }}
+        {{ if .partial }}{{ partial .partial }}{{ else }}{{ partial $partial }}{{ end }}
     </span>
     <span class="m-auto">{{ .text }}</span>
 </span>
