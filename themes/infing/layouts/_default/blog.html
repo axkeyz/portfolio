@@ -10,8 +10,11 @@
                 <h1 class="pt-8 text-green-700 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">{{ .Title }}</h1>
                 {{ if .Params.comments }}<p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>{{ end }}
             </div>
+
+            {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "blog") 6 }}
+            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
+
             <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
-                {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc") "Type" "blog") }}
                 {{ range $paginator.Pages }}
                     <a href="{{ .Permalink }}" class="group">
                     <div class="card group-hover:bg-yellow-500/[0.2]">
@@ -27,6 +30,8 @@
                     </a>
                 {{ end }}
             </div>
+
+            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
         </div>
     </section>
 {{ end }}

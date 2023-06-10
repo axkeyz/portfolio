@@ -11,8 +11,10 @@
                 <p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>
             </div>
 
+            {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "projects") 6 }}
+            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
-                {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "projects") }}
                 {{ range $paginator.Pages }}
                     <a href="{{ .Permalink }}" class="relative group">
                         <div class="card group-hover:bg-yellow-500/[0.2]">
@@ -29,6 +31,8 @@
                     </a>
                 {{ end }}
             </div>
+
+            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
         </div>
     </section>
 {{ end }}

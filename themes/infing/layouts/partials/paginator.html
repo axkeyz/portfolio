@@ -1,0 +1,12 @@
+<div class="mt-12 flex flex-col items-center gap-4">
+    <div class="font-semibold">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</div>
+    <div class="flex divide-x divide-green-600">
+    {{ if .Paginator.HasPrev }}
+    <div class="px-4"><a href="{{ .Paginator.Prev.URL }}">&lt;&lt; Previous</a></div>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+    <div class="px-4"><a href="{{ .Paginator.Next.URL }}">Next &gt;&gt;</a></div>
+    {{ end }}
+    </div>
+</div>
