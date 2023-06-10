@@ -11,7 +11,7 @@
                 <p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>
             </div>
 
-            {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "projects") 6 }}
+            {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "projects") 9 }}
             {{- partial "components/paginator.html" (dict "Paginator" .Paginator) -}}
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
