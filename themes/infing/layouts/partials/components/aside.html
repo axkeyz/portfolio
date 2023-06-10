@@ -1,0 +1,10 @@
+<div class="w-full col-span-1 card p-6 lg:p-12 bg-yellow-500/[0.2] {{ .class }}">
+    {{ range $stats := .Stats }}
+        {{ range $key, $val := $stats }}
+            <p>
+                <span class="uppercase text-xs tracking-widest">{{ replace $key "_" " " }}</span><br />
+                <span>{{ $val | markdownify }}</span>
+            </p>
+        {{ end }}
+    {{ end }}
+</div>

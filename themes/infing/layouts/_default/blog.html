@@ -12,7 +12,7 @@
             </div>
 
             {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc" ) "Type" "blog") 6 }}
-            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
+            {{- partial "components/paginator.html" (dict "Paginator" .Paginator) -}}
 
             <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
                 {{ range $paginator.Pages }}
@@ -31,7 +31,7 @@
                 {{ end }}
             </div>
 
-            {{- partial "paginator.html" (dict "Paginator" .Paginator) -}}
+            {{- partial "components/paginator.html" (dict "Paginator" .Paginator) -}}
         </div>
     </section>
 {{ end }}

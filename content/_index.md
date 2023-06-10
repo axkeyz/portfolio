@@ -15,31 +15,13 @@ about_me:
     - Nowadays, I build APIs, apps and websites with various languages and tools. I'm keen to use the right stack for the job, even if it means learning something completely new.
     - My blog contains my studies into computer science and software engineering, so that I can continuously improve my software skills. It may also contain some side project stuff. I'm a bit interested in game development and UX.
 
-services_heading: What can I do for you?
-services_descrip: 
-    - I can create performant code behind your API, app and/or website as according to your needs and designs.
-    - I can make it work, load fast and look good. 
-    - I can identify potential issues and fix them too.
-    - I can learn and use different technologies that best fit your project requirements.
-    - Let your digital product look and work just the way you wanted it to be.
-services_image: svg/services_image.svg
-
-projects_heading: Here are some projects I've worked on.
-projects: 
-    - dg-client-app:
-        name: Divers Group client portal
-        built_with: Laravel (PHP), AlpineJS, TailwindCSS
-        description: A project that completely upgrades the existing portal with reactive Javascript and modern design practices.
-    - pbt-parser:
-        name: PBT spreadsheet parser
-        built_with: Go, SQLite
-        description: An automation project that extracts information from PBTOne runsheets and invoices and outputs them in a Divers Group accounting format.
-        more_at: pbt-parser
-    - water-outages:
-        name: Water API & Dashboard
-        built_with: Go, Postgres (PostGIS), Hugo, Vue (CDN)
-        description: A project that intends to prove that certain non-rural regions of Auckland get more water outages than others.
-projects_button: "& more..."
+about_me_profile:
+    - name: Aileen Huang
+    - role: Web developer
+    - location: "New Zealand"
+    - website: "[aileenhuang.dev](https://aileenhuang.dev)"
+    - github: "[github.com/axkeyz](https://github.com/axkeyz)"
+    - linkedin: "[in/aileen-huang](https://linkedin.com/in/aileen-huang)"
 
 stack_heading: This is my tech stack I use to build stuff.
 stack_descrip: I'm always adding to these as I continue through my endeavours into tech. For a full tech stack list, please refer to [the full tech stack list](/fullstack).
