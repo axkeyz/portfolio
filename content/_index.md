@@ -5,7 +5,7 @@ title_descrip: I'm a full-stack developer based in New Zealand. If you need a di
 title_button: Hire Me
 title_button_url: /contact 
 cv_button: My Resume
-cv_button_url: /pdf/Aileen%20Huang.pdf
+cv_button_url: /pdf/Aileen%20Huang%2010%20Jun%202023.pdf
 cover_image: svg/cover_image.svg
 
 about_me_heading: About Me

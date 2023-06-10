@@ -2,9 +2,10 @@
 title: "Portfolio Design"
 date: 2022-07-05T23:37:44+12:00
 draft: false
+tags: ["Life"]
 ---
 
-Designing is not my strength, but somehow I've been doing it a lot these days. I spent a lot of ton of time doing, redoing, fixing, scrapping and lamenting over the design of this website. I completely overhauled the design dozens of times and eventually narrowed down on a couple of things I really wanted to do in my portfolio. These design constraints might be a bit unusual and may not impress everyone.<!--more-->
+Designing is not my strength, but somehow I've been doing it a lot these days. I spent a lot of ton of time doing, redoing, fixing, scrapping and lamenting over the design of this website.<!--more--> I completely overhauled the design dozens of times and eventually narrowed down on a couple of things I really wanted to do in my portfolio. These design constraints might be a bit unusual and may not impress everyone.
 
 ## Design constraints
 

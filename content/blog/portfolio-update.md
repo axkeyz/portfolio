@@ -2,9 +2,10 @@
 title: "Portfolio Update & Change of Circumstances"
 date: 2022-09-06T18:10:22+12:00
 draft: false
+tags: ["Life"]
 ---
 
-In 2023, I plan to return to the workforce. Ideally, I'd like to relocate to Hamilton, but staying in Auckland is possible too. There are a couple of reasons, but it is mainly due to a change of circumstances. Hence, I finally updated my portfolio. There's still a lot that can be added, but it should be on its way over time.<!--more-->
+In 2023, I plan to return to the workforce. Ideally, I'd like to relocate to Hamilton, but staying in Auckland is possible too. There are a couple of reasons, but it is mainly due to a change of circumstances. <!--more-->Hence, I finally updated my portfolio. There's still a lot that can be added, but it should be on its way over time.
 
 ## BACKGROUND
 

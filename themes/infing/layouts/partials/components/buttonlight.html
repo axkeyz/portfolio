@@ -1,7 +1,7 @@
 {{ if or (.open_only) (ne .open_only "") }}
 <button 
     href="{{ .url }}" 
-    class="transition duration-300  w-full text-center px-4 py-2 bg-white/[0.5] border-2 border-green-600 text-green-600 hover:border-green-700 hover:bg-white/[0.75] {{ if ne .class ""}}{{ .class }}{{ end }}"
+    class="transition duration-300  w-full text-center px-4 py-2 bg-white/[0.5] border-2 border-green-700 text-green-700 hover:border-green-900 hover:bg-white/[0.75] {{ if ne .class ""}}{{ .class }}{{ end }}"
     {{ if .custom_attr }}{{ .custom_attr }}{{ end }}
 >
 {{ end }}

@@ -11,22 +11,7 @@
                 {{ if .Params.comments }}<p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>{{ end }}
             </div>
             <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 mt-12">
-                {{ $paginator := .Paginate (where (sort .Data.Pages "Date" "desc") "Type" "blog") }}
-                {{ range $paginator.Pages }}
-                    <a href="{{ .Permalink }}">
-                    {{ partial "components/cardyellowborder.html" (dict "class" "h-full") }}
-                        {{ partial "components/h3.html" (dict "class" "mb-4" "text" .Title )}}
-                        <p class="text-green-700/[0.5] mb-2">{{ .Date.Format "January 2006" }}</p>
-                        {{ .Summary }} 
-                        <div class="flex flex-wrap gap-4 mt-8">
-                            {{ range $i := .Params.tags }}
-                                {{ $partial := print "svg/" ($i | lower) ".svg" }}
-                                {{ partial "components/tag.html" (dict "text" ($i | title) "partial" $partial)}}
-                            {{ end }}
-                        </div>
-                    {{ partial "components/cardyellowborder-end.html" }}
-                    </a>
-                {{ end }}
+                {{ .Content | markdownify }}
             </div>
         </div>
     </section>

@@ -18,7 +18,7 @@ description = "I'm Aileen Huang. I'm a full-stack developer in Auckland, New Zea
 
 [permalinks]
     page = "/:filename"
-    blog = "/blog/:year-:month-:filename"
+    blog = "/blog/:year/:filename"
 
 [params]
     logo = "HUANG"
