@@ -12,7 +12,7 @@
             </div>
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-screen-2xl">
                 {{ partial "components/aside.html" (dict "Stats" .Params.project_stats ) }}
-                <div class="col-span-1 md:col-span-3">
+                <div id="post" class="col-span-1 md:col-span-3">
                     {{ .Content | safeHTML }}
                 </div>
             </div>

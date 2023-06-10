@@ -10,7 +10,7 @@
                 <h1 class="pt-8 text-green-700 font-bold text-4xl leading-[3.5rem] ease-out duration-300 md:leading-[4rem] md:text-5xl">{{ .Title }}</h1>
                 {{ if .Params.comments }}<p class="text-xl my-6 leading-9">{{ .Params.comments | markdownify }}</p>{{ end }}
             </div>
-            <div class="mt-12 max-w-screen-md mx-auto">
+            <div id="post" class="mt-12 max-w-screen-md mx-auto">
                 {{ .Content | safeHTML }}
             </div>
         </div>

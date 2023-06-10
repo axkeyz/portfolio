@@ -8,11 +8,18 @@ description: "A tool I built for work in my spare time, using Flask (Python). Th
 status: completed
 project_type: [personal, work]
 tags: [Personal, Work, Python, Flask, Solo]
+
+project_stats:
+    - stack: Python, Flask, Bootstrap
+    - purpose: Work & personal
+    - status: Completed (for now)
+    - date: 2021-2022
+
 ---
 
 *This project has been privatised due to sensitivity of DG's accounts*
 
-## PURPOSE
+## The purpose
 
 I was hired to do accounts assistance work, which mainly involved data-entry and more data-entry. I hated it. It was time-consuming and mind-numbingly boring. So I wrote this to automate some accounting jobs.
 
@@ -22,19 +29,19 @@ This app had to:
 - Process manual journals that would reallocate wages & salaries by department.
 - Extract statistics on staff & other expenses.
 
-## TECH
+## The tech
 
 I picked __Flask (Python)__. I think Python remains my preferred tool when it comes automation tasks because their Excel packages are much better (Go excelize doesn't support pivot tables as well, for example). Also, Xero has some great support for Python, so there's that.
 
 Frontend was lazily built with __Bootstrap__.
 
-## LEARNING
+## The learning
 
 - Reading Xero's documentation
 - Flask infrastructure, mounting apps & sessions, blueprints
 - SQLAlchemy ORM
 
-## TODOS
+##  The TODOs
 
 This project isn't a high priority since it mostly does what I urgently need it to do. However, given time, I'd probably do the following:
 - Build a better frontend
