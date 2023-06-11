@@ -1,7 +1,7 @@
 ---
 title: "Solar Blue"
 date: 2023-06-10T22:16:10+12:00
-draft: false
+draft: true
 
 description: A website for Solar Blue.
 comments: Under development
