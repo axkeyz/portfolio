@@ -4,6 +4,8 @@ tagline2: "快输和优雅。"
 tagline_description: "让时间放在有趣的东西上。"
 tagimage: "svg/webdev-og.html"
 
+draft: true
+
 cards:
     - 您选的框架: 
         - svg/adjustments.html

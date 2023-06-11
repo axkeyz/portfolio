@@ -1,7 +1,7 @@
 ---
 title: "My Full Tech Stack"
 date: 2022-06-25T01:22:33+12:00
-draft: false
+draft: true
 ---
 
 | Stack      | Description |

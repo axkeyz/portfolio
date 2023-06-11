@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2022-06-24T16:57:18+12:00
-draft: false
+draft: true
 ---
 
 I'm Aileen Huang, a full-stack developer based in Auckland, New Zealand.
