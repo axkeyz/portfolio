@@ -5,7 +5,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-6 md:mt-12">
             {{ $projects := (where (sort site.RegularPages "Date" "desc") "Type" "in" "projects") }}
-            {{ range first 3 ($projects.ByParam "showcase") }}
+            {{ range first 3 (sort $projects "Params.showcase" "desc") }}
             <a href="{{ .Permalink }}" class="relative group">
                 <div class="card group-hover:bg-yellow-500/[0.2]">
                     <h3 class="left mb-4 text-green-700 font-semibold">
